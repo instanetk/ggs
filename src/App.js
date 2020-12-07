@@ -1,9 +1,77 @@
 import React from 'react';
-import NavBar from './components/NavBar';
+import NavBar from './components/common/NavBar';
 import Categories from './components/Categories';
-import Popular from './components/Popular';
 
 function App() {
+  const categories = [
+    {
+      name: 'Floor installation',
+      image: 'https://images.pexels.com/photos/276554/pexels-photo-276554.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260',
+    },
+    {
+      name: 'Landscape & Irrigation',
+      image:
+        'https://images.unsplash.com/photo-1554663565-f60b88adfa08?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80',
+    },
+    {
+      name: 'Additions & Remodels',
+      image:
+        'https://images.unsplash.com/photo-1542621334-a254cf47733d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80',
+    },
+    {
+      name: 'Painting',
+      image:
+        'https://images.unsplash.com/photo-1525909002-1b05e0c869d8?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=750&q=80',
+    },
+    {
+      name: 'Cleaning',
+      image: 'https://images.pexels.com/photos/4021256/pexels-photo-4021256.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
+    },
+    {
+      name: 'Plumbing',
+      image:
+        'https://images.unsplash.com/photo-1577678923709-758495cb4497?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1652&q=80',
+    },
+  ];
+
+  const popular = [
+    {
+      name: 'Bathroom Remodel',
+      image:
+        'https://images.unsplash.com/flagged/photo-1600002368144-444430d3f3ca?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80',
+    },
+    {
+      name: 'Kitchen Remodel',
+      image:
+        'https://images.unsplash.com/photo-1574621974239-00deab554d60?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1599&q=80',
+    },
+    {
+      name: 'Tile Installation',
+      image:
+        'https://images.unsplash.com/photo-1599209250635-26c180f28419?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80',
+    },
+    {
+      name: 'Wood & Laminate Floors',
+      image:
+        'https://images.unsplash.com/photo-1560185893-a55cbc8c57e8?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80',
+    },
+    {
+      name: 'Handyman Services',
+      image:
+        'https://images.unsplash.com/photo-1509453721491-c3af5961df76?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80',
+    },
+    {
+      name: 'Minor Electrical',
+      image:
+        'https://images.unsplash.com/photo-1462041866295-e4af004a32ef?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1566&q=80',
+    },
+    {
+      name: 'One-Time Cleaning',
+      image:
+        'https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80',
+    },
+  ];
+
   return (
     <div id="App" className="min-h-screen antialiasing bg-gray-100">
       <NavBar />
@@ -45,8 +113,8 @@ function App() {
             </div>
           </div>
         </div>
-        <Categories />
-        <Popular />
+        <Categories name="Browse by category" categories={categories} />
+        <Categories name="Popular services" categories={popular} />
         <div className="mt-6 text-gray-800 tracking-wide text-justify">
           <p className="mt-2">
             For over 15 years, <span className="font-bold">General Global Services</span> has brought remodeling
