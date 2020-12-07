@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 
 const NavBar = () => {
-  const [isOpen, setOpen] = useState(false);
+  const [isOpen, setOpen] = useState(true);
 
   return (
     <React.Fragment>
-      <header className="px-4 py-2 bg-gray-900 flex justify-between items-center">
-        <h1 className="text-lg items-center text-white font-sans tracking-wide font-bold  select-none">
+      <header className="px-4 py-2 bg-gray-900 flex justify-between items-center text-center">
+        <h1 className="text-lg items-center text-white font-sans tracking-wide font-bold uppercase  select-none">
           <span className="text-3xl">🏡</span> General Global Services
         </h1>
         <div className="inline-flex">
