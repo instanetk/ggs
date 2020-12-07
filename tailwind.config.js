@@ -4,6 +4,9 @@ module.exports = {
   purge: ['./src/**/*.js', './public/index.html'],
   colors: {
     gray: colors.coolGray,
+    green: colors.emerald,
+    blue: colors.indigo,
+    yellow: colors.amber,
   },
   darkMode: false, // or 'media' or 'class'
   theme: {
@@ -11,6 +14,9 @@ module.exports = {
   },
   variants: {
     extend: {},
+  },
+  corePlugins: {
+    backgroundImage: true,
   },
   plugins: [require('@tailwindcss/forms')],
 };
