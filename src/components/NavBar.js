@@ -6,12 +6,18 @@ const NavBar = () => {
   return (
     <React.Fragment>
       <header className="px-4 py-2 bg-gray-900 flex justify-between items-center">
-        <div className="flex items-center">
-          <span className="text-3xl">🏡</span>
-          <h1 className="ml-2 text-md items-center text-white font-sans tracking-wide font-bold uppercase select-none">
-            General Global Services
-          </h1>
+        <div>
+          <div className="flex items-baseline">
+            <span className="text-3xl">🏡</span>
+            <h1 className="flex ml-3 text-lg items-baseline text-white font-sans tracking-wide font-bold select-none">
+              HomeWorks
+            </h1>
+          </div>
+          <div className="ml-1 -mt-2">
+            <span className="text-xs text-gray-500 font-normal uppercase">By General Global Services, LLC</span>
+          </div>
         </div>
+
         <div className="flex items-center">
           <button
             type="button"
@@ -85,7 +91,7 @@ const NavBar = () => {
         <div className="flex flex-col justify-center items-center select-none text-white hover:text-green-400">
           <div id="online" className="relative h-2 w-2 ml-6 -mb-2">
             <span class="flex h-1 w-1">
-              <span class="animate-ping absolute inline-flex h-2 w-2 rounded-full bg-green-400 opacity-75"></span>
+              <span class="animate-ping absolute inline-flex h-1 w-1 rounded-full bg-green-400 opacity-75"></span>
               <span class="relative inline-flex rounded-full h-1 w-1 bg-green-500"></span>
             </span>
           </div>
@@ -109,7 +115,11 @@ const NavBar = () => {
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 20 20"
             fill="currentColor">
-            <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
+            <path
+              fillRule="evenodd"
+              d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z"
+              clipRule="evenodd"
+            />
           </svg>
           <span className="mt-2 text-xs uppercase font-bold tracking-wider content-center">Sign in</span>
         </div>

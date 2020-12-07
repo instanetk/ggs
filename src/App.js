@@ -5,7 +5,7 @@ import Popular from './components/Popular';
 
 function App() {
   return (
-    <div id="App" className="min-h-screen antialiasing bg-gray-200">
+    <div id="App" className="min-h-screen antialiasing bg-gray-100">
       <NavBar />
       <main className="p-4">
         <div>
