@@ -67,18 +67,19 @@ function App() {
           </p>
           <p className="mt-2">Let us earn your business and trust by scheduling a phone call or an estimate.</p>
         </div>
-        <div className="bg-green-500 text-green-900 text-2xl p-4 text-center uppercase rounded">Call now!</div>
-        <h2>[SCHEDULE ESTIMATE OR CALL -- autofill FL addresses ]</h2>
-        <section>## Photo Project 1 ##</section>
-        <h3>% TESTIMONIAL %</h3>% services offered % % service description % % picture %<h3>% TESTIMONIAL %</h3>
-        <h2>% CONTACT FORM %</h2>
-        <ul>
-          <li>% HOW-TO KB %</li>
-        </ul>
-        <div>
-          <h4>[ ARE YOU A CONTRACTOR? ]</h4>
-          Submit your company’s bond and insurance along with your occupational license and join our team of highly
-          skilled service providers. State your range of movement in miles radius.
+        <div className="flex w-full my-6">
+          <div className="w-full justify-center bg-green-500 hover:bg-green-600 text-green-50 text-3xl p-2 text-center font-extrabold uppercase rounded-lg">
+            Call now!
+          </div>
+        </div>
+        <div className="flex-col bg-white p-4 rounded-lg shadow-lg">
+          <h3 className="font-serif italic text-2xl text-gray-900">
+            &ldquo; My home feels like new after General Global Services renovated my kitchen and bathrooms. They were
+            honest, kind and professional. I would recommend them to everyone!&rdquo;
+          </h3>
+          <div className="flex justify-end items-baseline p-2 text-sm text-gray-800">
+            — Isabela Smith, <span className="flex ml-2 items-baseline text-xs">Orlando, FL</span>
+          </div>
         </div>
       </main>
     </div>
