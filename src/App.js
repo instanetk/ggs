@@ -5,7 +5,7 @@ import Popular from './components/Popular';
 
 function App() {
   return (
-    <div id="App" className="antialiasing bg-gray-100">
+    <div id="App" className="min-h-screen antialiasing bg-gray-200">
       <NavBar />
       <main className="p-4">
         <div>
@@ -67,7 +67,7 @@ function App() {
           </p>
           <p className="mt-2">Let us earn your business and trust by scheduling a phone call or an estimate.</p>
         </div>
-        <h2>[CALL NOW]</h2>
+        <div className="bg-green-500 text-green-900 text-2xl p-4 text-center uppercase rounded">Call now!</div>
         <h2>[SCHEDULE ESTIMATE OR CALL -- autofill FL addresses ]</h2>
         <section>## Photo Project 1 ##</section>
         <h3>% TESTIMONIAL %</h3>% services offered % % service description % % picture %<h3>% TESTIMONIAL %</h3>

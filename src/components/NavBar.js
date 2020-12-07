@@ -5,15 +5,18 @@ const NavBar = () => {
 
   return (
     <React.Fragment>
-      <header className="px-4 py-2 bg-gray-900 flex justify-between items-center text-center">
-        <h1 className="text-lg items-center text-white font-sans tracking-wide font-bold uppercase  select-none">
-          <span className="text-3xl">🏡</span> General Global Services
-        </h1>
-        <div className="inline-flex">
+      <header className="px-4 py-2 bg-gray-900 flex justify-between items-center">
+        <div className="flex items-center">
+          <span className="text-3xl">🏡</span>
+          <h1 className="ml-2 text-md items-center text-white font-sans tracking-wide font-bold uppercase select-none">
+            General Global Services
+          </h1>
+        </div>
+        <div className="flex items-center">
           <button
             type="button"
             onClick={() => setOpen(!isOpen)}
-            className="px-2 focus:outline-none focus:shadow-ouline">
+            className="px-0 focus:outline-none focus:shadow-ouline">
             <svg
               className="h-6 w-6 fill-current text-white hover:text-gray-400"
               xmlns="http://www.w3.org/2000/svg"
@@ -32,7 +35,7 @@ const NavBar = () => {
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth={2}
-                // d="M6 18L18 6M6 6l12 12"
+                d="M6 18L18 6M6 6l12 12"
               />
             </svg>
           </button>
@@ -51,7 +54,7 @@ const NavBar = () => {
     </div> */}
         <div className="flex flex-col justify-center items-center select-none text-white hover:text-green-400">
           <svg
-            className="h-8 w-8  fill-current"
+            className="h-7 w-7  fill-current"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 20 20"
             fill="currentColor">
@@ -66,7 +69,7 @@ const NavBar = () => {
 
         <div className="flex flex-col justify-center items-center select-none text-white hover:text-green-400">
           <svg
-            className="h-8 w-8 fill-current"
+            className="h-7 w-7 fill-current"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 20 20"
             fill="currentColor">
@@ -81,7 +84,7 @@ const NavBar = () => {
         </div>
         <div className="flex flex-col justify-center items-center select-none text-white hover:text-green-400">
           <svg
-            className="h-8 w-8 fill-current"
+            className="h-7 w-7 fill-current"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 20 20"
             fill="currentColor">
@@ -95,7 +98,7 @@ const NavBar = () => {
         </div>
         <div className="flex flex-col justify-center items-center select-none text-white hover:text-green-400">
           <svg
-            className="h-8 w-8 fill-current"
+            className="h-7 w-7 fill-current"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 20 20"
             fill="currentColor">

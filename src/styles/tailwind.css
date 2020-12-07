@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+input[type='text'],
+input[type='password'],
+input[type='email'],
+input[type='number'],
+input[type='url'],
+input[type='date'],
+input[type='datetime-local'],
+input[type='month'],
+input[type='week'],
+input[type='time'],
+input[type='search'],
+input[type='tel'],
+select,
+select[multiple],
+textarea {
+  @apply rounded-lg bg-gray-700 border-none text-white hover:text-gray-700;
+}
+
+input[type='checkbox'] {
+  @apply h-6 w-6 rounded-sm bg-gray-900 border-none text-indigo-500;
+}
+
+input[type='radio'] {
+  @apply h-6 w-6 bg-gray-900 border-none text-indigo-500;
+}
