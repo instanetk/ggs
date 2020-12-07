@@ -9,7 +9,7 @@ const NavBar = () => {
         <div>
           <div className="flex items-baseline">
             <span className="text-3xl">🏡</span>
-            <h1 className="flex ml-3 text-lg items-baseline text-white font-sans tracking-wide font-bold select-none">
+            <h1 className="flex ml-2 text-lg items-baseline text-white font-sans tracking-wide font-bold select-none">
               HomeWorks
             </h1>
           </div>
