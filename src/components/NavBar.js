@@ -83,6 +83,12 @@ const NavBar = () => {
           <span className="mt-2 text-xs uppercase font-bold tracking-wider content-center">Services</span>
         </div>
         <div className="flex flex-col justify-center items-center select-none text-white hover:text-green-400">
+          <div id="online" className="relative h-2 w-2 ml-6 -mb-2">
+            <span class="flex h-1 w-1">
+              <span class="animate-ping absolute inline-flex h-2 w-2 rounded-full bg-green-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-1 w-1 bg-green-500"></span>
+            </span>
+          </div>
           <svg
             className="h-7 w-7 fill-current"
             xmlns="http://www.w3.org/2000/svg"
@@ -94,6 +100,7 @@ const NavBar = () => {
               clipRule="evenodd"
             />
           </svg>
+
           <span className="mt-2 text-xs uppercase font-bold tracking-wider content-center">Chat</span>
         </div>
         <div className="flex flex-col justify-center items-center select-none text-white hover:text-green-400">
@@ -107,6 +114,7 @@ const NavBar = () => {
           <span className="mt-2 text-xs uppercase font-bold tracking-wider content-center">Sign in</span>
         </div>
       </div>
+      <div className=" bg-purple-500 p-px animate-pulse flex"></div>
     </React.Fragment>
   );
 };
