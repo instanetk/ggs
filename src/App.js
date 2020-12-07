@@ -68,9 +68,9 @@ function App() {
           <p className="mt-2">Let us earn your business and trust by scheduling a phone call or an estimate.</p>
         </div>
         <div className="flex w-full my-6">
-          <div className="w-full justify-center bg-green-500 hover:bg-green-600 text-green-50 text-3xl p-2 text-center font-extrabold uppercase rounded-lg">
+          <button className="w-full justify-center bg-green-500 hover:bg-green-600 text-green-50 text-3xl p-2 text-center font-extrabold uppercase rounded-lg transition delay-150 duration-300 ease-in-out">
             Call now!
-          </div>
+          </button>
         </div>
         <div className="flex-col bg-white p-4 rounded-lg shadow-lg">
           <h3 className="font-serif italic text-2xl text-gray-900">
