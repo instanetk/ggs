@@ -51,7 +51,7 @@ function App() {
         'https://images.unsplash.com/photo-1599209250635-26c180f28419?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80',
     },
     {
-      name: 'Wood & Laminate Floors',
+      name: 'Hardwood & Laminate Floors',
       image:
         'https://images.unsplash.com/photo-1560185893-a55cbc8c57e8?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80',
     },
@@ -125,10 +125,10 @@ function App() {
         </div>
         <Categories name="Browse by category" categories={categories} />
         <Categories name="Popular services" categories={popular} />
-        <div className="p-4">
+        <div className="px-4">
           <div id="testimonial" className="mt-8 flex-col bg-white p-4 rounded-lg shadow-lg">
             <span className="text-xs text-gray-300 font-semibold uppercase tracking-wider hidden">Testimonial</span>
-            <h3 className="font-serif italic text-2xl text-gray-900">
+            <h3 className="font-serif italic text-2xl text-gray-800">
               &ldquo; My home feels like new after General Global Services renovated my kitchen and bathrooms. They were
               honest, kind and professional. I would recommend them to anyone!&rdquo;
             </h3>
@@ -157,7 +157,9 @@ function App() {
             <p className="mt-2">Let us earn your business and trust by scheduling a phone call or an estimate.</p>
           </div>
           <div className="flex w-full my-6">
-            <button className="w-full justify-center bg-green-500 hover:bg-green-600 text-green-50 text-3xl p-2 text-center font-extrabold uppercase rounded-lg transition delay-150 duration-300 ease-in-out">
+            <button
+              type="submit"
+              className="w-full justify-center bg-green-500 hover:bg-green-600 text-green-50 text-3xl p-2 text-center font-extrabold uppercase rounded-lg transition delay-150 duration-300 ease-in-out">
               Call now!
             </button>
           </div>

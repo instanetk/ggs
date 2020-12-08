@@ -2,7 +2,9 @@ import React, { useState } from 'react';
 import Category from './common/Category';
 
 const Categories = ({ name, categories }) => {
+  // eslint-disable-next-line
   const [useName, setName] = useState(name);
+  // eslint-disable-next-line
   const [useCat, setCat] = useState(categories);
 
   return (
