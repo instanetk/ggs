@@ -1,8 +1,13 @@
 import React from 'react';
+import detectBrowserLanguage from 'detect-browser-language';
 import NavBar from './components/common/NavBar';
 import Categories from './components/Categories';
 
 function App() {
+  // Returns a string: 'en' or 'es'
+  // If 'es' render site in Spanish -- all others in English
+  const lang = detectBrowserLanguage().split('-')[0];
+
   const categories = [
     {
       name: 'Floor Installation',
@@ -88,10 +93,12 @@ function App() {
       <main>
         <div className="p-4">
           <div className="flex justify-between">
-            <div className="flex items-center bg-yellow-300 rounded w-32 px-2">
-              <span className="ml-1 text-xs uppercase text-yellow-800 font-bold select-none">Free Estimates!</span>
+            <div className="flex items-center bg-yellow-300 rounded px-2">
+              <span className="ml-1 text-xs uppercase text-yellow-800 font-bold select-none">
+                {lang === 'es' ? '¡Estimados Gratis!' : 'Free Estimates!'}
+              </span>
             </div>
-            <div className="flex items-center bg-green-300 rounded w-24 px-2">
+            <div className="flex items-center bg-green-300 rounded px-2">
               <svg
                 className="w-4 h-4 text-green-600"
                 xmlns="http://www.w3.org/2000/svg"
@@ -105,7 +112,9 @@ function App() {
                   d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"
                 />
               </svg>
-              <span className="ml-1 text-xs uppercase text-green-700 font-bold select-none">Get $40</span>
+              <span className="ml-1 text-xs uppercase text-green-700 font-bold select-none">
+                {lang === 'es' ? 'Recibe $40' : 'Get $40'}
+              </span>
             </div>
           </div>
           <div className="relative mt-2 select-none">
@@ -117,8 +126,10 @@ function App() {
           </div>
           <div className="relative px-2 sm:w-1/2">
             <div className="-mt-20 rounded-md ">
-              <h2 className="text-white text-center px-2 py-1 text-3xl font-extrabold select-none">
-                Home projects and remodeling services
+              <h2 className="text-white text-center px-2 py-1 text-2xl font-extrabold select-none">
+                {lang === 'es'
+                  ? 'Proyectos del hogar y servicios de remodelación'
+                  : 'Home projects and remodeling services'}
               </h2>
             </div>
           </div>
