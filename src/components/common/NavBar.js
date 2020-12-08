@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 const NavBar = () => {
-  const [isOpen, setOpen] = useState(true);
+  const [isOpen, setOpen] = useState(false);
 
   return (
     <React.Fragment>
@@ -14,11 +14,13 @@ const NavBar = () => {
             </h1>
           </div>
           <div className="ml-1 -mt-2">
-            <span className="text-xs text-gray-500 font-normal uppercase">By General Global Services, LLC</span>
+            <span className="text-xs text-gray-500 font-normal uppercase select-none">
+              By General Global Services, LLC
+            </span>
           </div>
         </div>
 
-        <div className="flex items-center">
+        <div className="flex items-center sm:hidden">
           <button
             type="button"
             onClick={() => setOpen(!isOpen)}
@@ -47,20 +49,10 @@ const NavBar = () => {
           </button>
         </div>
       </header>
-      <div className={` ${isOpen ? '' : 'hidden'} px-4 py-2 bg-gray-800 flex flex-nowrap justify-between`}>
-        {/* <div className="flex flex-col justify-center items-center select-none text-white hover:text-white">
-      <svg
-        className="h-8 w-8 fill-current"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-        fill="currentColor">
-        <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
-      </svg>
-      <span className="mt-2 text-xs uppercase font-bold tracking-wider">Home</span>
-    </div> */}
+      <div className={` ${isOpen ? '' : 'hidden'} px-4 py-2 bg-gray-800 flex flex-nowrap justify-between sm:flex`}>
         <div className="flex flex-col justify-center items-center select-none text-white hover:text-green-400">
           <svg
-            className="h-7 w-7  fill-current"
+            className="h-7 w-7 fill-current sm:hidden"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 20 20"
             fill="currentColor">
@@ -75,7 +67,7 @@ const NavBar = () => {
 
         <div className="flex flex-col justify-center items-center select-none text-white hover:text-green-400">
           <svg
-            className="h-7 w-7 fill-current"
+            className="h-7 w-7 fill-current sm:hidden"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 20 20"
             fill="currentColor">
@@ -96,7 +88,7 @@ const NavBar = () => {
             </span>
           </div>
           <svg
-            className="h-7 w-7 fill-current"
+            className="h-7 w-7 fill-current sm:hidden"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 20 20"
             fill="currentColor">
@@ -111,7 +103,7 @@ const NavBar = () => {
         </div>
         <div className="flex flex-col justify-center items-center select-none text-white hover:text-green-400">
           <svg
-            className="h-7 w-7 fill-current"
+            className="h-7 w-7 fill-current sm:hidden"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 20 20"
             fill="currentColor">

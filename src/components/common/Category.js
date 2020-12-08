@@ -2,8 +2,8 @@ import React from 'react';
 
 const Category = ({ name, image }) => {
   return (
-    <div className="w-56 text-center ml-4 flex-shrink-0 px-4 py-2 pb-6">
-      <div className="flex flex-col justify-center items-center">
+    <div className="w-56 text-center ml-4 flex-shrink-0 px-4 py-2 pb-2 select-none">
+      <div className="flex flex-col justify-center items-center select-none">
         <img
           alt={name}
           className="h-28 w-48 border-white border-t-2 border-l-2 border-r-2 rounded-t-lg shadow-md object-cover"
