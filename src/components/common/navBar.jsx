@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Menu from './Menu';
+import Menu from './menu';
 
 const NavBar = () => {
   const [isOpen, setOpen] = useState(false);
@@ -16,8 +16,9 @@ const NavBar = () => {
                   <h1 className="ml-2 text-lg items-baseline text-white font-sans tracking-wide font-bold select-none">
                     HomeWorks
                   </h1>
+                  <sup className="font-light text-gray-300 px-1">&trade;</sup>
                 </div>
-                <div className="flex-col ml-5 -mt-4 pb-2 sm:-mt-2">
+                <div className="flex-col ml-7 sm:ml-6 -mt-4 pb-2 sm:-mt-4">
                   <span className="text-xs text-gray-500 font-normal uppercase select-none">
                     By General Global Services, LLC
                   </span>
@@ -53,10 +54,17 @@ const NavBar = () => {
               </div>
             </div>
           </div>
-          <Menu isOpen={isOpen} />
+          <div className="sm:-ml-4">
+            <Menu isOpen={isOpen} />
+          </div>
+          <div className="flex">{/* <div className="flex-grow bg-black min-h-screen"></div> */}</div>
+          <div className="flex object-none object-bottom justify-center border text-gray-500 text-xs select-none hidden">
+            <div className="flex align-bottom bg-gray-50 object-bottom origin-bottom">
+              23 Users <span className="text-gray-700 ml-1"> — at 23:39:53</span>
+            </div>
+          </div>
         </div>
       </header>
-
       <div className="bg-purple-400 p-px flex sm:hidden"></div>
     </React.Fragment>
   );

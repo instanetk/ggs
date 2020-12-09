@@ -27,3 +27,16 @@ input[type='checkbox'] {
 input[type='radio'] {
   @apply h-6 w-6 bg-gray-900 border-none text-indigo-500;
 }
+
+.animate-down {
+  animation: slidein 1s linear;
+
+  @keyframes slidein {
+    from {
+      transform: translate-y-0;
+    }
+    to {
+      transform: translate-y-10;
+    }
+  }
+}

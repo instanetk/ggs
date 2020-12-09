@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Category from './Category';
+import Category from './category';
 
 const Categories = ({ name, categories }) => {
   // eslint-disable-next-line

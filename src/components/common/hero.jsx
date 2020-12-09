@@ -25,7 +25,7 @@ const Hero = () => {
                 </h1>
                 <div class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
                   <span className="flex tracking-widest mt-4">⭐️⭐️⭐️⭐️⭐️</span>
-                  General Global Services has been the choice for all home renovation customers in Central Florida since
+                  General Global Services has been the choice for home renovation customers in Central Florida since
                   2010
                 </div>
                 <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
