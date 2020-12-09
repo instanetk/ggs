@@ -23,9 +23,11 @@ const Hero = () => {
                   <span class="block xl:inline">Home projects and </span>
                   <span class="block text-indigo-600 xl:inline">remodeling services</span>
                 </h1>
-                <p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                  Serving our Central Florida customers since 2010
-                </p>
+                <div class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
+                  <span className="flex tracking-widest mt-4">⭐️⭐️⭐️⭐️⭐️</span>
+                  General Global Services has been the choice for all home renovation customers in Central Florida since
+                  2010
+                </div>
                 <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                   <div class="rounded-md shadow">
                     <a

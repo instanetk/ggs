@@ -1,7 +1,7 @@
 import React from 'react';
 import detectBrowserLanguage from 'detect-browser-language';
 import NavBar from './components/common/NavBar';
-import Categories from './components/Categories';
+import Categories from './components/common/Categories';
 import Hero from './components/common/Hero';
 
 function App() {
@@ -91,12 +91,11 @@ function App() {
   return (
     <div id="App" className="min-h-screen antialiasing bg-gray-100 sm:flex">
       <NavBar />
-      <div className="sm:flex-col sm:w-4/5 lg:w-8/12 xl:w-4/5">
-        <div className="hidden sm:block">
-          <Hero />
-        </div>
-
-        <main className="sm:ml-10">
+      <div className="sm:flex-col sm:w-4/5 ">
+        <main>
+          <div className="hidden sm:block">
+            <Hero />
+          </div>
           <div className="p-4 sm:flex sm:justify-center">
             <div className="sm:w-2/3">
               <div className="flex justify-between sm:hidden">
@@ -132,8 +131,8 @@ function App() {
                 />
               </div>
               <div className="relative px-2 sm:w-1/2">
-                <div className="-mt-20 rounded-md sm:hidden">
-                  <h2 className="text-white text-center px-2 py-1 text-2xl font-extrabold select-none">
+                <div className="-mt-16 rounded-md sm:hidden">
+                  <h2 className="text-white leading-6 px-2 py-2 text-2xl font-extrabold select-none">
                     {lang === 'es'
                       ? 'Proyectos del hogar y servicios de remodelación'
                       : 'Home projects and remodeling services'}
@@ -143,12 +142,12 @@ function App() {
             </div>
           </div>
 
-          <div className="sm:-mt-6">
+          <div className="sm:-mt-6 sm:ml-2">
             <Categories name="Browse by category" categories={categories} />
             <Categories name="Popular services" categories={popular} />
           </div>
-          <div className="px-4">
-            <div id="testimonial" className="mt-8 flex-col bg-white p-4 rounded-lg shadow-lg select-none">
+          <div className="px-3 sm:ml-12 sm:mr-11">
+            <div id="testimonial" className="mt-8 flex-col bg-white p-4 rounded-lg shadow-md select-none">
               <span className="text-xs text-gray-300 font-semibold uppercase tracking-wider hidden">Testimonial</span>
               <h3 className="font-serif italic text-2xl text-gray-800">
                 &ldquo; My home feels like new after General Global Services renovated my kitchen and bathrooms. They
@@ -160,30 +159,33 @@ function App() {
             </div>
             <div className="mt-6 text-gray-800 tracking-wide text-justify text-lg select-none">
               <p className="mt-2 flex-wrap">
-                For over 15 years, <span className="font-bold">General Global Services</span> has brought remodeling
-                services to the Central Florida area. Over the years, we’ve had the privilege of serving hundreds of
-                homes, business and customers in every home remodeling need ranging from flooring installation, bathroom
-                remodeling, landscaping, gardening and more.
+                For over a decade <span className="font-bold">General Global Services</span> has brought professional
+                remodeling services to our customers in the Central Florida area. Over the years, we’ve had the
+                privilege of serving hundreds of family homes, businesses and customers in every possible way, ranging
+                from flooring installation, bathroom remodeling, landscaping, irrigation, gardening and more...
               </p>
               <p className="mt-2">
                 Our quality of service has always been superior, but our craft has evolved. We are passionate to share
                 our knowledge and expertise in the field to help our customers make cost effective decisions and create
-                long lasting results. Use not only of state-of-the-art tools and new technologies, but also best
-                practices and solutions.
+                the beautiful long-lasting results they've envisioned, using only state-of-the-art tools and new
+                technologies and the best practices and solutions.
               </p>
               <p className="mt-2">
-                Our philosophy is at the forefront of our work and growth. Going above and beyond our customer
-                expectations and earning their testimony and referrals. We are grateful for all our customers who have
-                made us known to their friends and family. We promise to make good on the good word you have put for us!
+                Our philosophy remains at the forefront of our work and growth. To go above and beyond our customer
+                expectations and earn their valued testimony and referrals. We are grateful for all our customers who
+                have referred us to their friends and family. We promise to deliver our best work and keep the good word
+                you have put for us!
               </p>
-              <p className="mt-2">Let us earn your business and trust by scheduling a phone call or an estimate.</p>
+              <p className="mt-2">Let us earn your business by scheduling a phone call for a free estimate.</p>
             </div>
-            <div className="flex flex-col w-full  my-6 text-3xl sm:w-48 sm:text-xl sm:justify-center">
-              <button
-                type="submit"
-                className="w-full bg-green-500 hover:bg-green-600 text-green-50  p-2 text-center font-extrabold uppercase rounded-lg select-none">
-                Call now!
-              </button>
+            <div className="flex justify-center">
+              <div className="flex flex-col w-full my-6 text-3xl sm:w-48 sm:text-xl">
+                <button
+                  type="submit"
+                  className="w-full bg-green-500 hover:bg-green-600 text-green-50  p-2 text-center font-extrabold uppercase rounded-lg select-none">
+                  Call now!
+                </button>
+              </div>
             </div>
           </div>
         </main>

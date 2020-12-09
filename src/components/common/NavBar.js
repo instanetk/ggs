@@ -6,10 +6,10 @@ const NavBar = () => {
 
   return (
     <React.Fragment>
-      <header className="bg-gray-900 items-center sm:w-1/5 lg:w-4/12 sm:bg-gray-800">
-        <div>
-          <div className="sm:px-4 sm:py-1 sm:bg-gray-900">
-            <div id="brand" className="flex justify-between">
+      <header className="bg-gray-900 items-center sm:w-1/5 sm:bg-gray-800">
+        <div className="sm:fixed sm:w-1/5 sm:flex-col flex-shrink-0">
+          <div className="sm:flex-col sm:py-1 sm:bg-gray-900">
+            <div id="brand" className="flex justify-between sm:w-full">
               <div>
                 <div className="px-4 py-2 flex items-baseline select-none">
                   <span className="text-3xl select-none">🏡</span>
@@ -17,7 +17,7 @@ const NavBar = () => {
                     HomeWorks
                   </h1>
                 </div>
-                <div className="flex-col ml-5 -mt-4 pb-2">
+                <div className="flex-col ml-5 -mt-4 pb-2 sm:-mt-2">
                   <span className="text-xs text-gray-500 font-normal uppercase select-none">
                     By General Global Services, LLC
                   </span>
