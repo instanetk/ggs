@@ -15,7 +15,7 @@ const Home = ({ lang }) => {
       name: 'Landscape & Irrigation',
       image:
         'https://images.unsplash.com/photo-1554663565-f60b88adfa08?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80',
-      weight: 90,
+      weight: 20,
     },
     {
       name: 'Additions & Remodels',
@@ -55,7 +55,7 @@ const Home = ({ lang }) => {
       name: 'Pool Service',
       image:
         'https://images.pexels.com/photos/261045/pexels-photo-261045.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-      weight: 20,
+      weight: 90,
     },
   ];
 
@@ -163,7 +163,7 @@ const Home = ({ lang }) => {
               honest, kind and professional. I would recommend them to anyone!&rdquo;
             </h3>
             <div className="flex justify-end items-baseline p-2 text-sm text-gray-800">
-              — Paige Wagner, <span className="flex ml-2 items-baseline text-xs">Orlando, FL</span>
+              — Beth Harmon, <span className="flex ml-2 items-baseline text-xs">Orlando, FL</span>
             </div>
           </div>
           <div className="mt-6 text-gray-800 tracking-wide text-justify text-lg select-none">
@@ -191,17 +191,20 @@ const Home = ({ lang }) => {
             </p>
           </div>
           <div className="flex justify-center">
-            <div className="flex flex-col w-full my-6 text-3xl sm:w-48 sm:text-xl">
-              <button
-                type="submit"
-                className="sm:hidden w-full bg-green-500 hover:bg-green-600 text-green-50  p-2 text-center font-extrabold uppercase rounded-lg select-none">
-                Call now!
-              </button>
-              <button
-                type="submit"
-                className="hidden sm:block w-full bg-green-500 hover:bg-green-600 text-green-50  p-2 text-center font-extrabold uppercase rounded-lg select-none">
-                407-801-3447
-              </button>
+            <div className="flex flex-col w-full m-6 text-2xl sm:w-48 sm:text-xl">
+              <form action="tel:407-801-3447">
+                <button
+                  type="submit"
+                  className="sm:hidden w-full bg-green-500 hover:bg-green-600 text-green-50  p-2 text-center font-extrabold uppercase rounded-lg select-none">
+                  Tap to call!
+                </button>
+
+                <button
+                  type="submit"
+                  className="hidden sm:block w-full bg-green-500 hover:bg-green-600 text-green-50  p-2 text-center font-extrabold uppercase rounded-lg select-none">
+                  407-801-3447
+                </button>
+              </form>
             </div>
           </div>
         </div>
