@@ -84,7 +84,7 @@ const Home = ({ lang }) => {
   ];
 
   return (
-    <div className="sm:flex-col sm:w-4/5 ">
+    <div className="sm:flex-col sm:w-full">
       <main>
         <div className="hidden sm:block">
           <Hero />
@@ -135,11 +135,11 @@ const Home = ({ lang }) => {
           </div>
         </div>
 
-        <div className="sm:-mt-6 sm:ml-2">
+        <div className="sm:flex-col sm:justify-center">
           <Categories name="Browse by category" categories={categories} />
           <Categories name="Popular services" categories={popular} />
         </div>
-        <div className="px-3 sm:ml-12 sm:mr-11">
+        <div className="px-14">
           <div id="testimonial" className="mt-8 flex-col bg-white p-4 rounded-lg shadow-md select-none">
             <span className="text-xs text-gray-300 font-semibold uppercase tracking-wider hidden">Testimonial</span>
             <h3 className="font-serif italic text-2xl text-gray-800">

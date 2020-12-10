@@ -6,11 +6,11 @@ const NavBar = () => {
 
   return (
     <React.Fragment>
-      <header className="bg-gray-900 items-center sm:w-1/5 sm:bg-gray-800">
-        <div className="sm:fixed sm:w-1/5 sm:flex-col flex-shrink-0">
-          <div className="sm:flex-col sm:py-1 sm:bg-gray-900">
-            <div id="brand" className="flex justify-between sm:w-full">
-              <div>
+      <header className="bg-gray-900 items-center sm:bg-gray-800 sm:w-70 sm:flex-shrink-0">
+        <div className="sm:fixed sm:flex-col flex-shrink-0">
+          <div className="sm:flex-col sm:py-1 sm:bg-gray-900 ">
+            <div id="brand" className="flex justify-between">
+              <div className="sm:flex-col sm:w-70">
                 <div className="px-4 py-2 flex items-baseline select-none">
                   <span className="text-3xl select-none">🏡</span>
                   <h1 className="ml-2 text-lg items-baseline text-white font-sans tracking-wide font-bold select-none">
@@ -24,6 +24,7 @@ const NavBar = () => {
                   </span>
                 </div>
               </div>
+
               <div id="control" className="flex mr-4 items-center sm:hidden">
                 <button
                   type="button"
@@ -56,12 +57,6 @@ const NavBar = () => {
           </div>
           <div className="sm:-ml-4">
             <Menu isOpen={isOpen} />
-          </div>
-          <div className="flex">{/* <div className="flex-grow bg-black min-h-screen"></div> */}</div>
-          <div className="flex object-none object-bottom justify-center border text-gray-500 text-xs select-none hidden">
-            <div className="flex align-bottom bg-gray-50 object-bottom origin-bottom">
-              23 Users <span className="text-gray-700 ml-1"> — at 23:39:53</span>
-            </div>
           </div>
         </div>
       </header>

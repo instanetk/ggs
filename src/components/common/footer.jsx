@@ -5,18 +5,19 @@ const Footer = () => {
     <footer className="flex flex-col justify-center bg-gray-200 pb-10 sm:py-5">
       <div className="text-xs text-center my-2 ">
         <a href="/terms" className="text-blue-500 px-2 hover:text-blue-700 select-none">
-          Terms of Service
+          Terms
         </a>
         <a href="/privacy" className="text-blue-500 px-2 hover:text-blue-700 select-none">
-          Privacy Policy
+          Privacy
         </a>
         <a href="/legal" className="text-blue-500 px-2 hover:text-blue-700 select-none">
           Legal
         </a>
       </div>
       <div className="text-xs text-center select-none">
-        HomeWorks<sup>&trade;</sup> is a registered trademark <br />
-        by General Global Services, LLC &bull; &copy; {new Date(Date.now()).getFullYear()}
+        HomeWorks<sup>&trade;</sup> is a registered trademark.
+        <br />
+        General Global Services, LLC &bull; &copy; {new Date(Date.now()).getFullYear()}
       </div>
       <div className="text-xs text-center select-none">Made in Orlando, FL</div>
       <div className="text-xs text-center opacity-20 select-none flex justify-center">

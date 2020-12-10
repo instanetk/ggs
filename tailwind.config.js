@@ -14,6 +14,12 @@ module.exports = {
       screens: {
         sm: '770px',
       },
+      spacing: {
+        70: '17.4rem',
+        84: '21rem',
+        88: '22rem',
+        97: '24.2rem',
+      },
     },
   },
   variants: {

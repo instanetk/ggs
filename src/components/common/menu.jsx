@@ -3,7 +3,7 @@ import React from 'react';
 const Menu = ({ isOpen }) => {
   return (
     <div id="submenu" className={`${isOpen ? 'animate-down' : 'hidden'} sm:mt-2 sm:block `}>
-      <div className="w-full flex flex-nowrap justify-between px-4 py-3 bg-gray-800 sm:flex-col sm:flex-shrink-0">
+      <div className="w-full flex flex-nowrap justify-between px-4 py-3 bg-gray-800 sm:bg-transparent sm:flex-col sm:flex-shrink-0">
         <div className="flex flex-col justify-center items-center select-none text-white hover:text-indigo-400 sm:mt-6 sm:flex-row sm:bg-transparent sm:hover:bg-gray-900 sm:rounded-md sm:justify-start sm:ml-2 sm:items-center sm:p-2 cursor-pointer ">
           <svg
             className="h-7 w-7 sm:block flex-shrink-0"
