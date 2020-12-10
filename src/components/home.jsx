@@ -7,31 +7,55 @@ const Home = ({ lang }) => {
   const categories = [
     {
       name: 'Floor Installation',
-      image: 'https://images.pexels.com/photos/276554/pexels-photo-276554.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260',
+      image:
+        'http://nebula.wsimg.com/34f2c373cdaed55592801775e35af063?AccessKeyId=56F7F3315B18AFDB68AF&disposition=0&alloworigin=1',
+      weight: 10,
     },
     {
       name: 'Landscape & Irrigation',
       image:
         'https://images.unsplash.com/photo-1554663565-f60b88adfa08?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80',
+      weight: 90,
     },
     {
       name: 'Additions & Remodels',
       image:
         'https://images.unsplash.com/photo-1542621334-a254cf47733d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80',
+      weight: 30,
     },
     {
       name: 'Painting',
       image:
         'https://images.unsplash.com/photo-1525909002-1b05e0c869d8?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=750&q=80',
+      weight: 40,
     },
     {
       name: 'Cleaning',
       image: 'https://images.pexels.com/photos/4021256/pexels-photo-4021256.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
+      weight: 50,
     },
     {
       name: 'Plumbing',
       image:
         'https://images.unsplash.com/photo-1577678923709-758495cb4497?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1652&q=80',
+      weight: 60,
+    },
+    {
+      name: 'Pavers & Stones',
+      image: 'https://image.shutterstock.com/image-photo/house-manicured-frontyard-garden-water-600w-458022232.jpg',
+      weight: 70,
+    },
+    {
+      name: 'Granite Countertops',
+      image:
+        'https://images.pexels.com/photos/3935337/pexels-photo-3935337.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+      weight: 80,
+    },
+    {
+      name: 'Pool Service',
+      image:
+        'https://images.pexels.com/photos/261045/pexels-photo-261045.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+      weight: 20,
     },
   ];
 
@@ -40,46 +64,55 @@ const Home = ({ lang }) => {
       name: 'Bathroom Remodel',
       image:
         'https://images.unsplash.com/flagged/photo-1600002368144-444430d3f3ca?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80',
+      weight: 30,
     },
     {
       name: 'Kitchen Remodel',
       image:
         'https://images.unsplash.com/photo-1574621974239-00deab554d60?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1599&q=80',
+      weight: 20,
     },
     {
       name: 'Tile Installation',
       image:
-        'https://images.unsplash.com/photo-1599209250635-26c180f28419?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80',
+        'https://images.pexels.com/photos/276528/pexels-photo-276528.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+      weight: 10,
     },
     {
       name: 'Hardwood & Laminate Floors',
       image:
         'https://images.unsplash.com/photo-1560185893-a55cbc8c57e8?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80',
+      weight: 40,
     },
     {
       name: 'Carpet Installation',
       image:
         'https://images.pexels.com/photos/5872378/pexels-photo-5872378.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+      weight: 50,
     },
     {
       name: 'Carpet Cleaning',
       image:
         'https://images.pexels.com/photos/38325/vacuum-cleaner-carpet-cleaner-housework-housekeeping-38325.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+      weight: 60,
     },
     {
       name: 'Handyman Services',
       image:
         'https://images.unsplash.com/photo-1509453721491-c3af5961df76?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80',
+      weight: 70,
     },
     {
       name: 'Minor Electrical',
       image:
         'https://images.unsplash.com/photo-1462041866295-e4af004a32ef?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1566&q=80',
+      weight: 80,
     },
     {
       name: 'One-Time Cleaning',
       image:
         'https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80',
+      weight: 90,
     },
   ];
 
@@ -115,10 +148,10 @@ const Home = ({ lang }) => {
             </div>
           </div>
         </div>
-        <div className="-mt-8">
+        <div className="-mt-14 py-1 sm:-mt-28">
           <Hero />
         </div>
-        <div className="sm:flex-col sm:justify-center">
+        <div className="sm:flex-col sm:justify-center sm:px-14">
           <Categories name="Browse by category" categories={categories} />
           <Categories name="Popular services" categories={popular} />
         </div>
@@ -161,8 +194,13 @@ const Home = ({ lang }) => {
             <div className="flex flex-col w-full my-6 text-3xl sm:w-48 sm:text-xl">
               <button
                 type="submit"
-                className="w-full bg-green-500 hover:bg-green-600 text-green-50  p-2 text-center font-extrabold uppercase rounded-lg select-none">
+                className="sm:hidden w-full bg-green-500 hover:bg-green-600 text-green-50  p-2 text-center font-extrabold uppercase rounded-lg select-none">
                 Call now!
+              </button>
+              <button
+                type="submit"
+                className="hidden sm:block w-full bg-green-500 hover:bg-green-600 text-green-50  p-2 text-center font-extrabold uppercase rounded-lg select-none">
+                407-801-3447
               </button>
             </div>
           </div>

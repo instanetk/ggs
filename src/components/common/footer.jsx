@@ -15,8 +15,9 @@ const Footer = () => {
         </a>
       </div>
       <div className="text-xs text-center select-none">
-        HomeWorks<sup>&trade;</sup> is a registered trademark.
-        <br />
+        <span className="hidden">
+          HomeWorks<sup>&trade;</sup> is a registered trademark.
+        </span>
         General Global Services, LLC &bull; &copy; {new Date(Date.now()).getFullYear()}
       </div>
       <div className="text-xs text-center select-none">Made in Orlando, FL</div>
