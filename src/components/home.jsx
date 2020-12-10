@@ -86,11 +86,8 @@ const Home = ({ lang }) => {
   return (
     <div className="sm:flex-col sm:w-full">
       <main>
-        <div className="hidden sm:block">
-          <Hero />
-        </div>
         <div className="p-4 sm:flex sm:justify-center">
-          <div className="sm:w-2/3">
+          <div className="">
             <div className="flex justify-between sm:hidden">
               <div className="flex items-center bg-yellow-300 rounded-sm px-1">
                 <span className="ml-1 text-xs uppercase text-yellow-800 font-bold select-none">
@@ -116,30 +113,16 @@ const Home = ({ lang }) => {
                 </span>
               </div>
             </div>
-            <div className="relative mt-2 select-none sm:hidden">
-              <img
-                alt=""
-                className="rounded-sm shadow"
-                src="https://images.unsplash.com/photo-1589530006797-d67347f18caa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80"
-              />
-            </div>
-            <div className="relative px-2 sm:w-1/2">
-              <div className="-mt-16 rounded-md sm:hidden">
-                <h2 className="text-white leading-6 px-2 py-2 text-2xl font-extrabold select-none">
-                  {lang === 'es'
-                    ? 'Proyectos del hogar y servicios de remodelación'
-                    : 'Home projects and remodeling services'}
-                </h2>
-              </div>
-            </div>
           </div>
         </div>
-
+        <div className="-mt-8">
+          <Hero />
+        </div>
         <div className="sm:flex-col sm:justify-center">
           <Categories name="Browse by category" categories={categories} />
           <Categories name="Popular services" categories={popular} />
         </div>
-        <div className="px-14">
+        <div className="px-4 sm:px-14">
           <div id="testimonial" className="mt-8 flex-col bg-white p-4 rounded-lg shadow-md select-none">
             <span className="text-xs text-gray-300 font-semibold uppercase tracking-wider hidden">Testimonial</span>
             <h3 className="font-serif italic text-2xl text-gray-800">
