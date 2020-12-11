@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import Menu from './menu';
 
 const NavBar = () => {
@@ -10,20 +11,22 @@ const NavBar = () => {
         <div className="sm:fixed sm:flex-col flex-shrink-0">
           <div className="sm:flex-col sm:py-1 sm:bg-gray-900 ">
             <div id="brand" className="flex justify-between cursor-pointer">
-              <div className="sm:flex-col sm:w-70">
-                <div className="px-4 py-2 flex items-baseline select-none">
-                  <span className="text-3xl select-none">🏡</span>
-                  <h1 className="ml-2 text-lg items-baseline text-white font-sans tracking-wide font-bold select-none">
-                    HomeWorks
-                  </h1>
-                  <sup className="font-light text-gray-300 px-1">&trade;</sup>
+              <NavLink to="/">
+                <div className="sm:flex-col sm:w-70">
+                  <div className="px-4 py-2 flex items-baseline select-none">
+                    <span className="text-3xl select-none">🏡</span>
+                    <h1 className="ml-2 text-lg items-baseline text-white font-sans tracking-wide font-bold select-none">
+                      HomeWorks
+                    </h1>
+                    <sup className="font-light text-gray-300 px-1">&trade;</sup>
+                  </div>
+                  <div className="flex-col ml-7 sm:ml-6 -mt-4 pb-2 sm:-mt-4">
+                    <span className="text-xs text-gray-500 font-normal uppercase select-none">
+                      By General Global Services, LLC
+                    </span>
+                  </div>
                 </div>
-                <div className="flex-col ml-7 sm:ml-6 -mt-4 pb-2 sm:-mt-4">
-                  <span className="text-xs text-gray-500 font-normal uppercase select-none">
-                    By General Global Services, LLC
-                  </span>
-                </div>
-              </div>
+              </NavLink>
 
               <div id="control" className="flex mr-4 items-center sm:hidden">
                 <button
