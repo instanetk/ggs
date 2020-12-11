@@ -1,4 +1,5 @@
 import React from 'react';
+import { Route, Redirect, Switch } from 'react-router-dom';
 import detectBrowserLanguage from 'detect-browser-language';
 import NavBar from './components/common/navBar.jsx';
 import Home from './components/home';

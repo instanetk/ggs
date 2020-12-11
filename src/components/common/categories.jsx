@@ -11,7 +11,7 @@ const Categories = ({ name, categories }) => {
     <div className="mt-6">
       <h3 className="p-4 text-gray-700 font-bold text-md uppercase select-none sm:-ml-4">{useName}</h3>
       <div className="overflow-x-auto">
-        <div className="-ml-4 inline-flex sm:flex sm:flex-wrap sm:flex-grow justify-between">
+        <div className="-ml-4 inline-flex sm:flex sm:flex-wrap sm:flex-grow">
           {useCat
             .sort(function (a, b) {
               return a.weight - b.weight;

@@ -9,7 +9,7 @@ const NavBar = () => {
       <header className="bg-gray-900 items-center sm:bg-gray-800 sm:w-70 sm:flex-shrink-0">
         <div className="sm:fixed sm:flex-col flex-shrink-0">
           <div className="sm:flex-col sm:py-1 sm:bg-gray-900 ">
-            <div id="brand" className="flex justify-between">
+            <div id="brand" className="flex justify-between cursor-pointer">
               <div className="sm:flex-col sm:w-70">
                 <div className="px-4 py-2 flex items-baseline select-none">
                   <span className="text-3xl select-none">🏡</span>
