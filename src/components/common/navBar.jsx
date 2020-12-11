@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Menu from './menu';
 
 const NavBar = () => {
@@ -11,7 +11,7 @@ const NavBar = () => {
         <div className="sm:fixed sm:flex-col flex-shrink-0">
           <div className="sm:flex-col sm:py-1 sm:bg-gray-900 ">
             <div id="brand" className="flex justify-between cursor-pointer">
-              <NavLink to="/">
+              <Link to="/">
                 <div className="sm:flex-col sm:w-70">
                   <div className="px-4 py-2 flex items-baseline select-none">
                     <span className="text-3xl select-none">🏡</span>
@@ -26,7 +26,7 @@ const NavBar = () => {
                     </span>
                   </div>
                 </div>
-              </NavLink>
+              </Link>
 
               <div id="control" className="flex mr-4 items-center sm:hidden">
                 <button

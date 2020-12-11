@@ -3,7 +3,8 @@ import { Route, Redirect, Switch } from 'react-router-dom';
 import detectBrowserLanguage from 'detect-browser-language';
 import NavBar from './components/common/navBar.jsx';
 import Home from './components/home';
-import Login from './components/login';
+import Login from './components/login/login';
+import NotFound from './components/notFound';
 
 const App = () => {
   // Returns a string: 'en' or 'es'
@@ -15,7 +16,9 @@ const App = () => {
       <NavBar />
       <Switch>
         <Route path="/login" component={Login} />
-        <Route path="/" render={(props) => <Home {...props} lang={lang} />} />
+        <Route path="/not-found" component={NotFound} />
+        <Route path="/" exact render={(props) => <Home {...props} lang={lang} />} />
+        <Redirect to="/not-found" />
       </Switch>
     </div>
   );

@@ -84,7 +84,7 @@ const MenuItem = ({ label }) => {
   // };
 
   return (
-    <div className="flex flex-col justify-center items-center select-none text-white hover:text-indigo-400 sm:mt-6 sm:-mr-2 sm:flex-row sm:bg-transparent sm:hover:bg-gray-900 sm:rounded-md sm:justify-start sm:ml-2 sm:items-center sm:p-2 cursor-pointer ">
+    <React.Fragment>
       {ReactHtmlParser(icon(label))}
       <span
         className={`mt-2 text-xs uppercase opacity-80 font-semibold tracking-wider content-center sm:mt-0 ${
@@ -92,7 +92,7 @@ const MenuItem = ({ label }) => {
         } sm:items-center sm:text-base sm:normal-case`}>
         {label}
       </span>
-    </div>
+    </React.Fragment>
   );
 };
 

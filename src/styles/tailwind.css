@@ -27,3 +27,11 @@ input[type='checkbox'] {
 input[type='radio'] {
   @apply h-6 w-6 bg-gray-900 border-none text-indigo-500;
 }
+
+.menu {
+  @apply flex flex-col justify-center items-center select-none text-white hover:text-indigo-400 sm:mt-6 sm:-mr-2 sm:flex-row sm:hover:bg-gray-900 sm:rounded-md sm:justify-start sm:ml-2 sm:items-center sm:p-2 cursor-pointer;
+}
+
+.active {
+  @apply text-indigo-400 sm:mt-6 sm:-mr-2 sm:flex-row sm:bg-gray-900 sm:rounded-md sm:justify-start sm:ml-2 sm:items-center sm:p-2;
+}
