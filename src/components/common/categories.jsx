@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Category from './categoryItem';
 
-const Categories = ({ name, categories }) => {
+const Categories = ({ name, slug, categories }) => {
   // eslint-disable-next-line
   const [useName, setName] = useState(name);
   // eslint-disable-next-line
@@ -17,7 +17,7 @@ const Categories = ({ name, categories }) => {
               return a.weight - b.weight;
             })
             .map((cat) => {
-              return <Category name={cat.name} image={cat.image} />;
+              return <Category name={cat.name} slug={slug} image={cat.image} />;
             })}
         </div>
       </div>

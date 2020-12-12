@@ -1,12 +1,12 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-const Category = ({ name, image }) => {
+const Category = ({ name, slug, image }) => {
   //regex: match ' & ' - any ampersand wrapped by single spaces or a single space ' '.
-  const nav = name.toLowerCase().replace(/\s&\s|\s/g, '-');
+  const route = slug + '/' + name.toLowerCase().replace(/\s&\s|\s/g, '-');
   return (
     <div className="w-64 text-center ml-4 flex-shrink-0 px-4 py-0 sm:pb-8 select-none sm:w-64 sm:ml-0 cursor-pointer ">
-      <NavLink to={nav}>
+      <Link to={route}>
         <div className="flex flex-col flex-grow justify-center items-center select-none">
           <img
             alt={name}
@@ -17,7 +17,7 @@ const Category = ({ name, image }) => {
             {name}
           </span>
         </div>
-      </NavLink>
+      </Link>
     </div>
   );
 };

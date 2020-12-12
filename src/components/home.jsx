@@ -2,7 +2,6 @@ import React from 'react';
 import Categories from './common/categories';
 import Hero from './common/hero';
 import Footer from './common/footer';
-import Pavers from '../images/shutterstock_458022232.jpg';
 
 const Home = ({ lang }) => {
   const categories = [
@@ -49,7 +48,7 @@ const Home = ({ lang }) => {
     },
     {
       name: 'Pavers & Stones',
-      image: { Pavers },
+      image: 'http://localhost:3000/static/media/shutterstock_458022232.cf1e73e9.jpg',
       weight: 70,
       featured: true,
     },
@@ -176,8 +175,8 @@ const Home = ({ lang }) => {
           <Hero />
         </div>
         <div className="sm:flex-col sm:justify-center sm:px-14">
-          <Categories name="Browse by category" categories={categories} />
-          <Categories name="Popular services" categories={popular} />
+          <Categories name="Browse by category" slug="services" categories={categories} />
+          <Categories name="Popular services" slug="schedule" categories={popular} />
         </div>
         <div className="px-4 sm:px-14">
           <div id="testimonial" className="mt-8 flex-col bg-white p-4 rounded-lg shadow-md select-none">
