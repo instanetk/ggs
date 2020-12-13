@@ -2,6 +2,7 @@ import React from 'react';
 import { Route, Redirect, Switch } from 'react-router-dom';
 import detectBrowserLanguage from 'detect-browser-language';
 import NavBar from './components/common/navBar.jsx';
+import Footer from './components/common/footer';
 import Home from './components/home';
 import Schedule from './components/schedule';
 import Services from './components/services';
@@ -17,15 +18,18 @@ const App = () => {
   return (
     <div id="App" className="min-h-screen antialiasing bg-gray-100 sm:flex">
       <NavBar />
-      <Switch>
-        <Route path="/schedule" component={Schedule} />
-        <Route path="/services" component={Services} />
-        <Route path="/pinboard" component={Pinboard} />
-        <Route path="/login" component={Login} />
-        <Route path="/not-found" component={NotFound} />
-        <Route path="/" exact render={(props) => <Home {...props} lang={lang} />} />
-        <Redirect to="/not-found" />
-      </Switch>
+      <div className="sm:flex-col sm:w-full">
+        <Switch>
+          <Route path="/schedule" component={Schedule} />
+          <Route path="/services" component={Services} />
+          <Route path="/pinboard" component={Pinboard} />
+          <Route path="/login" component={Login} />
+          <Route path="/not-found" component={NotFound} />
+          <Route path="/" exact render={(props) => <Home {...props} lang={lang} />} />
+          <Redirect to="/not-found" />
+        </Switch>
+        <Footer />
+      </div>
     </div>
   );
 };

@@ -59,7 +59,7 @@ const NavBar = () => {
             </div>
           </div>
           <div className="sm:-ml-4">
-            <Menu isOpen={isOpen} />
+            <Menu isOpen={isOpen} setOpen={setOpen} />
           </div>
         </div>
       </header>

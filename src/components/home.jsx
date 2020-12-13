@@ -1,7 +1,6 @@
 import React from 'react';
 import Categories from './common/categories';
 import Hero from './common/hero';
-import Footer from './common/footer';
 
 const Home = ({ lang }) => {
   const categories = [
@@ -140,100 +139,97 @@ const Home = ({ lang }) => {
   ];
 
   return (
-    <div className="sm:flex-col sm:w-full">
-      <main>
-        <div className="p-4 sm:flex sm:justify-center">
-          <div className="">
-            <div className="flex justify-between sm:hidden">
-              <div className="flex items-center bg-yellow-300 rounded-sm px-1">
-                <span className="ml-1 text-xs uppercase text-yellow-800 font-bold select-none">
-                  {lang === 'es' ? '¡Estimados Gratis!' : 'Free Estimates!'}
-                </span>
-              </div>
-              <div className="flex items-center bg-green-300 rounded-sm px-1">
-                <svg
-                  className="w-4 h-4 text-green-600"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor">
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"
-                  />
-                </svg>
-                <span className="ml-1 text-xs uppercase text-green-700 font-bold select-none">
-                  {lang === 'es' ? 'Recibe $40' : 'Get $40'}
-                </span>
-              </div>
+    <main>
+      <div className="p-4 sm:flex sm:justify-center">
+        <div className="">
+          <div className="flex justify-between sm:hidden">
+            <div className="flex items-center bg-yellow-300 rounded-sm px-1">
+              <span className="ml-1 text-xs uppercase text-yellow-800 font-bold select-none">
+                {lang === 'es' ? '¡Estimados Gratis!' : 'Free Estimates!'}
+              </span>
+            </div>
+            <div className="flex items-center bg-green-300 rounded-sm px-1">
+              <svg
+                className="w-4 h-4 text-green-600"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"
+                />
+              </svg>
+              <span className="ml-1 text-xs uppercase text-green-700 font-bold select-none">
+                {lang === 'es' ? 'Recibe $40' : 'Get $40'}
+              </span>
             </div>
           </div>
         </div>
-        <div className="-mt-14 py-1 sm:-mt-28">
-          <Hero />
-        </div>
-        <div className="sm:flex-col sm:justify-center sm:px-14">
-          <Categories name="Browse by category" slug="services" categories={categories} />
-          <Categories name="Popular services" slug="schedule" categories={popular} />
-        </div>
-        <div className="px-4 sm:px-14">
-          <div id="testimonial" className="mt-8 flex-col bg-white p-4 rounded-lg shadow-md select-none">
-            <span className="text-xs text-gray-300 font-semibold uppercase tracking-wider hidden">Testimonial</span>
-            <h3 className="font-serif italic text-2xl text-gray-800">
-              &ldquo; My home feels like new after General Global Services renovated my kitchen and bathrooms. They were
-              honest, kind and professional. I would recommend them to anyone!&rdquo;
-            </h3>
-            <div className="flex justify-end items-baseline p-2 text-sm text-gray-800">
-              — Beth Harmon, <span className="flex ml-2 items-baseline text-xs">Orlando, FL</span>
-            </div>
+      </div>
+      <div className="-mt-14 py-1 sm:-mt-28">
+        <Hero />
+      </div>
+      <div className="sm:flex-col sm:justify-center sm:px-14">
+        <Categories name="Browse by category" slug="services" categories={categories} />
+        <Categories name="Popular services" slug="schedule" categories={popular} />
+      </div>
+      <div className="px-4 sm:px-14">
+        <div id="testimonial" className="mt-8 flex-col bg-white p-4 rounded-lg shadow-md select-none">
+          <span className="text-xs text-gray-300 font-semibold uppercase tracking-wider hidden">Testimonial</span>
+          <h3 className="font-serif italic text-2xl text-gray-800">
+            &ldquo; My home feels like new after General Global Services renovated my kitchen and bathrooms. They were
+            honest, kind and professional. I would recommend them to anyone!&rdquo;
+          </h3>
+          <div className="flex justify-end items-baseline p-2 text-sm text-gray-800">
+            — Beth Harmon, <span className="flex ml-2 items-baseline text-xs">Orlando, FL</span>
           </div>
-          <div className="mt-6 text-gray-800 tracking-wide text-justify text-lg select-none">
-            <p className="mt-2 flex-wrap">
-              For over a decade <span className="font-bold">General Global Services</span> has brought professional
-              remodeling services to our customers in the Central Florida area. Over the years, we’ve had the privilege
-              of serving hundreds of family homes, businesses and customers, ranging from tile and flooring
-              installation, bathroom remodeling, landscaping, irrigation, gardening and more...
-            </p>
-            <p className="mt-2">
-              Our quality of service has always been superior, but our craft has evolved. We are passionate to share our
-              knowledge and expertise in the field to help our customers make cost effective decisions and create the
-              beautiful long-lasting results they've envisioned — using only state-of-the-art tools, premium quality
-              materials and the best practices in the industry.
-            </p>
-            <p className="mt-2">
-              Our philosophy remains at the forefront of our work and growth. To go above and beyond our customer
-              expectations and earn their valued testimony and referrals. We are grateful to all our customers who have
-              referred us to their friends and family. We promise to deliver our best work and keep the good word you
-              have put for us!
-            </p>
-            <p className="mt-2">
-              Let us earn your business by scheduling a phone call for a free estimate, or choose a job type from the
-              categories above to <span className="font-medium">begin now</span>.
-            </p>
-          </div>
-          <div className="flex justify-center">
-            <div className="flex flex-col w-full m-6 text-2xl sm:w-48 sm:text-xl">
-              <form action="tel:407-801-3447">
-                <button
-                  type="submit"
-                  className="sm:hidden w-full bg-green-500 hover:bg-green-600 text-green-50  p-2 text-center font-extrabold uppercase rounded-lg select-none">
-                  Tap to call!
-                </button>
+        </div>
+        <div className="mt-6 text-gray-800 tracking-wide text-justify text-lg select-none">
+          <p className="mt-2 flex-wrap">
+            For over a decade <span className="font-bold">General Global Services</span> has brought professional
+            remodeling services to our customers in the Central Florida area. Over the years, we’ve had the privilege of
+            serving hundreds of family homes, businesses and customers, ranging from tile and flooring installation,
+            bathroom remodeling, landscaping, irrigation, gardening and more...
+          </p>
+          <p className="mt-2">
+            Our quality of service has always been superior, but our craft has evolved. We are passionate to share our
+            knowledge and expertise in the field to help our customers make cost effective decisions and create the
+            beautiful long-lasting results they've envisioned — using only state-of-the-art tools, premium quality
+            materials and the best practices in the industry.
+          </p>
+          <p className="mt-2">
+            Our philosophy remains at the forefront of our work and growth. To go above and beyond our customer
+            expectations and earn their valued testimony and referrals. We are grateful to all our customers who have
+            referred us to their friends and family. We promise to deliver our best work and keep the good word you have
+            put for us!
+          </p>
+          <p className="mt-2">
+            Let us earn your business by scheduling a phone call for a free estimate, or choose a job type from the
+            categories above to <span className="font-medium">begin now</span>.
+          </p>
+        </div>
+        <div className="flex justify-center">
+          <div className="flex flex-col w-full m-6 text-2xl sm:w-48 sm:text-xl">
+            <form action="tel:407-801-3447">
+              <button
+                type="submit"
+                className="sm:hidden w-full bg-green-500 hover:bg-green-600 text-green-50  p-2 text-center font-extrabold uppercase rounded-lg select-none">
+                Tap to call!
+              </button>
 
-                <button
-                  type="submit"
-                  className="hidden sm:block w-full bg-green-500 hover:bg-green-600 text-green-50  p-2 text-center font-extrabold uppercase rounded-lg select-none">
-                  407-801-3447
-                </button>
-              </form>
-            </div>
+              <button
+                type="submit"
+                className="hidden sm:block w-full bg-green-500 hover:bg-green-600 text-green-50  p-2 text-center font-extrabold uppercase rounded-lg select-none">
+                407-801-3447
+              </button>
+            </form>
           </div>
         </div>
-      </main>
-      <Footer />
-    </div>
+      </div>
+    </main>
   );
 };
 
