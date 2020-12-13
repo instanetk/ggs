@@ -5,7 +5,7 @@ import NavBar from './components/common/navBar.jsx';
 import Home from './components/home';
 import Schedule from './components/schedule';
 import Services from './components/services';
-import Chat from './components/chat';
+import Pinboard from './components/pinboard';
 import Login from './components/login';
 import NotFound from './components/notFound';
 
@@ -20,7 +20,7 @@ const App = () => {
       <Switch>
         <Route path="/schedule" component={Schedule} />
         <Route path="/services" component={Services} />
-        <Route path="/chat" component={Chat} />
+        <Route path="/pinboard" component={Pinboard} />
         <Route path="/login" component={Login} />
         <Route path="/not-found" component={NotFound} />
         <Route path="/" exact render={(props) => <Home {...props} lang={lang} />} />

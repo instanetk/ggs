@@ -12,8 +12,8 @@ const Menu = ({ isOpen }) => {
         <NavLink className="menu" to="/schedule">
           <MenuItem label="Schedule" />
         </NavLink>
-        <NavLink className="menu" to="chat">
-          <MenuItem label="Chat" />
+        <NavLink className="menu" to="pinboard">
+          <MenuItem label="Pinboard" />
         </NavLink>
         <NavLink className="menu" to="login">
           <MenuItem label="Log in" />
