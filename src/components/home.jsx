@@ -47,7 +47,7 @@ const Home = ({ lang }) => {
     },
     {
       name: 'Pavers & Stones',
-      image: 'http://localhost:3000/static/media/shutterstock_458022232.cf1e73e9.jpg',
+      image: 'https://www.carolinaartificiallawns.com/wp-content/uploads/2017/10/shutterstock_458022232.jpg',
       weight: 70,
       featured: true,
     },

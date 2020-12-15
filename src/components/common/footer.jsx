@@ -23,8 +23,8 @@ const Footer = () => {
       <div className="text-xs text-center select-none">Made in Orlando, FL</div>
       <div className="text-xs text-center opacity-20 select-none flex justify-center">
         <span className="italic font-serif mr-1">(x)</span>wavefunction
-        <span className="hidden flex-col text-xs text-white bg-black opacity-20 rounded-sm px-1" title="we make apps">
-          we make apps
+        <span className="hidden flex-col text-xs text-white bg-black opacity-20 rounded-sm px-1" title="app by">
+          app by
         </span>
       </div>
     </footer>

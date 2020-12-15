@@ -1,59 +1,78 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
 import { Link } from 'react-router-dom';
-import img1 from '../images/shutterstock_1100648855.jpg';
-import img2 from '../images/stock-photo-real-photo-of-a-pink-armchair-standing-on-a-rug-and-under-a-lamp-in-spacious-living-room-interior-1105805627.jpg';
+import { login } from '../services/authService';
+import bgimg from '../images/shutterstock_1100648855.jpg';
 
-const Login = () => {
-  const [useSlogan, setSlogan] = useState([
-    'Home is waiting...',
-    'Home awaits...',
-    'Home is where the heart is...',
-    "There's no place like home...",
-    'Mi casa es tu casa...',
-    'Home sweet home!',
-    'Hogar dulce hogar...',
-  ]);
+const Login = ({ quote }) => {
+  const [form, setState] = useState({ email: '', password: '' });
+  const [error, setError] = useState({});
 
-  function getRandomInt(max) {
-    return Math.floor(Math.random() * Math.floor(max));
-  }
-  // Choose random background image
-  const bgRandom = () => {
-    // List imported images in this array
-    let array = [img1];
-    // Generates a number between 0 and max-1
-    let chosen = getRandomInt(1);
-    return array[chosen];
+  const updateField = (e) => {
+    setState({
+      ...form,
+      [e.target.name]: e.target.value,
+    });
   };
 
-  const slogan = () => {
-    let chosen = getRandomInt(7);
-    return useSlogan[chosen];
+  const doSubmit = async (e) => {
+    try {
+      e.preventDefault();
+
+      await login(form.email, form.password);
+    } catch (ex) {
+      if (ex.response && ex.response.status === 400) {
+        const errors = { ...error };
+        errors.username = ex.response.data;
+        setError(errors);
+        toast('🦊 ' + errors.username, {
+          position: 'top-right',
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
+      }
+    }
   };
 
-  let saying = slogan();
   return (
     <main
       className="flex justify-center h-screen bg-cover bg-center sm:items-center"
       style={{
-        backgroundImage: 'url(' + bgRandom() + ')',
+        backgroundImage: 'url(' + bgimg + ')',
       }}>
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
       <div className="w-full items-stretch px-4 mt-10 sm:mt-0">
         <div className="flex justify-center mx-auto">
           <div className="w-full sm:w-96 px-4">
             <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-white border-0">
               <div className="rounded-t mb-0 px-6 py-6"></div>
               <div className="flex-auto px-4 lg:px-10 py-10 pt-0">
-                <div className="text-gray-500 text-center mb-3 cursor-pointer" onClick={() => (saying = 'Hi!')}>
-                  <small className="font-serif italic text-lg">{saying}</small>
+                <div className="text-gray-500 text-center mb-3 select-none">
+                  <small className="font-serif italic text-lg">{quote}</small>
                 </div>
-                <form action="register">
+                <form onSubmit={doSubmit}>
                   <div className="relative w-full mb-3">
                     <label className="block uppercase text-gray-700 text-xs font-bold mb-2" htmlFor="grid-password">
                       Email
                     </label>
                     <input
+                      onChange={updateField}
                       type="email"
+                      name="email"
                       className="px-3 py-3 placeholder-gray-200 text-gray-200 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full"
                       placeholder="Email"
                       style={{ transition: 'all .15s ease' }}
@@ -65,7 +84,9 @@ const Login = () => {
                       Password
                     </label>
                     <input
+                      onChange={updateField}
                       type="password"
+                      name="password"
                       className="px-3 py-3 placeholder-gray-200 text-gray-100 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full"
                       placeholder="Password"
                       style={{ transition: 'all .15s ease' }}
