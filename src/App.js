@@ -9,6 +9,7 @@ import Schedule from './components/schedule';
 import Services from './components/services';
 import Pinboard from './components/pinboard';
 import Login from './components/login';
+import Registration from './components/registration';
 import NotFound from './components/notFound';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -50,6 +51,7 @@ const App = () => {
           <Route path="/services" component={Services} />
           <Route path="/pinboard" component={Pinboard} />
           <Route path="/login" render={(props) => <Login {...props} quote={quote} />} />
+          <Route path="/register" component={Registration} />
           <Route path="/not-found" component={NotFound} />
           <Route path="/" exact render={(props) => <Home {...props} lang={lang} />} />
           <Redirect to="/not-found" />
