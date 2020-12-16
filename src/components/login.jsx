@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import { ToastContainer, toast } from 'react-toastify';
+import React, { useState } from 'react';
+import { toast } from 'react-toastify';
 import { Link } from 'react-router-dom';
 import { login } from '../services/authService';
 import bgimg from '../images/shutterstock_1100648855.jpg';
 
-const Login = ({ quote }) => {
+const Login = ({ quote, history }) => {
   const [form, setState] = useState({ email: '', password: '' });
   const [error, setError] = useState({});
 
@@ -17,23 +17,22 @@ const Login = ({ quote }) => {
 
   const doSubmit = async (e) => {
     try {
+      // This prevents a window reload (!)
       e.preventDefault();
-
-      await login(form.email, form.password);
+      // This is the server's response to the auth route
+      const { data: jwt } = await login(form.email, form.password);
+      // Save token on browser
+      localStorage.setItem('token', jwt);
+      // Redirect user
+      history.push('/');
     } catch (ex) {
       if (ex.response && ex.response.status === 400) {
         const errors = { ...error };
+        // If errors, set the error state to the response data.
         errors.username = ex.response.data;
         setError(errors);
-        toast('🦊 ' + errors.username, {
-          position: 'top-right',
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-        });
+        // This error will be displayed to the client.
+        toast('🦊 ' + errors.username);
       }
     }
   };
@@ -44,17 +43,6 @@ const Login = ({ quote }) => {
       style={{
         backgroundImage: 'url(' + bgimg + ')',
       }}>
-      <ToastContainer
-        position="top-center"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-      />
       <div className="w-full items-stretch px-4 mt-10 sm:mt-0">
         <div className="flex justify-center mx-auto">
           <div className="w-full sm:w-96 px-4">

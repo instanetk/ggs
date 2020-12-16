@@ -55,5 +55,7 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "image-webpack-loader": "^7.0.1"
+  }
 }
