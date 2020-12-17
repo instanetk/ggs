@@ -51,15 +51,15 @@ const Registration = ({ history }) => {
   };
   return (
     <main
-      className="flex justify-center bg-cover bg-center sm:items-center"
+      className="flex justify-center sm:h-screen bg-cover bg-center sm:items-center"
       style={{
         backgroundImage: 'url(' + bgimg + ')',
       }}>
       <div className="w-full items-stretch px-4 sm:mt-0">
         <div className="flex justify-center mx-auto">
-          <div className="mt-10 w-full sm:w-96 px-2">
+          <div className="mt-10 w-full sm:w-7/12 px-4">
             <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-white border-0">
-              <div className="rounded-t px-6 py-6"></div>
+              <div className="rounded-t mb-0 px-6 py-6"></div>
               <div className="flex-auto px-4 lg:px-10 py-0 pt-0">
                 <div className="text-gray-500 text-center mb-3 select-none">
                   <small className="font-serif italic text-lg">We're glad to have you here...</small>

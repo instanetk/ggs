@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { toast } from 'react-toastify';
 import { Link } from 'react-router-dom';
 import { login } from '../services/authService';
+import Quote from './common/quote';
 import bgimg from '../images/shutterstock_1100648855.jpg';
 
 const Login = ({ quote, history }) => {
@@ -50,7 +51,7 @@ const Login = ({ quote, history }) => {
               <div className="rounded-t mb-0 px-6 py-6"></div>
               <div className="flex-auto px-4 lg:px-10 py-10 pt-0">
                 <div className="text-gray-500 text-center mb-3 select-none">
-                  <small className="font-serif italic text-lg">{quote}</small>
+                  <Quote />
                 </div>
                 <form onSubmit={doSubmit}>
                   <div className="relative w-full mb-3">

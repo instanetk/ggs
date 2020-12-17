@@ -184,27 +184,11 @@ const Home = () => {
           </div>
         </div>
         <div className="mt-6 text-gray-800 tracking-wide text-justify text-lg select-none">
-          <p className="mt-2 flex-wrap">
-            For over a decade <span className="font-bold">General Global Services</span> has brought professional
-            remodeling services to our customers in the Central Florida area. Over the years, we’ve had the privilege of
-            serving hundreds of family homes, businesses and customers, ranging from tile and flooring installation,
-            bathroom remodeling, landscaping, irrigation, gardening and more...
-          </p>
+          <p className="mt-2 flex-wrap">{t('home.p.1')}</p>
+          <p className="mt-2">{t('home.p.2')}</p>
+          <p className="mt-2">{t('home.p.3')}</p>
           <p className="mt-2">
-            Our quality of service has always been superior, but our craft has evolved. We are passionate to share our
-            knowledge and expertise in the field to help our customers make cost effective decisions and create the
-            beautiful long-lasting results they've envisioned — using only state-of-the-art tools, premium quality
-            materials and the best practices in the industry.
-          </p>
-          <p className="mt-2">
-            Our philosophy remains at the forefront of our work and growth. To go above and beyond our customer
-            expectations and earn their valued testimony and referrals. We are grateful to all our customers who have
-            referred us to their friends and family. We promise to deliver our best work and keep the good word you have
-            put for us!
-          </p>
-          <p className="mt-2">
-            Let us earn your business by scheduling a phone call for a free estimate, or choose a job type from the
-            categories above to <span className="font-medium">begin now</span>.
+            {t('home.p.4')} <span className="font-medium">{t('home.p.4-span')}</span>.
           </p>
         </div>
         <div className="flex justify-center">

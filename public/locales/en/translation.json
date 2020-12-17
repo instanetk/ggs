@@ -11,6 +11,13 @@
     "category": "Browse by category",
     "services": "Popular services",
     "testimonial": "My home feels like new after General Global Services renovated my kitchen and bathrooms. They were honest, kind and professional. I would recommend them to anyone!",
+    "p": {
+      "1": "For over a decade General Global Services has brought professional remodeling services to our customers in the Central Florida area. Over the years, we’ve had the privilege of serving hundreds of family homes, businesses and customers, ranging from tile and flooring installation, bathroom remodeling, landscaping, irrigation, gardening and more...",
+      "2": "Our quality of service has always been superior, but our craft has evolved. We are passionate to share our knowledge and expertise in the field to help our customers make cost effective decisions and create the beautiful long-lasting results they've envisioned — using only state-of-the-art tools, premium quality materials and the best practices in the industry.",
+      "3": "Our philosophy remains at the forefront of our work and growth. To go above and beyond our customer expectations and earn their valued testimony and referrals. We are grateful to all our customers who have referred us to their friends and family. We promise to deliver our best work and keep the good word you have put for us!",
+      "4": "Let us earn your business by scheduling a phone call for a free estimate, or choose a job type from the categories above to",
+      "4-span": "begin now"
+    },
     "button": "Tap to call"
   },
   "menu": {

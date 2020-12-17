@@ -13,28 +13,6 @@ import NotFound from './components/notFound';
 import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {
-  // Login page quote generator
-  const quotes = [
-    'Home is waiting...',
-    'Home awaits...',
-    'Home is where the heart is...',
-    "There's no place like home...",
-    'Mi casa es tu casa...',
-    'Home sweet home!',
-    'Hogar dulce hogar...',
-    'Welcome home!',
-  ];
-
-  const slogan = () => {
-    function getRandomInt(max) {
-      return Math.floor(Math.random() * Math.floor(max));
-    }
-    let chosen = getRandomInt(8);
-    return quotes[chosen];
-  };
-
-  let quote = slogan();
-
   return (
     <div id="App" className="min-h-screen antialiasing bg-gray-100 sm:flex">
       <ToastContainer />
@@ -44,10 +22,10 @@ const App = () => {
           <Route path="/schedule" component={Schedule} />
           <Route path="/services" component={Services} />
           <Route path="/pinboard" component={Pinboard} />
-          <Route path="/login" render={(props) => <Login {...props} quote={quote} />} />
+          <Route path="/login" component={Login} />
           <Route path="/register" component={Registration} />
           <Route path="/not-found" component={NotFound} />
-          <Route path="/" exact component={Home} />} />
+          <Route path="/" exact component={Home} />
           <Redirect to="/not-found" />
         </Switch>
         <Footer />
