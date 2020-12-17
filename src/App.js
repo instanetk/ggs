@@ -1,7 +1,6 @@
 import React from 'react';
 import { Route, Redirect, Switch } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
-import detectBrowserLanguage from 'detect-browser-language';
 import NavBar from './components/common/navBar.jsx';
 import Footer from './components/common/footer';
 import Home from './components/home';
@@ -14,12 +13,7 @@ import NotFound from './components/notFound';
 import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {
-  // Returns a string: 'en' or 'es'
-  // If 'es' render site in Spanish -- all others in English
-  const lang = detectBrowserLanguage().split('-')[0];
-
   // Login page quote generator
-
   const quotes = [
     'Home is waiting...',
     'Home awaits...',
@@ -53,7 +47,7 @@ const App = () => {
           <Route path="/login" render={(props) => <Login {...props} quote={quote} />} />
           <Route path="/register" component={Registration} />
           <Route path="/not-found" component={NotFound} />
-          <Route path="/" exact render={(props) => <Home {...props} lang={lang} />} />
+          <Route path="/" exact component={Home} />} />
           <Redirect to="/not-found" />
         </Switch>
         <Footer />

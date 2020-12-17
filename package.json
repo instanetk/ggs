@@ -1,6 +1,6 @@
 {
   "name": "ggs",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "homepage": ".",
   "dependencies": {
@@ -13,6 +13,9 @@
     "axios": "^0.21.0",
     "detect-browser-language": "0.0.2",
     "file-loader": "^6.2.0",
+    "i18next": "^19.8.4",
+    "i18next-browser-languagedetector": "^6.0.1",
+    "i18next-xhr-backend": "^3.2.2",
     "joi-browser": "^13.4.0",
     "jwt-decode": "^3.1.2",
     "node-sass": "^4.14.1",
@@ -21,6 +24,7 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-html-parser": "^2.0.2",
+    "react-i18next": "^11.8.4",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
     "react-toastify": "^6.2.0",

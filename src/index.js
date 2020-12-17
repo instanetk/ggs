@@ -1,4 +1,5 @@
-import React from 'react';
+import './i18next';
+import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 import './styles/tailwind.css';
@@ -6,9 +7,11 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>,
+  <Suspense fallback={<div>Loading...</div>}>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </Suspense>,
 
   document.getElementById('root')
 );

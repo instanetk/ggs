@@ -1,7 +1,10 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { NavLink } from 'react-router-dom';
 
 const Hero = () => {
+  const { t } = useTranslation();
+
   return (
     <React.Fragment>
       <div class="px-4 sm:block sm:relative sm:bg-white sm:overflow-hidden sm:-mt-16 md:-mt-1 select-none">
@@ -22,14 +25,13 @@ const Hero = () => {
               <div class="sm:text-center lg:text-left xl:py-6">
                 <div class="hidden sm:block mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
                   <h1 class="hidden sm:block sm:mt-0 sm:mb-0 text-3xl leading-7 tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
-                    <span class="block xl:inline text-white sm:text-black">Home projects and </span>
-                    <span class="block text-white sm:text-indigo-600 xl:inline">remodeling services</span>
+                    <span class="block xl:inline text-white sm:text-black">{t('hero.1')}</span>
+                    <span class="block text-white sm:text-indigo-600 xl:inline">{t('hero.2')}</span>
                   </h1>
                   <span className="flex tracking-widest mt-4 py-1 sm:justify-center lg:justify-start">
                     ⭐️⭐️⭐️⭐️⭐️
                   </span>
-                  General Global Services has been the choice for home renovation customers in Central Florida since
-                  2010
+                  <span>{t('hero.tagline')}</span>
                 </div>
                 <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                   <div class="hidden sm:block rounded-md shadow">
@@ -37,7 +39,7 @@ const Hero = () => {
                       <span
                         href="https://generalglobalservices.com"
                         class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10">
-                        Schedule an appointment
+                        {t('hero.button')}
                       </span>
                     </NavLink>
                   </div>
@@ -61,8 +63,8 @@ const Hero = () => {
           />
         </div>
         <h1 class="-mt-16 ml-4 sm:hidden sm:mt-0 sm:mb-0 text-3xl leading-7 tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
-          <span class="block xl:inline text-white sm:text-black">Home projects and </span>
-          <span class="block text-white sm:text-indigo-600 xl:inline">remodeling services</span>
+          <span class="block xl:inline text-white sm:text-black">{t('hero.1')}</span>
+          <span class="block text-white sm:text-indigo-600 xl:inline">{t('hero.2')}</span>
         </h1>
       </div>
     </React.Fragment>

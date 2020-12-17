@@ -1,8 +1,11 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import Categories from './common/categories';
 import Hero from './common/hero';
 
-const Home = ({ lang }) => {
+const Home = () => {
+  const { t } = useTranslation();
+
   const categories = [
     {
       name: 'Floor Coverings',
@@ -144,9 +147,7 @@ const Home = ({ lang }) => {
         <div className="">
           <div className="flex justify-between sm:hidden">
             <div className="flex items-center bg-yellow-300 rounded-sm px-1">
-              <span className="ml-1 text-xs uppercase text-yellow-800 font-bold select-none">
-                {lang === 'es' ? '¡Estimados Gratis!' : 'Free Estimates!'}
-              </span>
+              <span className="ml-1 text-xs uppercase text-yellow-800 font-bold select-none">{t('home.pill1')}</span>
             </div>
             <div className="flex items-center bg-green-300 rounded-sm px-1">
               <svg
@@ -162,9 +163,7 @@ const Home = ({ lang }) => {
                   d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"
                 />
               </svg>
-              <span className="ml-1 text-xs uppercase text-green-700 font-bold select-none">
-                {lang === 'es' ? 'Recibe $40' : 'Get $40'}
-              </span>
+              <span className="ml-1 text-xs uppercase text-green-700 font-bold select-none">{t('home.pill2')}</span>
             </div>
           </div>
         </div>
@@ -173,16 +172,13 @@ const Home = ({ lang }) => {
         <Hero />
       </div>
       <div className="sm:flex-col sm:justify-center sm:px-14">
-        <Categories name="Browse by category" slug="services" categories={categories} />
-        <Categories name="Popular services" slug="schedule" categories={popular} />
+        <Categories name={t('home.category')} slug="services" categories={categories} />
+        <Categories name={t('home.services')} slug="schedule" categories={popular} />
       </div>
       <div className="px-4 sm:px-14">
         <div id="testimonial" className="mt-8 flex-col bg-white p-4 rounded-lg shadow-md select-none">
           <span className="text-xs text-gray-300 font-semibold uppercase tracking-wider hidden">Testimonial</span>
-          <h3 className="font-serif italic text-2xl text-gray-800">
-            &ldquo; My home feels like new after General Global Services renovated my kitchen and bathrooms. They were
-            honest, kind and professional. I would recommend them to anyone!&rdquo;
-          </h3>
+          <h3 className="font-serif italic text-2xl text-gray-800">&ldquo;{t('home.testimonial')}&rdquo;</h3>
           <div className="flex justify-end items-baseline p-2 text-sm text-gray-800">
             — Beth Harmon, <span className="flex ml-2 items-baseline text-xs">Orlando, FL</span>
           </div>
@@ -217,7 +213,7 @@ const Home = ({ lang }) => {
               <button
                 type="submit"
                 className="sm:hidden w-full bg-green-500 hover:bg-green-600 text-green-50  p-2 text-center font-extrabold uppercase rounded-lg select-none">
-                Tap to call!
+                {t('home.button')}
               </button>
 
               <button

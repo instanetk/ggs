@@ -1,0 +1,22 @@
+{
+  "hero": {
+    "1": "Proyectos del hogar ",
+    "2": "y renovaciones",
+    "tagline": "General Global Services ha sido la elección para renovaciones del hogar en Florida Central desde el 2012",
+    "button": "Programar una cita"
+  },
+  "home": {
+    "pill1": "¡Estimados Gratis!",
+    "pill2": "Recibe $40",
+    "category": "Buscar por categoría",
+    "services": "Servicios populares",
+    "testimonial": "Mi casa se siente como nueva luego que General Global Services renovara mi cocina y baños. Fueron honestos, amables y profecionales. ¡Se los remendaria a quien sea!",
+    "button": "Toca para llamar"
+  },
+  "menu": {
+    "services": "Servicios",
+    "schedule": "Horarios",
+    "pinboard": "Inspiración",
+    "account": "Iniciar sesión"
+  }
+}
