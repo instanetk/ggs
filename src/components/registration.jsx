@@ -51,16 +51,16 @@ const Registration = ({ history }) => {
   };
   return (
     <main
-      className="flex justify-center h-screen bg-cover bg-center sm:items-center"
+      className="flex justify-center bg-cover bg-center sm:items-center"
       style={{
         backgroundImage: 'url(' + bgimg + ')',
       }}>
-      <div className="w-full items-stretch px-4 mt-10 sm:mt-0">
+      <div className="w-full items-stretch px-4 sm:mt-0">
         <div className="flex justify-center mx-auto">
-          <div className="w-full sm:w-96 px-2">
+          <div className="mt-10 w-full sm:w-96 px-2">
             <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-white border-0">
-              <div className="rounded-t mb-0 px-6 py-6"></div>
-              <div className="flex-auto px-4 lg:px-10 py-10 pt-0">
+              <div className="rounded-t px-6 py-6"></div>
+              <div className="flex-auto px-4 lg:px-10 py-0 pt-0">
                 <div className="text-gray-500 text-center mb-3 select-none">
                   <small className="font-serif italic text-lg">We're glad to have you here...</small>
                 </div>
@@ -156,12 +156,12 @@ const Registration = ({ history }) => {
                   </div>
                 </form>
               </div>
-            </div>
-            <div className="flex flex-wrap mt-6 mx-3">
-              <span className="text-xs text-white font-semibold text-justify">
-                By selecting 'Create an Account' you are agreeing to the HomeWorks
-                <sup className="font-light">&trade;</sup> Terms and Conditions, Privacy and Security Statement.
-              </span>
+              <div className="flex flex-wrap mt-6 mx-3 bg-white rounded p-2 m-2">
+                <span className="text-xs text-gray-600 font-semibold text-justify">
+                  By selecting 'Create an Account' you are agreeing to the HomeWorks
+                  <sup className="font-light">&trade;</sup> Terms and Privacy Statement.
+                </span>
+              </div>
             </div>
           </div>
         </div>
