@@ -4,7 +4,7 @@ import { register } from '../services/userService';
 import bgimg from '../images/shutterstock_1100648855.jpg';
 
 const Registration = ({ history }) => {
-  const [form, setState] = useState({ email: '', password: '', name: '', zip: '', phone: '' });
+  const [form, setState] = useState({ email: '', password: '', name: '', zip: '', phone: '', marketing: false });
   const [error, setError] = useState({});
 
   const updateField = (e) => {
@@ -12,6 +12,10 @@ const Registration = ({ history }) => {
       ...form,
       [e.target.name]: e.target.value,
     });
+  };
+
+  const marketing = () => {
+    setState({ ...form, marketing: !form.marketing });
   };
 
   const doSubmit = async (e) => {
@@ -25,6 +29,7 @@ const Registration = ({ history }) => {
         password: form.password,
         zip: form.zip,
         phone: form.phone,
+        marketing: form.marketing,
       };
       console.log(user);
       // This is the server's response to the auth route
@@ -129,6 +134,7 @@ const Registration = ({ history }) => {
                   <div className="mt-6">
                     <label className="inline-flex items-center cursor-pointer">
                       <input
+                        onChange={marketing}
                         id="customCheckLogin"
                         type="checkbox"
                         className="form-checkbox border-0 focus:ring-0 focus:ring-offset-0"

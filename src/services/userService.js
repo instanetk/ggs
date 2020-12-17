@@ -10,5 +10,6 @@ export function register(user) {
     password: user.password,
     zip: user.zip,
     phone: user.phone,
+    marketing: user.marketing,
   });
 }
