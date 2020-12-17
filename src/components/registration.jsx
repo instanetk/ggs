@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import { toast } from 'react-toastify';
 import { register } from '../services/userService';
+import { useTranslation } from 'react-i18next';
 import bgimg from '../images/shutterstock_1100648855.jpg';
 
 const Registration = ({ history }) => {
+  const { t } = useTranslation();
+
   const [form, setState] = useState({ email: '', password: '', name: '', zip: '', phone: '', marketing: false });
   const [error, setError] = useState({});
 
@@ -62,52 +65,52 @@ const Registration = ({ history }) => {
               <div className="rounded-t mb-0 px-6 py-6"></div>
               <div className="flex-auto px-4 lg:px-10 py-0 pt-0">
                 <div className="text-gray-500 text-center mb-3 select-none">
-                  <small className="font-serif italic text-lg">We're glad to have you here...</small>
+                  <small className="font-serif italic text-lg">{t('register.tagline')}</small>
                 </div>
                 <form onSubmit={doSubmit}>
                   <div className="relative w-full mb-3">
                     <label className="block uppercase text-gray-700 text-xs font-bold mb-2" htmlFor="grid-password">
-                      Name
+                      {t('register.name')}
                     </label>
                     <input
                       onChange={updateField}
                       type="text"
                       name="name"
                       className="px-3 py-3 placeholder-gray-200 text-gray-200 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full"
-                      placeholder="Full Name"
+                      placeholder={t('register.fullname')}
                       style={{ transition: 'all .15s ease' }}
                     />
                   </div>
                   <div className="relative w-full mb-3">
                     <label className="block uppercase text-gray-700 text-xs font-bold mb-2" htmlFor="grid-password">
-                      Email
+                      {t('register.email')}
                     </label>
                     <input
                       onChange={updateField}
                       type="email"
                       name="email"
                       className="px-3 py-3 placeholder-gray-200 text-gray-200 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full"
-                      placeholder="Email"
+                      placeholder={t('register.email')}
                       style={{ transition: 'all .15s ease' }}
                     />
                   </div>
 
                   <div className="relative w-full mb-3">
                     <label className="block uppercase text-gray-700 text-xs font-bold mb-2" htmlFor="grid-password">
-                      Password
+                      {t('register.password')}
                     </label>
                     <input
                       onChange={updateField}
                       type="password"
                       name="password"
                       className="px-3 py-3 placeholder-gray-200 text-gray-100 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full"
-                      placeholder="Password"
+                      placeholder={t('register.password')}
                       style={{ transition: 'all .15s ease' }}
                     />
                   </div>
                   <div className="relative w-full mb-3">
                     <label className="block uppercase text-gray-700 text-xs font-bold mb-2" htmlFor="grid-password">
-                      Zip Code
+                      {t('register.zip')}
                     </label>
                     <input
                       onChange={updateField}
@@ -120,7 +123,7 @@ const Registration = ({ history }) => {
                   </div>
                   <div className="relative w-full mb-3">
                     <label className="block uppercase text-gray-700 text-xs font-bold mb-2" htmlFor="grid-password">
-                      Phone
+                      {t('register.phone')}
                     </label>
                     <input
                       onChange={updateField}
@@ -140,9 +143,7 @@ const Registration = ({ history }) => {
                         className="form-checkbox border-0 focus:ring-0 focus:ring-offset-0"
                         style={{ transition: 'all .15s ease' }}
                       />
-                      <span className="ml-2 text-sm font-semibold text-gray-600">
-                        Send me expert tips and suggestions.
-                      </span>
+                      <span className="ml-2 text-sm font-semibold text-gray-600">{t('register.marketing')}</span>
                     </label>
                   </div>
 
@@ -151,16 +152,13 @@ const Registration = ({ history }) => {
                       className="bg-indigo-700 text-white active:bg-gray-700 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full"
                       type="submit"
                       style={{ transition: 'all .15s ease' }}>
-                      Create an account
+                      {t('register.create')}
                     </button>
                   </div>
                 </form>
               </div>
               <div className="flex flex-wrap mt-6 mx-3 bg-white rounded p-2 m-2">
-                <span className="text-xs text-gray-600 font-semibold text-justify">
-                  By selecting 'Create an Account' you are agreeing to the HomeWorks
-                  <sup className="font-light">&trade;</sup> Terms and Privacy Statement.
-                </span>
+                <span className="text-xs text-gray-600 font-semibold text-justify">{t('register.legal')}</span>
               </div>
             </div>
           </div>

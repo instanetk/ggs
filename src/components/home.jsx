@@ -8,61 +8,61 @@ const Home = () => {
 
   const categories = [
     {
-      name: 'Floor Coverings',
+      name: t('cat.coverings'),
       image:
         'http://nebula.wsimg.com/34f2c373cdaed55592801775e35af063?AccessKeyId=56F7F3315B18AFDB68AF&disposition=0&alloworigin=1',
       weight: 10,
       featured: false,
     },
     {
-      name: 'Landscape & Irrigation',
+      name: t('cat.landscape'),
       image:
         'https://images.unsplash.com/photo-1554663565-f60b88adfa08?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80',
       weight: 20,
       featured: true,
     },
     {
-      name: 'Additions & Remodels',
+      name: t('cat.remodel'),
       image:
         'https://images.unsplash.com/photo-1542621334-a254cf47733d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80',
       weight: 30,
       featured: true,
     },
     {
-      name: 'Painting',
+      name: t('cat.painting'),
       image:
         'https://images.unsplash.com/photo-1525909002-1b05e0c869d8?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=750&q=80',
       weight: 40,
       featured: true,
     },
     {
-      name: 'Cleaning',
+      name: t('cat.cleaning'),
       image: 'https://images.pexels.com/photos/4021256/pexels-photo-4021256.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
       weight: 50,
       featured: true,
     },
     {
-      name: 'Plumbing',
+      name: t('cat.plumbing'),
       image:
         'https://images.unsplash.com/photo-1577678923709-758495cb4497?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1652&q=80',
       weight: 60,
       featured: true,
     },
     {
-      name: 'Pavers & Stones',
+      name: t('cat.pavers'),
       image: 'https://www.carolinaartificiallawns.com/wp-content/uploads/2017/10/shutterstock_458022232.jpg',
       weight: 70,
       featured: true,
     },
     {
-      name: 'Granite Countertops',
+      name: t('cat.granite'),
       image:
         'https://images.pexels.com/photos/3935337/pexels-photo-3935337.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
       weight: 80,
       featured: true,
     },
     {
-      name: 'Pool Service',
+      name: t('cat.pool'),
       image:
         'https://images.pexels.com/photos/261045/pexels-photo-261045.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
       weight: 90,
@@ -72,69 +72,69 @@ const Home = () => {
 
   const popular = [
     {
-      name: 'Bathroom Remodel',
+      name: t('services.bathroom'),
       image:
         'https://images.unsplash.com/flagged/photo-1600002368144-444430d3f3ca?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80',
       weight: 30,
       featured: true,
     },
     {
-      name: 'Kitchen Remodel',
+      name: t('services.kitchen'),
       image:
         'https://images.unsplash.com/photo-1574621974239-00deab554d60?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1599&q=80',
       weight: 40,
       featured: true,
     },
     {
-      name: 'Tile Installation',
+      name: t('services.tiles'),
       image:
         'https://images.pexels.com/photos/276528/pexels-photo-276528.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
       weight: 10,
       featured: true,
     },
     {
-      name: 'Hardwood & Laminate Floors',
+      name: t('services.laminate'),
       image:
         'https://images.unsplash.com/photo-1560185893-a55cbc8c57e8?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80',
       weight: 20,
       featured: true,
     },
     {
-      name: 'Carpet Installation',
+      name: t('services.carpet'),
       image:
         'https://images.pexels.com/photos/5872378/pexels-photo-5872378.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
       weight: 50,
       featured: true,
     },
     {
-      name: 'Carpet Cleaning',
+      name: t('services.carpetclean'),
       image:
         'https://images.pexels.com/photos/38325/vacuum-cleaner-carpet-cleaner-housework-housekeeping-38325.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
       weight: 60,
       featured: true,
     },
     {
-      name: 'Handyman Services',
+      name: t('services.handyman'),
       image: 'https://image.shutterstock.com/image-photo/hands-handyman-tool-belt-600w-366462815.jpg',
       weight: 70,
       featured: true,
     },
     {
-      name: 'Minor Electrical',
+      name: t('services.electrical'),
       image:
         'https://images.unsplash.com/photo-1462041866295-e4af004a32ef?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1566&q=80',
       weight: 80,
       featured: true,
     },
     {
-      name: 'One-Time Cleaning',
+      name: t('services.cleaning'),
       image:
         'https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80',
       weight: 90,
       featured: true,
     },
     {
-      name: 'Backsplash',
+      name: t('services.backsplash'),
       image: 'https://image.shutterstock.com/image-photo/chicago-il-usa-january-26-600w-1675447636.jpg',
       weight: 100,
       featured: true,

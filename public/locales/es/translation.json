@@ -25,5 +25,59 @@
     "schedule": "Horarios",
     "pinboard": "Inspiración",
     "account": "Iniciar sesión"
+  },
+  "login": {
+    "email": "Email",
+    "password": "Contraseña",
+    "remember": "Recuérdame",
+    "button": "Ingresar",
+    "forgot": "¿Olvidó su contraseña?",
+    "register": "Crear nueva cuenta"
+  },
+  "register": {
+    "tagline": "Nos alegra tenerte aquí...",
+    "name": "Nombre",
+    "fullname": "Nombre Completo",
+    "email": "Email",
+    "password": "Contraseña",
+    "zip": "Código Postal / Zip Code",
+    "phone": "Teléfono",
+    "marketing": "Envíame tips y sugerencias de expertos",
+    "create": "Crear una cuenta",
+    "legal": "Al seleccionar 'Crear una cuenta' está aceptando los Términos y la Declaración de privacidad de HomeWorks™."
+  },
+  "cat": {
+    "coverings": "Pisos y Losas",
+    "landscape": "Jardinería e Irrigación",
+    "remodel": "Adiciones y Remodelaciones",
+    "painting": "Pintura",
+    "cleaning": "Limpieza",
+    "plumbing": "Plomería",
+    "pavers": "Pavimentos y Piedras",
+    "granite": "Superficies de Granito",
+    "pool": "Servicio de Piscina"
+  },
+  "services": {
+    "bathroom": "Remodelación de Baños",
+    "kitchen": "Remodelación de Cocina",
+    "tiles": "Instalación de Losas",
+    "laminate": "Pisos de Madera y Laminado",
+    "carpet": "Instalación de Alfombras",
+    "carpetclean": "Limpieza de Alfombras",
+    "handyman": "Servicios de Reparación",
+    "electrical": "Electricidad Menor",
+    "cleaning": "Limpieza (Una vez)",
+    "backsplash": "Backsplash"
+  },
+  "navBar": {
+    "app": "HomeWorks",
+    "company": "por General Global Services, LLC"
+  },
+  "footer": {
+    "terms": "Términos",
+    "privacy": "Privacidad",
+    "legal": "Legal",
+    "company": "General Global Services, LLC",
+    "made": "Hecho en Orlando, FL"
   }
 }

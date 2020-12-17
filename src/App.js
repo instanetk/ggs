@@ -11,6 +11,7 @@ import Login from './components/login';
 import Registration from './components/registration';
 import NotFound from './components/notFound';
 import 'react-toastify/dist/ReactToastify.css';
+import Translate from './components/common/translate';
 
 const App = () => {
   return (
@@ -28,6 +29,7 @@ const App = () => {
           <Route path="/" exact component={Home} />
           <Redirect to="/not-found" />
         </Switch>
+        <Translate />
         <Footer />
       </div>
     </div>

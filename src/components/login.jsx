@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { toast } from 'react-toastify';
 import { Link } from 'react-router-dom';
 import { login } from '../services/authService';
 import Quote from './common/quote';
 import bgimg from '../images/shutterstock_1100648855.jpg';
 
-const Login = ({ quote, history }) => {
+const Login = ({ history }) => {
+  const { t } = useTranslation();
+
   const [form, setState] = useState({ email: '', password: '' });
   const [error, setError] = useState({});
 
@@ -56,28 +59,28 @@ const Login = ({ quote, history }) => {
                 <form onSubmit={doSubmit}>
                   <div className="relative w-full mb-3">
                     <label className="block uppercase text-gray-700 text-xs font-bold mb-2" htmlFor="grid-password">
-                      Email
+                      {t('login.email')}
                     </label>
                     <input
                       onChange={updateField}
                       type="email"
                       name="email"
                       className="px-3 py-3 placeholder-gray-200 text-gray-200 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full"
-                      placeholder="Email"
+                      placeholder={t('login.email')}
                       style={{ transition: 'all .15s ease' }}
                     />
                   </div>
 
                   <div className="relative w-full mb-3">
                     <label className="block uppercase text-gray-700 text-xs font-bold mb-2" htmlFor="grid-password">
-                      Password
+                      {t('login.password')}
                     </label>
                     <input
                       onChange={updateField}
                       type="password"
                       name="password"
                       className="px-3 py-3 placeholder-gray-200 text-gray-100 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full"
-                      placeholder="Password"
+                      placeholder={t('login.password')}
                       style={{ transition: 'all .15s ease' }}
                     />
                   </div>
@@ -89,7 +92,7 @@ const Login = ({ quote, history }) => {
                         className="form-checkbox border-0 focus:ring-0 focus:ring-offset-0"
                         style={{ transition: 'all .15s ease' }}
                       />
-                      <span className="ml-2 text-sm font-semibold text-gray-600">Remember me</span>
+                      <span className="ml-2 text-sm font-semibold text-gray-600"> {t('login.remember')}</span>
                     </label>
                   </div>
 
@@ -98,7 +101,7 @@ const Login = ({ quote, history }) => {
                       className="bg-indigo-700 text-white active:bg-gray-700 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full"
                       type="submit"
                       style={{ transition: 'all .15s ease' }}>
-                      Sign In
+                      {t('login.button')}
                     </button>
                   </div>
                 </form>
@@ -107,12 +110,12 @@ const Login = ({ quote, history }) => {
             <div className="flex flex-wrap mt-6 mx-1">
               <div className="w-1/2">
                 <Link to="password" className="text-white font-semibold">
-                  <small>Forgot password?</small>
+                  <small>{t('login.forgot')}</small>
                 </Link>
               </div>
               <div className="w-1/2 text-right">
                 <Link to="register" className="text-white font-semibold">
-                  <small>Create new account</small>
+                  <small>{t('login.register')}</small>
                 </Link>
               </div>
             </div>

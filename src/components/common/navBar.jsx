@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import Menu from './menu';
 
 const NavBar = () => {
   const [isOpen, setOpen] = useState(false);
-
+  const { t } = useTranslation();
   return (
     <React.Fragment>
       <header className="bg-gray-900 items-center sm:bg-gray-800 sm:w-70 sm:flex-shrink-0">
@@ -16,13 +17,13 @@ const NavBar = () => {
                   <div className="px-4 py-2 flex items-baseline select-none">
                     <span className="text-3xl select-none">🏡</span>
                     <h1 className="ml-2 text-lg items-baseline text-white font-sans tracking-wide font-bold select-none">
-                      HomeWorks
+                      {t('navBar.app')}
                     </h1>
                     <sup className="font-light text-gray-300 px-1">&trade;</sup>
                   </div>
                   <div className="flex-col ml-7 sm:ml-6 -mt-4 pb-2 sm:-mt-4">
                     <span className="text-xs text-gray-500 font-normal uppercase select-none">
-                      By General Global Services, LLC
+                      {t('navBar.company')}
                     </span>
                   </div>
                 </div>

@@ -25,5 +25,59 @@
     "schedule": "Schedule",
     "pinboard": "Pinboard",
     "account": "My account"
+  },
+  "login": {
+    "email": "Email",
+    "password": "Password",
+    "remember": "Remember me",
+    "button": "Sign In",
+    "forgot": "Forgot password?",
+    "register": "Create new account"
+  },
+  "register": {
+    "tagline": "We're glad to have you here...",
+    "name": "Name",
+    "fullname": "Full Name",
+    "email": "Email",
+    "password": "Password",
+    "zip": "Zip Code",
+    "phone": "Phone",
+    "marketing": "Send me expert tips and suggestions",
+    "create": "Create an account",
+    "legal": "By selecting 'Create an Account' you are agreeing to the HomeWorks™ Terms and Privacy Statement."
+  },
+  "cat": {
+    "coverings": "Floors & Coverings",
+    "landscape": "Landscape & Irrigation",
+    "remodel": "Additions & Remodels",
+    "painting": "Painting",
+    "cleaning": "Cleaning",
+    "plumbing": "Plumbing",
+    "pavers": "Pavers & Stones",
+    "granite": "Granite Countertops",
+    "pool": "Pool Service"
+  },
+  "services": {
+    "bathroom": "Bathroom Remodel",
+    "kitchen": "Kitchen Remodel",
+    "tiles": "Tile Installation",
+    "laminate": "Hardwood & Laminate Floors",
+    "carpet": "Carpet Installation",
+    "carpetclean": "Carpet Cleaning",
+    "handyman": "Handyman Services",
+    "electrical": "Minor Electrical",
+    "cleaning": "One-Time Cleaning",
+    "backsplash": "Backsplash"
+  },
+  "navBar": {
+    "app": "HomeWorks",
+    "company": "by General Global Services, LLC"
+  },
+  "footer": {
+    "terms": "Terms",
+    "privacy": "Privacy",
+    "legal": "Legal",
+    "company": "General Global Services, LLC",
+    "made": "Made in Orlando, FL"
   }
 }
