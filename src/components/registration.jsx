@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { toast } from 'react-toastify';
 import { register } from '../services/userService';
 import { useTranslation } from 'react-i18next';
+import auth from '../services/authService';
 import bgimg from '../images/shutterstock_1100648855.jpg';
 
 const Registration = ({ history }) => {
@@ -38,9 +39,10 @@ const Registration = ({ history }) => {
       // This is the server's response to the auth route
       const response = await register(user);
       // Save token on browser
-      localStorage.setItem('token', response.headers['x-auth-token']);
+      auth.loginWithJwt(response.headers['x-auth-token']);
       // Redirect user
-      history.push('/');
+      // Here we use window.location instead of history.push to force an app reload
+      window.location = '/';
     } catch (ex) {
       if (ex.response && ex.response.status === 400) {
         const errors = { ...error };

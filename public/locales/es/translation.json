@@ -79,5 +79,8 @@
     "legal": "Legal",
     "company": "General Global Services, LLC",
     "made": "Hecho en Orlando, FL"
+  },
+  "user": {
+    "logout": "Cerrar sesión"
   }
 }

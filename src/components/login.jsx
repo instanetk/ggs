@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { toast } from 'react-toastify';
 import { Link } from 'react-router-dom';
-import { login } from '../services/authService';
+import auth from '../services/authService';
 import Quote from './common/quote';
 import bgimg from '../images/shutterstock_1100648855.jpg';
 
@@ -24,11 +24,9 @@ const Login = ({ history }) => {
       // This prevents a window reload (!)
       e.preventDefault();
       // This is the server's response to the auth route
-      const { data: jwt } = await login(form.email, form.password);
-      // Save token on browser
-      localStorage.setItem('token', jwt);
+      await auth.login(form.email, form.password);
       // Redirect user
-      history.push('/');
+      window.location = '/';
     } catch (ex) {
       if (ex.response && ex.response.status === 400) {
         const errors = { ...error };
