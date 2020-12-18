@@ -1,11 +1,11 @@
-import './i18next';
 import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
-import './styles/tailwind.css';
+import Loading from './components/common/loading';
+import './i18next';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Loading from './components/common/loading';
+import './styles/tailwind.css';
 
 ReactDOM.render(
   <Suspense fallback={<Loading />}>

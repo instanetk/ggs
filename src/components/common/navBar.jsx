@@ -64,7 +64,7 @@ const NavBar = () => {
           </div>
         </div>
       </header>
-      <div className="bg-purple-400 p-px flex sm:hidden"></div>
+      <div className="bg-purple-400 p-px flex"></div>
     </React.Fragment>
   );
 };
