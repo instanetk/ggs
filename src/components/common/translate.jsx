@@ -12,7 +12,10 @@ const Translate = () => {
   }
 
   return (
-    <div className="invisible sm:visible sm:m-0 sm:fixed sm:right-2 sm:bottom-2">
+    <div
+      className={`${
+        isOpen ? 'opacity-95' : 'opacity-40'
+      } fixed right-6 bottom-6 sm:opacity-100 sm:right-2 sm:bottom-2`}>
       <div className="select-none">
         <div className="flex items-center">
           <svg

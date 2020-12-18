@@ -1,4 +1,31 @@
 {
+  "navBar": {
+    "app": "HomeWorks",
+    "company": "de General Global Services, LLC"
+  },
+  "cat": {
+    "coverings": "Pisos y Losas",
+    "landscape": "Jardinería e Irrigación",
+    "remodel": "Adiciones y Remodelaciones",
+    "painting": "Pintura",
+    "cleaning": "Limpieza",
+    "plumbing": "Plomería",
+    "pavers": "Pavimentos y Piedras",
+    "granite": "Superficies de Granito",
+    "pool": "Servicio de Piscina"
+  },
+  "services": {
+    "bathroom": "Remodelación de Baños",
+    "kitchen": "Remodelación de Cocina",
+    "tiles": "Instalación de Losas",
+    "laminate": "Pisos de Madera y Laminado",
+    "carpet": "Instalación de Alfombras",
+    "carpetclean": "Limpieza de Alfombras",
+    "handyman": "Servicios de Reparación",
+    "electrical": "Electricidad Menor",
+    "cleaning": "Limpieza (Una vez)",
+    "backsplash": "Backsplash"
+  },
   "hero": {
     "1": "Proyectos del hogar ",
     "2": "y renovaciones",
@@ -12,10 +39,10 @@
     "services": "Servicios populares",
     "testimonial": "Mi casa se siente como nueva luego que General Global Services renovara mi cocina y baños. Fueron honestos, amables y profecionales. ¡Se los remendaria a quien sea!",
     "p": {
-      "1": "Por más de una década General Global Services ha brindado servicios profesionales de remodelación a nuestros clientes en el área de Florida Central. A lo largo de los años, hemos tenido el privilegio de servir a cientos de hogares familiares, empresas y clientes, que van desde la instalación de azulejos y suelos, la remodelación de baños, jardinería, irrigación y más...",
-      "2": "Nuestra calidad de servicio siempre ha sido superior, pero nuestro oficio ha evolucionado. Queremos compartir nuestro conocimiento y experiencia en el campo para ayudar a nuestros clientes a tomar decisiones rentables y crear los hermosos y duraderos resultados que han previsto, utilizando sólo herramientas de última generación, materiales de primera calidad y las mejores prácticas de la industria.",
-      "3": "Nuestra filosofía continua a la vanguardia de nuestro trabajo y crecimiento. Ir más allá de las expectativas de nuestros clientes y ganar sus valiosos testimonios y referencias. Agradecemos a todos nuestros clientes que nos han recomendado a sus amigos y familiares. Nos comprometemos entregar nuestro mejor trabajo y mantener la buena palabra que nos han dado.",
-      "4": "Déjenos ganarnos su negocio programando una llamada telefónica para un presupuesto gratuito, o elija un tipo de trabajo de las categorías que se encuentran arriba para",
+      "1": "Por más de una década General Global Services ha brindado servicios profesionales de remodelación a nuestros clientes en el área de Florida Central. A lo largo de los años, hemos tenido el privilegio de servir a cientos de hogares, empresas y clientes, que van desde la instalación de losas y pisos, remodelación de baños, jardinería, irrigación y más...",
+      "2": "Nuestra calidad de servicio siempre ha sido superior, pero nuestro oficio sigue evolucionado. Queremos compartir nuestro conocimiento y experiencia en el campo para ayudar a nuestros clientes a tomar decisiones rentables y crear los hermosos y duraderos resultados que han imaginado, utilizando sólo herramientas de última generación, materiales de primera calidad y las mejores prácticas de la industria.",
+      "3": "Nuestra filosofía continua a la vanguardia de nuestro trabajo y crecimiento. Ir más allá de las expectativas de nuestros clientes y ganar sus valiosos testimonios y referencias. Agradecemos a todos nuestros clientes quienes nos han recomendado a sus amigos y familiares. Nos comprometemos a entregar nuestro mejor trabajo y mantener la buena palabra que nos han dado.",
+      "4": "Déjenos ganar su negocio programando una llamada telefónica para un presupuesto gratuito, o elija un tipo de trabajo en las categorías que se encuentran arriba para",
       "4-span": "comenzar ahora"
     },
     "button": "Toca para llamar"
@@ -44,34 +71,7 @@
     "phone": "Teléfono",
     "marketing": "Envíame tips y sugerencias de expertos",
     "create": "Crear una cuenta",
-    "legal": "Al seleccionar 'Crear una cuenta' está aceptando los Términos y la Declaración de privacidad de HomeWorks™."
-  },
-  "cat": {
-    "coverings": "Pisos y Losas",
-    "landscape": "Jardinería e Irrigación",
-    "remodel": "Adiciones y Remodelaciones",
-    "painting": "Pintura",
-    "cleaning": "Limpieza",
-    "plumbing": "Plomería",
-    "pavers": "Pavimentos y Piedras",
-    "granite": "Superficies de Granito",
-    "pool": "Servicio de Piscina"
-  },
-  "services": {
-    "bathroom": "Remodelación de Baños",
-    "kitchen": "Remodelación de Cocina",
-    "tiles": "Instalación de Losas",
-    "laminate": "Pisos de Madera y Laminado",
-    "carpet": "Instalación de Alfombras",
-    "carpetclean": "Limpieza de Alfombras",
-    "handyman": "Servicios de Reparación",
-    "electrical": "Electricidad Menor",
-    "cleaning": "Limpieza (Una vez)",
-    "backsplash": "Backsplash"
-  },
-  "navBar": {
-    "app": "HomeWorks",
-    "company": "por General Global Services, LLC"
+    "legal": "Al seleccionar 'Crear una cuenta' está aceptando los Términos y la declaración de Privacidad de HomeWorks™ y General Global Services, LLC."
   },
   "footer": {
     "terms": "Términos",

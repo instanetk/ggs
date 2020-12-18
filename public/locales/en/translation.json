@@ -1,4 +1,31 @@
 {
+  "navBar": {
+    "app": "HomeWorks",
+    "company": "by General Global Services, LLC"
+  },
+  "cat": {
+    "coverings": "Floors & Coverings",
+    "landscape": "Landscape & Irrigation",
+    "remodel": "Additions & Remodels",
+    "painting": "Painting",
+    "cleaning": "Cleaning",
+    "plumbing": "Plumbing",
+    "pavers": "Pavers & Stones",
+    "granite": "Granite Countertops",
+    "pool": "Pool Service"
+  },
+  "services": {
+    "bathroom": "Bathroom Remodel",
+    "kitchen": "Kitchen Remodel",
+    "tiles": "Tile Installation",
+    "laminate": "Hardwood & Laminate Floors",
+    "carpet": "Carpet Installation",
+    "carpetclean": "Carpet Cleaning",
+    "handyman": "Handyman Services",
+    "electrical": "Minor Electrical",
+    "cleaning": "One-Time Cleaning",
+    "backsplash": "Backsplash"
+  },
   "hero": {
     "1": "Home projects and ",
     "2": "remodeling services",
@@ -44,34 +71,7 @@
     "phone": "Phone",
     "marketing": "Send me expert tips and suggestions",
     "create": "Create an account",
-    "legal": "By selecting 'Create an Account' you are agreeing to the HomeWorks™ Terms and Privacy Statement."
-  },
-  "cat": {
-    "coverings": "Floors & Coverings",
-    "landscape": "Landscape & Irrigation",
-    "remodel": "Additions & Remodels",
-    "painting": "Painting",
-    "cleaning": "Cleaning",
-    "plumbing": "Plumbing",
-    "pavers": "Pavers & Stones",
-    "granite": "Granite Countertops",
-    "pool": "Pool Service"
-  },
-  "services": {
-    "bathroom": "Bathroom Remodel",
-    "kitchen": "Kitchen Remodel",
-    "tiles": "Tile Installation",
-    "laminate": "Hardwood & Laminate Floors",
-    "carpet": "Carpet Installation",
-    "carpetclean": "Carpet Cleaning",
-    "handyman": "Handyman Services",
-    "electrical": "Minor Electrical",
-    "cleaning": "One-Time Cleaning",
-    "backsplash": "Backsplash"
-  },
-  "navBar": {
-    "app": "HomeWorks",
-    "company": "by General Global Services, LLC"
+    "legal": "By selecting 'Create an Account' you are agreeing to the HomeWorks™ and General Global Services, LLC Terms and Privacy statement."
   },
   "footer": {
     "terms": "Terms",

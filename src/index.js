@@ -5,9 +5,10 @@ import { BrowserRouter } from 'react-router-dom';
 import './styles/tailwind.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Loading from './components/common/loading';
 
 ReactDOM.render(
-  <Suspense fallback={<div>Loading...</div>}>
+  <Suspense fallback={<Loading />}>
     <BrowserRouter>
       <App />
     </BrowserRouter>
