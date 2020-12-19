@@ -5,15 +5,22 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 
 const Languages = ['en', 'es'];
 
+const options = {
+  order: ['querystring', 'navigator'],
+  lookupQuerystring: 'lng',
+};
+
 export default i18n
   .use(Backend)
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
+    load: 'languageOnly',
     fallbackLng: 'en',
-    debug: true,
+    debug: false,
     whitelist: Languages,
     interpolation: {
       escapeValue: false,
     },
+    detection: options,
   });
