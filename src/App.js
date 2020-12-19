@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Route, Redirect, Switch } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
+import ProtectedRoute from './components/common/protectedRoute';
 import NavBar from './components/common/navBar.jsx';
 import Translate from './components/common/translate';
 import User from './components/common/user';
@@ -12,6 +13,7 @@ import Login from './components/login';
 import Registration from './components/registration';
 import Logout from './components/logout';
 import NotFound from './components/notFound';
+import Account from './components/account';
 import auth from './services/authService';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -38,6 +40,7 @@ const App = () => {
           <Route path="/register" component={Registration} />
           <Route path="/logout" component={Logout} />
           <Route path="/not-found" component={NotFound} />
+          <ProtectedRoute path="/account" component={Account} />
           <Route path="/" exact component={Home} />
           <Redirect to="/not-found" />
         </Switch>

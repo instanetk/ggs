@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { toast } from 'react-toastify';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import auth from '../services/authService';
 import Quote from './common/quote';
 import bgimg from '../images/shutterstock_1100648855.jpg';
 
-const Login = ({ history }) => {
+const Login = ({ location }) => {
   const { t } = useTranslation();
 
   const [form, setState] = useState({ email: '', password: '' });
@@ -26,7 +26,8 @@ const Login = ({ history }) => {
       // This is the server's response to the auth route
       await auth.login(form.email, form.password);
       // Redirect user
-      window.location = '/';
+      const { state } = location;
+      window.location = state ? state.from.pathname : '/';
     } catch (ex) {
       if (ex.response && ex.response.status === 400) {
         const errors = { ...error };
@@ -38,6 +39,8 @@ const Login = ({ history }) => {
       }
     }
   };
+
+  if (auth.getCurrentUser()) return <Redirect to="/" />;
 
   return (
     <main
