@@ -1,10 +1,11 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import '../../styles/bg.css';
 
 const Footer = () => {
   const { t } = useTranslation();
   return (
-    <footer className="flex flex-col justify-center bg-gray-200 pb-10 sm:py-5">
+    <footer className="flex flex-col justify-center text-gray-700 bg-gray-200 pb-10 sm:py-5 bgfloor">
       <div className="text-xs text-center my-2 ">
         <a href="/terms" className="text-blue-500 px-2 hover:text-blue-700 select-none">
           {t('footer.terms')}
@@ -24,8 +25,8 @@ const Footer = () => {
       </div>
       <div className="text-xs text-center select-none"> {t('footer.made')}</div>
       <div className="text-xs text-center opacity-20 select-none flex justify-center">
-        <span className="hidden italic font-serif mr-1">(x)</span>
-        <span className="hidden">wavefunction</span>
+        <span className=" italic font-serif mr-1">(x)</span>
+        <span className="">wavefunction</span>
         <span className="hidden flex-col text-xs text-white bg-black opacity-20 rounded-sm px-1" title="app by">
           app by
         </span>

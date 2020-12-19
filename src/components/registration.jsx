@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Redirect } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { register } from '../services/userService';
 import { useTranslation } from 'react-i18next';
@@ -54,6 +55,8 @@ const Registration = ({ history }) => {
       }
     }
   };
+  if (auth.getCurrentUser()) return <Redirect to="/" />;
+
   return (
     <main
       className="flex justify-center sm:h-screen bg-cover bg-center sm:items-center"

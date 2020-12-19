@@ -5,6 +5,7 @@ import ProtectedRoute from './components/common/protectedRoute';
 import NavBar from './components/common/navBar.jsx';
 import Translate from './components/common/translate';
 import User from './components/common/user';
+import Footer from './components/common/footer';
 import Home from './components/home';
 import Schedule from './components/schedule';
 import Services from './components/services';
@@ -46,6 +47,7 @@ const App = () => {
         </Switch>
         <Translate />
         <User user={user} />
+        <Footer />
       </div>
     </div>
   );

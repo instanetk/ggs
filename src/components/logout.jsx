@@ -6,7 +6,7 @@ const Logout = () => {
     auth.logout();
     window.location = '/';
   });
-  return null;
+  return <div className="bg-white h-screen"></div>;
 };
 
 export default Logout;
