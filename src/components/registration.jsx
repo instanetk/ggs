@@ -4,9 +4,9 @@ import { toast } from 'react-toastify';
 import { register } from '../services/userService';
 import { useTranslation } from 'react-i18next';
 import auth from '../services/authService';
-import bgimg from '../images/shutterstock_1100648855.jpg';
+import img from '../services/imgService';
 
-const Registration = ({ history }) => {
+const Registration = () => {
   const { t } = useTranslation();
 
   const [form, setState] = useState({ email: '', password: '', name: '', zip: '', phone: '', marketing: false });
@@ -61,7 +61,7 @@ const Registration = ({ history }) => {
     <main
       className="flex justify-center sm:h-screen bg-cover bg-center sm:items-center"
       style={{
-        backgroundImage: 'url(' + bgimg + ')',
+        backgroundImage: 'url(' + img.login + ')',
       }}>
       <div className="w-full items-stretch px-4 sm:mt-0">
         <div className="flex justify-center mx-auto">

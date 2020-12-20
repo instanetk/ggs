@@ -1,6 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { NavLink } from 'react-router-dom';
+import img from '../../services/imgService';
 
 const Hero = () => {
   const { t } = useTranslation();
@@ -56,11 +57,7 @@ const Hero = () => {
           </div>
         </div>
         <div className="sm:inset-y-0 sm:bottom-0 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 xl:-mr-10">
-          <img
-            className="rounded-sm shadow object-cover w-full h-full"
-            src="https://images.unsplash.com/photo-1589530006797-d67347f18caa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80"
-            alt=""
-          />
+          <img className="rounded-sm shadow object-cover w-full h-full" src={img.hero} alt="" />
         </div>
         <h1 className="-mt-16 ml-4 sm:hidden sm:mt-0 sm:mb-0 text-3xl leading-7 tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
           <span className="block xl:inline text-white sm:text-black">{t('hero.1')}</span>

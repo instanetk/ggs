@@ -4,7 +4,7 @@ import { toast } from 'react-toastify';
 import { Link, Redirect } from 'react-router-dom';
 import auth from '../services/authService';
 import Quote from './common/quote';
-import bgimg from '../images/shutterstock_1100648855.jpg';
+import img from '../services/imgService';
 
 const Login = ({ location }) => {
   const { t } = useTranslation();
@@ -46,7 +46,7 @@ const Login = ({ location }) => {
     <main
       className="flex justify-center h-screen bg-cover bg-center sm:items-center"
       style={{
-        backgroundImage: 'url(' + bgimg + ')',
+        backgroundImage: 'url(' + img.login + ')',
       }}>
       <div className="w-full items-stretch px-4 mt-10 sm:mt-0">
         <div className="flex justify-center mx-auto">

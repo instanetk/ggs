@@ -2,6 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import Categories from './common/categories';
 import Hero from './common/hero';
+import img from '../services/imgService';
 
 const Home = () => {
   const { t } = useTranslation();
@@ -9,62 +10,55 @@ const Home = () => {
   const categories = [
     {
       name: t('cat.coverings'),
-      image:
-        'http://nebula.wsimg.com/34f2c373cdaed55592801775e35af063?AccessKeyId=56F7F3315B18AFDB68AF&disposition=0&alloworigin=1',
+      image: img.catCovering,
       weight: 10,
       featured: false,
     },
     {
       name: t('cat.landscape'),
-      image:
-        'https://images.unsplash.com/photo-1554663565-f60b88adfa08?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80',
+      image: img.catLandscaping,
       weight: 20,
       featured: true,
     },
     {
       name: t('cat.remodel'),
-      image:
-        'https://images.unsplash.com/photo-1542621334-a254cf47733d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80',
+      image: img.catRemodeling,
       weight: 30,
       featured: true,
     },
     {
       name: t('cat.painting'),
-      image:
-        'https://images.unsplash.com/photo-1525909002-1b05e0c869d8?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=750&q=80',
+      image: img.catPainting,
       weight: 40,
       featured: true,
     },
     {
       name: t('cat.cleaning'),
-      image: 'https://images.pexels.com/photos/4021256/pexels-photo-4021256.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
+      image: img.catCleaning,
       weight: 50,
       featured: true,
     },
     {
       name: t('cat.plumbing'),
-      image:
-        'https://images.unsplash.com/photo-1577678923709-758495cb4497?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1652&q=80',
+      image: img.catPlumbing,
       weight: 60,
       featured: true,
     },
     {
       name: t('cat.pavers'),
-      image: 'https://www.carolinaartificiallawns.com/wp-content/uploads/2017/10/shutterstock_458022232.jpg',
+      image: img.catPavers,
       weight: 70,
       featured: true,
     },
     {
       name: t('cat.granite'),
-      image:
-        'https://images.pexels.com/photos/3935337/pexels-photo-3935337.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+      image: img.catGranite,
       weight: 80,
       featured: true,
     },
     {
       name: t('cat.pool'),
-      image:
-        'https://images.pexels.com/photos/261045/pexels-photo-261045.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+      image: img.catPool,
       weight: 90,
       featured: true,
     },
@@ -73,69 +67,61 @@ const Home = () => {
   const popular = [
     {
       name: t('services.bathroom'),
-      image:
-        'https://images.unsplash.com/flagged/photo-1600002368144-444430d3f3ca?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80',
+      image: img.srvBathroom,
       weight: 30,
       featured: true,
     },
     {
       name: t('services.kitchen'),
-      image:
-        'https://images.unsplash.com/photo-1574621974239-00deab554d60?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1599&q=80',
+      image: img.srvKitchen,
       weight: 40,
       featured: true,
     },
     {
       name: t('services.tiles'),
-      image:
-        'https://images.pexels.com/photos/276528/pexels-photo-276528.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+      image: img.srvTiles,
       weight: 10,
       featured: true,
     },
     {
       name: t('services.laminate'),
-      image:
-        'https://images.unsplash.com/photo-1560185893-a55cbc8c57e8?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80',
+      image: img.srvLaminate,
       weight: 20,
       featured: true,
     },
     {
       name: t('services.carpet'),
-      image:
-        'https://images.pexels.com/photos/5872378/pexels-photo-5872378.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+      image: img.srvCarpet,
       weight: 50,
       featured: true,
     },
     {
       name: t('services.carpetclean'),
-      image:
-        'https://images.pexels.com/photos/38325/vacuum-cleaner-carpet-cleaner-housework-housekeeping-38325.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+      image: img.srvCarpetClean,
       weight: 60,
       featured: true,
     },
     {
       name: t('services.handyman'),
-      image: 'https://image.shutterstock.com/image-photo/hands-handyman-tool-belt-600w-366462815.jpg',
+      image: img.srvHandyman,
       weight: 70,
       featured: true,
     },
     {
       name: t('services.electrical'),
-      image:
-        'https://images.unsplash.com/photo-1462041866295-e4af004a32ef?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1566&q=80',
+      image: img.srvElectrical,
       weight: 80,
       featured: true,
     },
     {
       name: t('services.cleaning'),
-      image:
-        'https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80',
+      image: img.srvCleaning,
       weight: 90,
       featured: true,
     },
     {
       name: t('services.backsplash'),
-      image: 'https://image.shutterstock.com/image-photo/chicago-il-usa-january-26-600w-1675447636.jpg',
+      image: img.srvBacksplash,
       weight: 100,
       featured: true,
     },
