@@ -32,12 +32,14 @@
     "tagline": "Desde el 2012 General Global Services ha sido la elección para renovaciones del hogar en Florida Central.",
     "button": "Programar una cita"
   },
+  "testimonial": {
+    "text": "Mi casa se siente como nueva luego que General Global Services renovara mi cocina y baños. Fueron honestos, amables y profecionales. ¡Se los remendaria a quien sea!"
+  },
   "home": {
     "pill1": "¡Estimados Gratis!",
     "pill2": "Recibe $40",
     "category": "Buscar por categoría",
     "services": "Servicios populares",
-    "testimonial": "Mi casa se siente como nueva luego que General Global Services renovara mi cocina y baños. Fueron honestos, amables y profecionales. ¡Se los remendaria a quien sea!",
     "p": {
       "1": "Por más de una década General Global Services ha brindado servicios profesionales de remodelación a nuestros clientes en el área de Florida Central. A lo largo de los años, hemos tenido el privilegio de servir a cientos de hogares, empresas y clientes, que van desde la instalación de losas y pisos, remodelación de baños, jardinería, irrigación y más...",
       "2": "Nuestra calidad de servicio siempre ha sido superior, pero nuestro oficio sigue evolucionado. Queremos compartir nuestro conocimiento y experiencia en el campo para ayudar a nuestros clientes a tomar decisiones rentables y crear los hermosos y duraderos resultados que han imaginado, utilizando sólo herramientas de última generación, materiales de primera calidad y las mejores prácticas de la industria.",
@@ -77,6 +79,7 @@
     "terms": "Términos",
     "privacy": "Privacidad",
     "legal": "Legal",
+    "providers": "Proveedores",
     "company": "General Global Services, LLC",
     "made": "Hecho en Orlando, FL"
   },

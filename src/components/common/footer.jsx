@@ -17,6 +17,9 @@ const Footer = () => {
           <a href="/legal" className="text-blue-500 px-2 hover:text-blue-700 select-none">
             {t('footer.legal')}
           </a>
+          <a href="/providers" className="text-blue-500 px-2 hover:text-blue-700 select-none">
+            {t('footer.providers')}
+          </a>
         </div>
         <div className="text-xs text-center select-none">
           <span className="hidden">

@@ -1,6 +1,6 @@
 {
   "navBar": {
-    "app": "HomeWorks",
+    "app": "GlobalHome",
     "company": "by General Global Services, LLC"
   },
   "cat": {
@@ -32,12 +32,14 @@
     "tagline": "General Global Services has been the choice for home renovation customers in Central Florida since 2010",
     "button": "Schedule an appointement"
   },
+  "testimonial": {
+    "text": "My home feels like new after General Global Services renovated my kitchen and bathrooms. They were honest, kind and professional. I would recommend them to anyone!"
+  },
   "home": {
     "pill1": "Free Estimates!",
     "pill2": "Get $40",
     "category": "Browse by category",
     "services": "Popular services",
-    "testimonial": "My home feels like new after General Global Services renovated my kitchen and bathrooms. They were honest, kind and professional. I would recommend them to anyone!",
     "p": {
       "1": "For over a decade General Global Services has brought professional remodeling services to our customers in the Central Florida area. Over the years, we’ve had the privilege of serving hundreds of family homes, businesses and customers, ranging from tile and flooring installation, bathroom remodeling, landscaping, irrigation, gardening and more...",
       "2": "Our quality of service has always been superior, but our craft has evolved. We are passionate to share our knowledge and expertise in the field to help our customers make cost effective decisions and create the beautiful long-lasting results they've envisioned — using only state-of-the-art tools, premium quality materials and the best practices in the industry.",
@@ -77,6 +79,7 @@
     "terms": "Terms",
     "privacy": "Privacy",
     "legal": "Legal",
+    "providers": "Providers",
     "company": "General Global Services, LLC",
     "made": "Made in Orlando, FL"
   },

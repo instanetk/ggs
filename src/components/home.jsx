@@ -1,6 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import Categories from './common/categories';
+import Testimonial from './common/testimonial';
 import Hero from './common/hero';
 import img from '../services/imgService';
 
@@ -9,54 +10,63 @@ const Home = () => {
 
   const categories = [
     {
+      _id: '',
       name: t('cat.coverings'),
       image: img.catCovering,
       weight: 10,
       featured: false,
     },
     {
+      _id: '',
       name: t('cat.landscape'),
       image: img.catLandscaping,
       weight: 20,
       featured: true,
     },
     {
+      _id: '',
       name: t('cat.remodel'),
       image: img.catRemodeling,
       weight: 30,
       featured: true,
     },
     {
+      _id: '',
       name: t('cat.painting'),
       image: img.catPainting,
       weight: 40,
       featured: true,
     },
     {
+      _id: '',
       name: t('cat.cleaning'),
       image: img.catCleaning,
       weight: 50,
       featured: true,
     },
     {
+      _id: '',
       name: t('cat.plumbing'),
       image: img.catPlumbing,
       weight: 60,
       featured: true,
     },
     {
+      _id: '',
       name: t('cat.pavers'),
       image: img.catPavers,
       weight: 70,
       featured: true,
     },
     {
+      _id: '',
       name: t('cat.granite'),
       image: img.catGranite,
       weight: 80,
       featured: true,
     },
     {
+      _id: '',
       name: t('cat.pool'),
       image: img.catPool,
       weight: 90,
@@ -66,61 +76,81 @@ const Home = () => {
 
   const popular = [
     {
+      _id: '',
       name: t('services.bathroom'),
+      category: '5fd79ee3161a9b15addd5a0d',
       image: img.srvBathroom,
       weight: 30,
       featured: true,
     },
     {
+      _id: '',
       name: t('services.kitchen'),
+      category: '5fd79ee3161a9b15addd5a0d',
       image: img.srvKitchen,
       weight: 40,
       featured: true,
     },
     {
+      _id: '',
       name: t('services.tiles'),
+      category: '5fd79ee3161a9b15addd5a0d',
       image: img.srvTiles,
       weight: 10,
       featured: true,
     },
     {
+      _id: '',
       name: t('services.laminate'),
+      category: '5fd79ee3161a9b15addd5a0d',
       image: img.srvLaminate,
       weight: 20,
       featured: true,
     },
     {
+      _id: '',
       name: t('services.carpet'),
+      category: '5fd79ee3161a9b15addd5a0d',
       image: img.srvCarpet,
       weight: 50,
       featured: true,
     },
     {
+      _id: '',
       name: t('services.carpetclean'),
+      category: '5fd79ee3161a9b15addd5a0d',
       image: img.srvCarpetClean,
       weight: 60,
       featured: true,
     },
     {
+      _id: '',
       name: t('services.handyman'),
+      category: '5fd79ee3161a9b15addd5a0d',
       image: img.srvHandyman,
       weight: 70,
       featured: true,
     },
     {
+      _id: '',
       name: t('services.electrical'),
+      category: '5fd79ee3161a9b15addd5a0d',
       image: img.srvElectrical,
       weight: 80,
       featured: true,
     },
     {
+      _id: '',
       name: t('services.cleaning'),
+      category: '5fd79ee3161a9b15addd5a0d',
       image: img.srvCleaning,
       weight: 90,
       featured: true,
     },
     {
+      _id: '',
       name: t('services.backsplash'),
+      category: '5fd79ee3161a9b15addd5a0d',
       image: img.srvBacksplash,
       weight: 100,
       featured: true,
@@ -162,13 +192,7 @@ const Home = () => {
         <Categories name={t('home.services')} slug="schedule" categories={popular} />
       </div>
       <div className="px-4 sm:px-14">
-        <div id="testimonial" className="mt-8 flex-col bg-white p-4 rounded-lg shadow-md select-none">
-          <span className="text-xs text-gray-300 font-semibold uppercase tracking-wider hidden">Testimonial</span>
-          <h3 className="font-serif italic text-2xl text-gray-800">&ldquo;{t('home.testimonial')}&rdquo;</h3>
-          <div className="flex justify-end items-baseline p-2 text-sm text-gray-800">
-            — Beth Harmon, <span className="flex ml-2 items-baseline text-xs">Orlando, FL</span>
-          </div>
-        </div>
+        <Testimonial />
         <div className="mt-6 text-gray-800 tracking-wide text-justify text-lg select-none">
           <p className="mt-2 flex-wrap">{t('home.p.1')}</p>
           <p className="mt-2">{t('home.p.2')}</p>
