@@ -4,7 +4,7 @@
     "company": "de General Global Services, LLC"
   },
   "cat": {
-    "coverings": "Pisos y Revestimientos",
+    "coverings": "Revestimientos",
     "landscape": "Jardinería e Irrigación",
     "remodel": "Adiciones y Remodelaciones",
     "painting": "Pintura",
@@ -12,7 +12,8 @@
     "plumbing": "Plomería",
     "pavers": "Pavimentos y Piedras",
     "granite": "Superficies de Granito",
-    "pool": "Servicio de Piscina"
+    "pool": "Servicio de Piscina",
+    "misc": "Misceláneos"
   },
   "services": {
     "bathroom": "Remodelación de Baños",

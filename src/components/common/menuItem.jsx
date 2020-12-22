@@ -1,9 +1,9 @@
 import React from 'react';
-import { ReactComponent as Clipboard } from '../../svg/clipboard.svg';
-import { ReactComponent as Clock } from '../../svg/clock.svg';
-import { ReactComponent as Heart } from '../../svg/heart.svg';
-import { ReactComponent as User } from '../../svg/user.svg';
-import { ReactComponent as Ban } from '../../svg/ban.svg';
+import { ReactComponent as Clipboard } from '../../assets/svg/clipboard.svg';
+import { ReactComponent as Clock } from '../../assets/svg/clock.svg';
+import { ReactComponent as Heart } from '../../assets/svg/heart.svg';
+import { ReactComponent as User } from '../../assets/svg/user.svg';
+import { ReactComponent as Ban } from '../../assets/svg/ban.svg';
 
 const MenuItem = ({ label }) => {
   const icon = (label) => {

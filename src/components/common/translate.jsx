@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { ReactComponent as Icon } from '../../svg/translate.svg';
+import { ReactComponent as Icon } from '../../assets/svg/translate.svg';
 
 const Translate = () => {
   const [isOpen, setOpen] = useState(false);

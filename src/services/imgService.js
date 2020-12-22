@@ -9,6 +9,7 @@ import catPlumbing from '../assets/images/cat_photo-1577678923709-758495cb4497.j
 import catPavers from '../assets/images/cat_shutterstock_458022232.jpg';
 import catGranite from '../assets/images/cat_pexels-photo-3935337.jpeg';
 import catPool from '../assets/images/cat_pexels-photo-261045.jpeg';
+import catMiscellaneous from '../assets/images/cat_pexels-photo-1648768.jpeg';
 import srvBathroom from '../assets/images/srv_photo-1600002368144-444430d3f3ca.jpeg';
 import srvKitchen from '../assets/images/srv_photo-1574621974239-00deab554d60.jpeg';
 import srvTiles from '../assets/images/srv_pexels-photo-276528.jpeg';
@@ -31,6 +32,7 @@ const img = {
   catPavers,
   catGranite,
   catPool,
+  catMiscellaneous,
   srvBathroom,
   srvKitchen,
   srvTiles,

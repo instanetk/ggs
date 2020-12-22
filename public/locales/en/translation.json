@@ -4,7 +4,7 @@
     "company": "by General Global Services, LLC"
   },
   "cat": {
-    "coverings": "Floor Coverings",
+    "coverings": "Coverings",
     "landscape": "Landscape & Irrigation",
     "remodel": "Additions & Remodels",
     "painting": "Painting",
@@ -12,7 +12,8 @@
     "plumbing": "Plumbing",
     "pavers": "Pavers & Stones",
     "granite": "Granite Countertops",
-    "pool": "Pool Service"
+    "pool": "Pool Service",
+    "misc": "Miscellaneous"
   },
   "services": {
     "bathroom": "Bathroom Remodel",

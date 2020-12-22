@@ -1,105 +1,28 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import { getCategories } from '../services/categoryService';
+import { getServices } from '../services/popularService';
 import Categories from './common/categories';
 import Testimonial from './common/testimonial';
 import Hero from './common/hero';
-import img from '../services/imgService';
-import { getCategories } from '../services/categoryService';
 
 const Home = () => {
   const { t } = useTranslation();
-  const [useCat, setCat] = useState([]);
+  const [useCategories, setCategories] = useState([]);
+  const [useService, setService] = useState([]);
 
   useEffect(() => {
     async function fetchCategories() {
       const { data } = await getCategories();
-      setCat(data);
+      setCategories(data);
     }
     fetchCategories();
+    async function fetchServices() {
+      const { data } = await getServices();
+      setService(data);
+    }
+    fetchServices();
   }, []);
-
-  const popular = [
-    {
-      _id: '',
-      name: t('services.bathroom'),
-      category: '5fd79ee3161a9b15addd5a0d',
-      image: img.srvBathroom,
-      weight: 30,
-      featured: true,
-    },
-    {
-      _id: '',
-      name: t('services.kitchen'),
-      category: '5fd79ee3161a9b15addd5a0d',
-      image: img.srvKitchen,
-      weight: 40,
-      featured: true,
-    },
-    {
-      _id: '',
-      name: t('services.tiles'),
-      category: '5fd79ee3161a9b15addd5a0d',
-      image: img.srvTiles,
-      weight: 10,
-      featured: true,
-    },
-    {
-      _id: '',
-      name: t('services.laminate'),
-      category: '5fd79ee3161a9b15addd5a0d',
-      image: img.srvLaminate,
-      weight: 20,
-      featured: true,
-    },
-    {
-      _id: '',
-      name: t('services.carpet'),
-      category: '5fd79ee3161a9b15addd5a0d',
-      image: img.srvCarpet,
-      weight: 50,
-      featured: true,
-    },
-    {
-      _id: '',
-      name: t('services.carpetclean'),
-      category: '5fd79ee3161a9b15addd5a0d',
-      image: img.srvCarpetClean,
-      weight: 60,
-      featured: true,
-    },
-    {
-      _id: '',
-      name: t('services.handyman'),
-      category: '5fd79ee3161a9b15addd5a0d',
-      image: img.srvHandyman,
-      weight: 70,
-      featured: true,
-    },
-    {
-      _id: '',
-      name: t('services.electrical'),
-      category: '5fd79ee3161a9b15addd5a0d',
-      image: img.srvElectrical,
-      weight: 80,
-      featured: true,
-    },
-    {
-      _id: '',
-      name: t('services.cleaning'),
-      category: '5fd79ee3161a9b15addd5a0d',
-      image: img.srvCleaning,
-      weight: 90,
-      featured: true,
-    },
-    {
-      _id: '',
-      name: t('services.backsplash'),
-      category: '5fd79ee3161a9b15addd5a0d',
-      image: img.srvBacksplash,
-      weight: 100,
-      featured: true,
-    },
-  ];
 
   return (
     <main>
@@ -132,8 +55,8 @@ const Home = () => {
         <Hero />
       </div>
       <div className="sm:flex-col sm:justify-center sm:px-14">
-        <Categories name={t('home.category')} slug="services" categories={useCat} />
-        {/* <Categories name={t('home.services')} slug="schedule" categories={popular} /> */}
+        <Categories name={t('home.category')} slug="services" categories={useCategories} />
+        <Categories name={t('home.services')} slug="schedule" categories={useService} />
       </div>
       <div className="px-4 sm:px-14">
         <Testimonial />

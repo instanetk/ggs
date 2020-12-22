@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { ReactComponent as Star } from '../../svg/star.svg';
+import { ReactComponent as Star } from '../../assets/svg/star.svg';
 
 const User = ({ user }) => {
   const { t } = useTranslation();
