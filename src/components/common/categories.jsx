@@ -12,7 +12,7 @@ const Categories = ({ name, slug, categories }) => {
               return a.weight - b.weight;
             })
             .map((cat) => {
-              return <Category name={cat.name} slug={slug} image={cat.image} key={cat.name} />;
+              return <Category name={cat.i18n} slug={slug} image={cat.image} key={cat._id} />;
             })}
         </div>
       </div>

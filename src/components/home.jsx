@@ -1,78 +1,22 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import Categories from './common/categories';
 import Testimonial from './common/testimonial';
 import Hero from './common/hero';
 import img from '../services/imgService';
+import { getCategories } from '../services/categoryService';
 
 const Home = () => {
   const { t } = useTranslation();
+  const [useCat, setCat] = useState([]);
 
-  const categories = [
-    {
-      _id: '',
-      name: t('cat.coverings'),
-      image: img.catCovering,
-      weight: 10,
-      featured: false,
-    },
-    {
-      _id: '',
-      name: t('cat.landscape'),
-      image: img.catLandscaping,
-      weight: 20,
-      featured: true,
-    },
-    {
-      _id: '',
-      name: t('cat.remodel'),
-      image: img.catRemodeling,
-      weight: 30,
-      featured: true,
-    },
-    {
-      _id: '',
-      name: t('cat.painting'),
-      image: img.catPainting,
-      weight: 40,
-      featured: true,
-    },
-    {
-      _id: '',
-      name: t('cat.cleaning'),
-      image: img.catCleaning,
-      weight: 50,
-      featured: true,
-    },
-    {
-      _id: '',
-      name: t('cat.plumbing'),
-      image: img.catPlumbing,
-      weight: 60,
-      featured: true,
-    },
-    {
-      _id: '',
-      name: t('cat.pavers'),
-      image: img.catPavers,
-      weight: 70,
-      featured: true,
-    },
-    {
-      _id: '',
-      name: t('cat.granite'),
-      image: img.catGranite,
-      weight: 80,
-      featured: true,
-    },
-    {
-      _id: '',
-      name: t('cat.pool'),
-      image: img.catPool,
-      weight: 90,
-      featured: true,
-    },
-  ];
+  useEffect(() => {
+    async function fetchCategories() {
+      const { data } = await getCategories();
+      setCat(data);
+    }
+    fetchCategories();
+  }, []);
 
   const popular = [
     {
@@ -188,8 +132,8 @@ const Home = () => {
         <Hero />
       </div>
       <div className="sm:flex-col sm:justify-center sm:px-14">
-        <Categories name={t('home.category')} slug="services" categories={categories} />
-        <Categories name={t('home.services')} slug="schedule" categories={popular} />
+        <Categories name={t('home.category')} slug="services" categories={useCat} />
+        {/* <Categories name={t('home.services')} slug="schedule" categories={popular} /> */}
       </div>
       <div className="px-4 sm:px-14">
         <Testimonial />
