@@ -1,10 +1,10 @@
 {
   "navBar": {
-    "app": "HomeWorks",
+    "app": "General Global Services",
     "company": "de General Global Services, LLC"
   },
   "cat": {
-    "coverings": "Revestimientos",
+    "coverings": "Pisos y Revestimientos",
     "landscape": "Jardinería e Irrigación",
     "remodel": "Adiciones y Remodelaciones",
     "painting": "Pintura",
@@ -77,8 +77,8 @@
     "legal": "Al seleccionar 'Crear una cuenta' está aceptando los Términos y la declaración de Privacidad de HomeWorks™ y General Global Services, LLC."
   },
   "footer": {
-    "terms": "Términos",
-    "privacy": "Privacidad",
+    "terms": "Términos de Servicio",
+    "privacy": "Política de Privacidad",
     "legal": "Legal",
     "providers": "Proveedores",
     "company": "General Global Services, LLC",

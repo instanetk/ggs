@@ -14,10 +14,10 @@ const Footer = () => {
           <a href="/privacy" className="text-blue-500 px-2 hover:text-blue-700 select-none">
             {t('footer.privacy')}
           </a>
-          <a href="/legal" className="text-blue-500 px-2 hover:text-blue-700 select-none">
+          <a href="/legal" className="hidden text-blue-500 px-2 hover:text-blue-700 select-none">
             {t('footer.legal')}
           </a>
-          <a href="/providers" className="text-blue-500 px-2 hover:text-blue-700 select-none">
+          <a href="/providers" className="hidden text-blue-500 px-2 hover:text-blue-700 select-none">
             {t('footer.providers')}
           </a>
         </div>

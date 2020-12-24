@@ -14,15 +14,15 @@ const NavBar = () => {
             <div id="brand" className="flex justify-between cursor-pointer">
               <Link to="/">
                 <div className="sm:flex-col sm:w-70">
-                  <div className="px-4 py-2 flex items-baseline select-none">
-                    <span className="text-3xl select-none">🏡</span>
-                    <h1 className="ml-2 text-lg items-baseline text-white font-sans tracking-wide font-bold select-none">
+                  <div className="px-4 py-4 flex items-baseline select-none">
+                    <span className="text-2xl select-none">🏡</span>
+                    <h1 className="ml-2 mb-3 text-md items-baseline text-white font-sans tracking-wide font-bold select-none">
                       {t('navBar.app')}
                     </h1>
-                    <sup className="font-light text-gray-300 px-1">&trade;</sup>
+                    <sup className="hidden font-light text-gray-300 px-1">&trade;</sup>
                   </div>
                   <div className="flex-col ml-7 sm:ml-6 -mt-4 pb-2 sm:-mt-4">
-                    <span className="text-xs text-gray-500 font-normal uppercase select-none">
+                    <span className="hidden text-xs text-gray-500 font-normal uppercase select-none">
                       {t('navBar.company')}
                     </span>
                   </div>
