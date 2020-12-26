@@ -12,7 +12,10 @@ const Categories = ({ name, slug, categories }) => {
               return a.weight - b.weight;
             })
             .map((cat) => {
-              return <Category name={cat.i18n} slug={slug} image={cat.image} key={cat._id} />;
+              if (cat.featured) {
+                return <Category name={cat.i18n} slug={slug} image={cat.image} key={cat._id} />;
+              }
+              return null;
             })}
         </div>
       </div>

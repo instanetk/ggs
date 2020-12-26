@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { getCategories } from '../services/categoryService';
-import { getServices } from '../services/popularService';
+import { getServices } from '../services/getService';
 import Categories from './common/categories';
 import Testimonial from './common/testimonial';
 import Hero from './common/hero';

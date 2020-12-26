@@ -10,6 +10,7 @@ import Home from './components/home';
 import Schedule from './components/schedule';
 import Services from './components/services';
 import Pinboard from './components/pinboard';
+import Coverings from './components/coverings';
 import Login from './components/login';
 import Registration from './components/registration';
 import Logout from './components/logout';
@@ -34,8 +35,9 @@ const App = () => {
       <NavBar />
       <div className="sm:flex-col sm:w-full">
         <Switch>
-          <Route path="/schedule" component={Schedule} />
+          <Route path="/services/floors-coverings" component={Coverings} />
           <Route path="/services" component={Services} />
+          <Route path="/schedule" component={Schedule} />
           <Route path="/pinboard" component={Pinboard} />
           <Route path="/login" component={Login} />
           <Route path="/register" component={Registration} />
