@@ -1,7 +1,7 @@
 import React from 'react';
-import Category from './categoryItem';
+import CardScrollUnit from './cardScrollUnit';
 
-const Categories = ({ name, slug, categories }) => {
+const CardScroll = ({ name, slug, categories }) => {
   return (
     <div className="mt-6">
       <h3 className="p-4 text-gray-700 font-bold text-md uppercase select-none sm:-ml-4">{name}</h3>
@@ -13,7 +13,7 @@ const Categories = ({ name, slug, categories }) => {
             })
             .map((cat) => {
               if (cat.featured) {
-                return <Category name={cat.i18n} slug={slug} image={cat.image} key={cat._id} />;
+                return <CardScrollUnit name={cat.i18n} slug={slug} image={cat.image} key={cat._id} />;
               }
               return null;
             })}
@@ -23,4 +23,4 @@ const Categories = ({ name, slug, categories }) => {
   );
 };
 
-export default Categories;
+export default CardScroll;

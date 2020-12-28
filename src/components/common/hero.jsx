@@ -7,9 +7,9 @@ const Hero = () => {
   const { t } = useTranslation();
 
   return (
-    <React.Fragment>
+    <div>
       <div className="px-4 sm:block sm:relative sm:bg-white sm:overflow-hidden sm:-mt-16 md:-mt-1 select-none">
-        <div className="max-w-7xl mx-auto xl:max-w-6xl">
+        <div className="max-w-7xl mx-2.5 xl:max-w-6xl">
           <div className="relative z-10 sm:bg-white sm:pb-16 md:pb-20 lg:max-w-sm lg:w-full lg:pb-8 xl:pb-15 xl:max-w-2xl">
             <svg
               className="hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-white transform translate-x-1/2 sm:translate-x-2/4"
@@ -46,10 +46,10 @@ const Hero = () => {
                   </div>
                   <div className="mt-3 sm:mt-0 sm:ml-3">
                     {/* <a
-                      href="#"
-                      className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 md:py-4 md:text-lg md:px-10">
-                      Live demo
-                    </a> */}
+      href="#"
+      className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 md:py-4 md:text-lg md:px-10">
+      Live demo
+      </a> */}
                   </div>
                 </div>
               </div>
@@ -64,7 +64,7 @@ const Hero = () => {
           <span className="block text-white sm:text-indigo-600 xl:inline">{t('hero.2')}</span>
         </h1>
       </div>
-    </React.Fragment>
+    </div>
   );
 };
 

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { getServices } from '../services/getService';
-import Categories from './common/categories';
+import CardScroll from './common/cardScroll';
 
 const Coverings = () => {
   const { t } = useTranslation();
@@ -17,8 +17,11 @@ const Coverings = () => {
 
   return (
     <main>
-      <div className="h-screen p-4 sm:flex sm:justify-center">
-        <Categories name={t('cat.coverings')} slug="services" categories={useService} />
+      <div className="h-screen flex align-middle">
+        {/* <div className="w-full h-84 "></div> */}
+        <div className="flex align-middle rounded sm:flex-col sm:justify-center sm:px-14">
+          <CardScroll name={t('cat.coverings')} slug="services" categories={useService} />
+        </div>
       </div>
     </main>
   );

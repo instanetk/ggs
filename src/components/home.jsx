@@ -2,8 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { getCategories } from '../services/categoryService';
 import { getServices } from '../services/getService';
-import Categories from './common/categories';
+import CardScroll from './common/cardScroll';
 import Testimonial from './common/testimonial';
+import Carousel from './common/carousel';
 import Hero from './common/hero';
 
 const Home = () => {
@@ -51,12 +52,15 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="-mt-14 py-1 sm:-mt-28">
+      {/* <div className="-mt-14 py-1 sm:-mt-28">
         <Hero />
+      </div> */}
+      <div className="-mt-14 py-1 sm:-mt-24">
+        <Carousel />
       </div>
       <div className="sm:flex-col sm:justify-center sm:px-14">
-        <Categories name={t('home.category')} slug="services" categories={useCategories} />
-        <Categories name={t('home.services')} slug="schedule" categories={useService} />
+        <CardScroll name={t('home.category')} slug="services" categories={useCategories} />
+        <CardScroll name={t('home.services')} slug="schedule" categories={useService} />
       </div>
       <div className="px-4 sm:px-14">
         <Testimonial />

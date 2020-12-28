@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import img from '../../services/imgService';
 
-const Category = ({ name, slug, image }) => {
+const CardScrollUnit = ({ name, slug, image }) => {
   const { t } = useTranslation();
 
   const unit = t(name);
@@ -27,4 +27,4 @@ const Category = ({ name, slug, image }) => {
   );
 };
 
-export default Category;
+export default CardScrollUnit;
