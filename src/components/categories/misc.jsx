@@ -5,13 +5,13 @@ import CardScroll from '../common/cardScroll';
 import SecondaryHero from '../common/secondaryHero';
 import Testimonial from '../common/testimonial';
 
-const Coverings = () => {
+const Misc = () => {
   const { t } = useTranslation();
   const [useService, setService] = useState([]);
 
   useEffect(() => {
     async function fetchServices() {
-      const { data } = await getServices('coverings');
+      const { data } = await getServices('misc');
       setService(data);
     }
     fetchServices();
@@ -20,7 +20,7 @@ const Coverings = () => {
   return (
     <main>
       <div className="-mt-6 sm:mt-0">
-        <SecondaryHero text1={t('coverings.1')} text2={t('coverings.2')} color="text-yellow-500" image="catCovering" />
+        <SecondaryHero text2={t('misc.1')} color="text-blue-700" image="catMiscellaneous" />
       </div>
       <div>
         <div className="-mt-10 sm:mt-0 sm:ml-5 sm:flex-col sm:justify-center sm:px-14">
@@ -29,7 +29,7 @@ const Coverings = () => {
         <div className="px-4 sm:-mt-8 sm:px-20">
           <Testimonial />
           <div className="mt-6 pb-12 text-gray-800 tracking-wide text-justify text-lg select-none">
-            <p className="mt-2 flex-wrap">{t('coverings.text')}</p>
+            <p className="mt-2 flex-wrap">{t('misc.text')}</p>
           </div>
         </div>
       </div>
@@ -37,4 +37,4 @@ const Coverings = () => {
   );
 };
 
-export default Coverings;
+export default Misc;

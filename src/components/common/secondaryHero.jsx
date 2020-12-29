@@ -2,7 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import img from '../../services/imgService';
 
-const HeroCoverings = () => {
+const SecondaryHero = ({ text1, text2, color, image }) => {
   const { t } = useTranslation();
 
   return (
@@ -25,10 +25,10 @@ const HeroCoverings = () => {
               <div className="sm:text-center lg:text-left xl:py-6 sm:ml-5 sm:-mt-8">
                 <div className="hidden sm:block mt-4 text-base text-gray-500 sm:-mt-6 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
                   <h1 className="hidden sm:block sm:mt-0 sm:mb-0 text-3xl leading-7 tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
-                    <span className="block xl:inline text-white sm:text-black">Floors & </span>
-                    <span className="block text-white sm:text-yellow-500 xl:inline">Coverings</span>
+                    <span className="block xl:inline text-white sm:text-black">{text1}</span>
+                    <span className={`block text-white sm:${color} xl:inline`}>{text2}</span>
                   </h1>
-                  <span className="mt-10">Select the service you are seeking from the choices below:</span>
+                  <span className="mt-10">{t('secondaryHero.tagline')}</span>
                 </div>
                 <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                   <div className="mt-3 sm:mt-0 sm:ml-3">
@@ -44,15 +44,15 @@ const HeroCoverings = () => {
           </div>
         </div>
         <div className="sm:inset-y-0 sm:bottom-0 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 xl:-mr-10">
-          <img className="rounded-sm shadow object-cover w-full h-full" src={img.catCovering} alt="" />
+          <img className="rounded-sm shadow object-cover w-full h-60 sm:h-full" src={img[image]} alt="" />
         </div>
         <h1 className="-mt-16 ml-4 sm:hidden sm:mt-0 sm:mb-0 text-3xl leading-7 tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
-          <span className="block xl:inline text-white sm:text-black">Floors & </span>
-          <span className="block text-white sm:text-indigo-600 xl:inline">Coverings</span>
+          <span className="block xl:inline text-white sm:text-black">{text1}</span>
+          <span className="block text-white sm:text-indigo-600 xl:inline">{text2}</span>
         </h1>
       </div>
     </div>
   );
 };
 
-export default HeroCoverings;
+export default SecondaryHero;

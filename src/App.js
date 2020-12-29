@@ -11,6 +11,14 @@ import Schedule from './components/schedule';
 import Services from './components/services';
 import Pinboard from './components/pinboard';
 import Coverings from './components/categories/coverings';
+import Irrigation from './components/categories/irrigation';
+import Painting from './components/categories/painting';
+import Cleaning from './components/categories/cleaning';
+import Plumbing from './components/categories/plumbing';
+import Pavers from './components/categories/pavers';
+import Granite from './components/categories/granite';
+import Pool from './components/categories/pool';
+import Misc from './components/categories/misc';
 import Login from './components/login';
 import Registration from './components/registration';
 import Logout from './components/logout';
@@ -35,7 +43,18 @@ const App = () => {
       <NavBar />
       <div className="sm:flex-col sm:w-full">
         <Switch>
-          <Route path="/services/floors-coverings" component={Coverings} />
+          <Route path={['/services/floors-coverings', '/services/pisos-y-revestimientos']} component={Coverings} />
+          <Route
+            path={['/services/landscape-irrigation', '/services/jardinería-e-irrigación']}
+            component={Irrigation}
+          />
+          <Route path={['/services/painting', '/services/pintura']} component={Painting} />
+          <Route path={['/services/cleaning', '/services/limpieza']} component={Cleaning} />
+          <Route path={['/services/plumbing', '/services/plomería']} component={Plumbing} />
+          <Route path={['/services/pavers-stones', '/services/pavimentos-y-piedras']} component={Pavers} />
+          <Route path={['/services/granite-countertops', '/services/superficies-de-granito']} component={Granite} />
+          <Route path={['/services/pool-service', '/services/servicio-de-piscina']} component={Pool} />
+          <Route path={['/services/miscellaneous', '/services/misceláneos']} component={Misc} />
           <Route path="/services" component={Services} />
           <Route path="/schedule" component={Schedule} />
           <Route path="/pinboard" component={Pinboard} />

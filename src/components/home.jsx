@@ -5,7 +5,6 @@ import { getServices } from '../services/getService';
 import CardScroll from './common/cardScroll';
 import Testimonial from './common/testimonial';
 import Carousel from './common/carousel';
-import Hero from './common/hero';
 
 const Home = () => {
   const { t } = useTranslation();

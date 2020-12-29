@@ -86,5 +86,49 @@
   },
   "user": {
     "logout": "Logout"
+  },
+  "secondaryHero": {
+    "tagline": "Select the service you are seeking from the choices below:"
+  },
+  "coverings": {
+    "1": "Floors & ",
+    "2": "Coverings",
+    "text": "The choice of flooring sets the stage for the atmosphere of your interior design. From the firmness and openness of ceramic and porcelain tile floors to the warmth and coziness of hardwood and laminate, you can choose the right covering to go for the different spaces of your home; whether it be the living areas, bedrooms, or exteriors."
+  },
+  "irrigation": {
+    "1": "Landscape & ",
+    "2": "Irrigation",
+    "text": "Irrigation text"
+  },
+  "painting": {
+    "1": "Painting",
+    "text": "Painting"
+  },
+  "cleaning": {
+    "1": "Cleaning",
+    "text": "Cleaning text"
+  },
+  "plumbing": {
+    "1": "Plumbing",
+    "text": "Plumbing text"
+  },
+  "pavers": {
+    "1": "Pavers & ",
+    "2": "Stones",
+    "text": "Pavers text"
+  },
+  "granite": {
+    "1": "Granite ",
+    "2": "Countertops",
+    "text": "Granite text"
+  },
+  "pool": {
+    "1": "Pool ",
+    "2": "Services",
+    "text": "Pool text"
+  },
+  "misc": {
+    "1": "Miscellaneous",
+    "text": "Misc text"
   }
 }

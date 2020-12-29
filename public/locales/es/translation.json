@@ -86,5 +86,49 @@
   },
   "user": {
     "logout": "Cerrar sesión"
+  },
+  "secondaryHero": {
+    "tagline": "Seleccione el servicio que desea entre los siguientes:"
+  },
+  "coverings": {
+    "1": "Pisos y ",
+    "2": "Revestimientos",
+    "text": "La elección de un piso establece el ambiente de su diseño interior. Desde la firmeza y el carácter abierto de los suelos de cerámica y porcelana hasta la acogedora calidez de la madera y el laminado, usted puede elegir el revestimiento adecuado para los diferentes espacios de su casa; ya sea las zonas de estar, los dormitorios o exteriores."
+  },
+  "irrigation": {
+    "1": "Jardinería e ",
+    "2": "Irrigación",
+    "text": "Texto de irrigación"
+  },
+  "painting": {
+    "1": "Pintura",
+    "text": "Texto de pintura"
+  },
+  "cleaning": {
+    "1": "Limpieza",
+    "text": "Texto de limpieza"
+  },
+  "plumbing": {
+    "1": "Plomería",
+    "text": "Texto plomería"
+  },
+  "pavers": {
+    "1": "Pavimentos y ",
+    "2": "Piedras",
+    "text": "Pavimentos texto"
+  },
+  "granite": {
+    "1": "Superficies de ",
+    "2": "Granito",
+    "text": "Texto granito"
+  },
+  "pool": {
+    "1": "Servicio de ",
+    "2": "Piscina",
+    "text": "Pool text"
+  },
+  "misc": {
+    "1": "Misceláneos",
+    "text": "Texto misc"
   }
 }
