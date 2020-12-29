@@ -16,7 +16,7 @@ const NavBar = () => {
                 <div className="sm:flex-col sm:w-70">
                   <div className="px-4 py-4 flex items-baseline select-none">
                     <span className="text-2xl select-none">🏡</span>
-                    <h1 className="ml-2 mb-3 text-md items-baseline text-white font-sans tracking-wide font-bold select-none">
+                    <h1 className="ml-2 mb-3 text-sm items-baseline text-white font-sans tracking-wide font-bold uppercase select-none">
                       {t('navBar.app')}
                     </h1>
                     <sup className="hidden font-light text-gray-300 px-1">&trade;</sup>

@@ -14,10 +14,10 @@ const Menu = ({ isOpen, setOpen }) => {
         <NavLink className="menu" to="/schedule">
           <MenuItem label={t('menu.schedule')} />
         </NavLink>
-        <NavLink className="menu" to="pinboard">
+        <NavLink className="menu" to="/pinboard">
           <MenuItem label={t('menu.pinboard')} />
         </NavLink>
-        <NavLink className="menu" to="login" onClick={() => setOpen(!isOpen)}>
+        <NavLink className="menu" to="/login" onClick={() => setOpen(!isOpen)}>
           <MenuItem label={t('menu.account')} />
         </NavLink>
       </div>

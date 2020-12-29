@@ -10,7 +10,7 @@ import Home from './components/home';
 import Schedule from './components/schedule';
 import Services from './components/services';
 import Pinboard from './components/pinboard';
-import Coverings from './components/coverings';
+import Coverings from './components/categories/coverings';
 import Login from './components/login';
 import Registration from './components/registration';
 import Logout from './components/logout';
