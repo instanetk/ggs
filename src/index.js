@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 import Loading from './components/common/loading';
 import './i18next';
+import ScrollToTop from './scrollToTop';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './styles/tailwind.css';
@@ -10,6 +11,7 @@ import './styles/tailwind.css';
 ReactDOM.render(
   <Suspense fallback={<Loading />}>
     <BrowserRouter>
+      <ScrollToTop />
       <App />
     </BrowserRouter>
   </Suspense>,
