@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { getServices } from '../../services/getService';
+import { getCategories } from '../../services/categoryService';
 import CardScroll from '../common/cardScroll';
 import SecondaryHero from '../common/secondaryHero';
 import Testimonial from '../common/testimonial';
@@ -8,8 +9,14 @@ import Testimonial from '../common/testimonial';
 const Irrigation = () => {
   const { t } = useTranslation();
   const [useService, setService] = useState([]);
+  const [useCategories, setCategories] = useState([]);
 
   useEffect(() => {
+    async function fetchCategories() {
+      const { data } = await getCategories();
+      setCategories(data);
+    }
+    fetchCategories();
     async function fetchServices() {
       const { data } = await getServices('irrigation');
       setService(data);
@@ -37,6 +44,9 @@ const Irrigation = () => {
             <p className="mt-2 flex-wrap">{t('irrigation.text')}</p>
           </div>
         </div>
+      </div>
+      <div className="py-10 -mt-20 sm:ml-20">
+        <CardScroll name={t('home.category')} categories={useCategories} />
       </div>
     </main>
   );
