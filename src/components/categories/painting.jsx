@@ -7,9 +7,18 @@ import Testimonial from '../common/testimonial';
 const Painting = () => {
   const { t } = useTranslation();
 
+  const style = {
+    hero: '-mt-6 sm:mt-0',
+    services: '-mt-10 sm:mt-0 sm:ml-5 sm:flex-col sm:justify-center sm:px-14',
+    testimonial: 'px-4 sm:-mt-8 sm:px-20',
+    content: 'mt-6 pb-12 text-gray-800 tracking-wide text-justify text-lg select-none',
+    p: 'px-4 sm:px-20 mt-2 flex-wrap',
+    categories: 'py-10 -mt-20 sm:ml-20',
+  };
+
   return (
     <main>
-      <div className="-mt-6 sm:mt-0">
+      <div id="hero" className={style.hero}>
         <SecondaryHero
           text1={t('painting.1')}
           tagline={t('secondaryHero.tagline')}
@@ -18,17 +27,17 @@ const Painting = () => {
         />
       </div>
       <div>
-        <div className="-mt-10 sm:mt-0 sm:ml-5 sm:flex-col sm:justify-center sm:px-14">
+        <div id="services" className={style.services}>
           <CardScroll which="useService" category="painting" />
         </div>
-        <div className="px-4 sm:-mt-8 sm:px-20">
+        <div id="testimonial" className={style.testimonial}>
           <Testimonial />
-          <div className="mt-6 pb-12 text-gray-800 tracking-wide text-justify text-lg select-none">
-            <p className="mt-2 flex-wrap">{t('painting.text')}</p>
-          </div>
+        </div>
+        <div id="content" className={style.content}>
+          <p className={style.p}>{t('painting.text')}</p>
         </div>
       </div>
-      <div className="py-10 -mt-20 sm:ml-20">
+      <div id="categories" className={style.categories}>
         <CardScroll name={t('home.category')} which="useCategories" />
       </div>
     </main>
