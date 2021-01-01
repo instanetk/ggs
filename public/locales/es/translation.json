@@ -130,5 +130,9 @@
   "misc": {
     "1": "Misceláneos",
     "text": "Texto misc"
+  },
+  "tileinstallation": {
+    "1": "Tile ",
+    "2": "Installation"
   }
 }

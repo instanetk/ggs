@@ -1,10 +1,7 @@
 import React from 'react';
-import { useTranslation } from 'react-i18next';
 import img from '../../services/imgService';
 
-const SecondaryHero = ({ text1, text2, color, image }) => {
-  const { t } = useTranslation();
-
+const SecondaryHero = ({ text1, text2, color, image, tagline }) => {
   return (
     <div>
       <div className="px-4 h-84 sm:block sm:relative sm:bg-white sm:overflow-hidden md:-mt-1 select-none">
@@ -28,7 +25,7 @@ const SecondaryHero = ({ text1, text2, color, image }) => {
                     <span className="block xl:inline text-white sm:text-black">{text1}</span>
                     <span className={`block text-white sm:${color} xl:inline`}>{text2}</span>
                   </h1>
-                  <span className="mt-10">{t('secondaryHero.tagline')}</span>
+                  <span className="mt-10">{tagline}</span>
                 </div>
                 <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                   <div className="mt-3 sm:mt-0 sm:ml-3">

@@ -88,7 +88,8 @@
     "logout": "Logout"
   },
   "secondaryHero": {
-    "tagline": "Select the service you are seeking from the choices below:"
+    "tagline": "Select the service you are seeking from the choices below:",
+    "tagline2": "Let's set up an appointment for an estimate:"
   },
   "coverings": {
     "1": "Floors & ",
@@ -130,5 +131,9 @@
   "misc": {
     "1": "Miscellaneous",
     "text": "Misc text"
+  },
+  "tileinstallation": {
+    "1": "Tile ",
+    "2": "Installation"
   }
 }

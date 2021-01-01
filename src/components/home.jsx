@@ -1,28 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { getCategories } from '../services/categoryService';
-import { getServices } from '../services/getService';
 import CardScroll from './common/cardScroll';
 import Testimonial from './common/testimonial';
 import Carousel from './common/carousel';
 
 const Home = () => {
   const { t } = useTranslation();
-  const [useCategories, setCategories] = useState([]);
-  const [useService, setService] = useState([]);
-
-  useEffect(() => {
-    async function fetchCategories() {
-      const { data } = await getCategories();
-      setCategories(data);
-    }
-    fetchCategories();
-    async function fetchServices() {
-      const { data } = await getServices();
-      setService(data);
-    }
-    fetchServices();
-  }, []);
 
   return (
     <main>
@@ -58,8 +41,8 @@ const Home = () => {
         <Carousel />
       </div>
       <div className="sm:flex-col sm:justify-center sm:px-14">
-        <CardScroll name={t('home.category')} slug="services" categories={useCategories} />
-        <CardScroll name={t('home.services')} slug="schedule" categories={useService} />
+        <CardScroll name={t('home.category')} slug="services" which="useCategories" />
+        <CardScroll name={t('home.services')} slug="schedule" which="useService" />
       </div>
       <div className="px-4 sm:px-14">
         <Testimonial />

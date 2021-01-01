@@ -1,37 +1,26 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { getServices } from '../../services/getService';
-import { getCategories } from '../../services/categoryService';
 import CardScroll from '../common/cardScroll';
 import SecondaryHero from '../common/secondaryHero';
 import Testimonial from '../common/testimonial';
 
 const Pool = () => {
   const { t } = useTranslation();
-  const [useService, setService] = useState([]);
-  const [useCategories, setCategories] = useState([]);
-
-  useEffect(() => {
-    async function fetchCategories() {
-      const { data } = await getCategories();
-      setCategories(data);
-    }
-    fetchCategories();
-    async function fetchServices() {
-      const { data } = await getServices('pool');
-      setService(data);
-    }
-    fetchServices();
-  }, []);
 
   return (
     <main>
       <div className="-mt-6 sm:mt-0">
-        <SecondaryHero text1={t('pool.1')} text2={t('pool.2')} color="text-blue-500" image="catPool" />
+        <SecondaryHero
+          text1={t('pool.1')}
+          text2={t('pool.2')}
+          tagline={t('secondaryHero.tagline')}
+          color="text-blue-500"
+          image="catPool"
+        />
       </div>
       <div>
         <div className="-mt-10 sm:mt-0 sm:ml-5 sm:flex-col sm:justify-center sm:px-14">
-          <CardScroll categories={useService} />
+          <CardScroll which="useService" category="pool" />
         </div>
         <div className="px-4 sm:-mt-8 sm:px-20">
           <Testimonial />
@@ -41,7 +30,7 @@ const Pool = () => {
         </div>
       </div>
       <div className="py-10 -mt-20 sm:ml-20">
-        <CardScroll name={t('home.category')} categories={useCategories} />
+        <CardScroll name={t('home.category')} which="useCategories" />
       </div>
     </main>
   );
