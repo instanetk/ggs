@@ -22,8 +22,6 @@ const Tiles = () => {
         <div className="px-4 sm:-mt-0 sm:px-20 h-96">
           <div className="mt-6 pb-12 text-gray-800 tracking-wide text-justify text-lg select-none">
             <ServiceAddress />
-            {/* <GoogleMaps /> */}
-            {/* <p className="mt-2 flex-wrap">{t('coverings.text')}</p> */}
           </div>
         </div>
       </div>

@@ -15,11 +15,6 @@ const containerStyle = {
 
 const libraries = ['places'];
 
-const center = {
-  lat: 28.5445894,
-  lng: -81.3883121,
-};
-
 const options = {
   disableDefaultUI: true,
 };
@@ -28,28 +23,44 @@ const options = {
 const ServiceAddress = () => {
   // eslint-disable-next-line
   const [map, setMap] = React.useState(null);
+  const [searchBox, setSearchBox] = React.useState(null);
+  // eslint-disable-next-line
+  const [address, setAddress] = React.useState(null);
+  // eslint-disable-next-line
+  const [center, setCenter] = React.useState({
+    lat: 28.5445894,
+    lng: -81.3883121,
+  });
 
   const onLoad = React.useCallback(function callback(map) {
-    const bounds = new window.google.maps.LatLngBounds();
-    map.fitBounds(bounds);
-    setMap(map);
+    // const bounds = new window.google.maps.LatLngBounds();
+    // map.fitBounds(bounds);
+    // setMap(map);
   }, []);
 
   const onUnmount = React.useCallback(function callback(map) {
     setMap(null);
   }, []);
 
+  const onSearchBoxLoad = React.useCallback((ref) => {
+    setSearchBox(ref);
+  }, []);
+
+  const onPlacesChanged = React.useCallback(() => {
+    setAddress(searchBox.getPlaces());
+  }, [searchBox]);
+
   return (
     <div className={styles.mainDiv}>
       <LoadScript
-        googleMapsApiKey="AIzaSyDqwzCwa5VYbKEXFOT0bHtk58YINDHWQlc"
+        googleMapsApiKey={process.env.REACT_APP_GOOGLE_MAPS_API_KEY}
         libraries={libraries}
         language="en"
         region="us">
         <div>
           <h2 className={styles.h2}>What is your service address?</h2>
           <form>
-            <StandaloneSearchBox>
+            <StandaloneSearchBox onLoad={onSearchBoxLoad} onPlacesChanged={onPlacesChanged}>
               <input
                 type="text"
                 name="address"
@@ -62,8 +73,8 @@ const ServiceAddress = () => {
         <div className={styles.map}>
           <GoogleMap
             mapContainerStyle={containerStyle}
-            center={center}
-            zoom={10}
+            center={{ lat: 28.5445894, lng: -81.3883121 }}
+            zoom={7}
             onLoad={onLoad}
             onUnmount={onUnmount}
             options={options}>

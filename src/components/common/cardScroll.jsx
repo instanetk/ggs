@@ -4,7 +4,6 @@ import { getCategories } from '../../services/categoryService';
 import CardScrollUnit from './cardScrollUnit';
 
 const CardScroll = ({ name, slug, which, category }) => {
-  console.log(which, category);
   const [useService, setService] = useState([]);
   const [useCategories, setCategories] = useState([]);
 
