@@ -5,7 +5,8 @@ const styles = {
   input: 'px-3 py-3 h-12 placeholder-indigo-500 w-full',
   h2: 'py-4 text-3xl text-gray-600 font-normal text-left',
   map: 'mt-6 rounded-md select-none overflow-hidden sm:w-1/2',
-  mainDiv: 'sm:flex justify-between -mt-6',
+  mainDiv: 'sm:flex justify-between px-20',
+  boxDiv: 'sm:w-1/2 mr-6',
 };
 
 const containerStyle = {
@@ -29,7 +30,7 @@ const ServiceAddress = () => {
   // eslint-disable-next-line
   const [center, setCenter] = React.useState({
     lat: 28.5445894,
-    lng: -81.3883121,
+    lng: -81.5883121,
   });
 
   const onLoad = React.useCallback(function callback(map) {
@@ -57,7 +58,7 @@ const ServiceAddress = () => {
         libraries={libraries}
         language="en"
         region="us">
-        <div>
+        <div className={styles.boxDiv}>
           <h2 className={styles.h2}>What is your service address?</h2>
           <form>
             <StandaloneSearchBox onLoad={onSearchBoxLoad} onPlacesChanged={onPlacesChanged}>
@@ -73,8 +74,8 @@ const ServiceAddress = () => {
         <div className={styles.map}>
           <GoogleMap
             mapContainerStyle={containerStyle}
-            center={{ lat: 28.5445894, lng: -81.3883121 }}
-            zoom={7}
+            center={center}
+            zoom={8}
             onLoad={onLoad}
             onUnmount={onUnmount}
             options={options}>

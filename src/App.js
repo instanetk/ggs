@@ -56,8 +56,8 @@ const App = () => {
           <Route path={['/services/granite-countertops', '/services/superficies-de-granito']} component={Granite} />
           <Route path={['/services/pool-service', '/services/servicio-de-piscina']} component={Pool} />
           <Route path={['/services/miscellaneous', '/services/misceláneos']} component={Misc} />
-          <Route path={['/services/tile-installation', '/services/instalación-de-losas']} component={Tiles} />
           <Route path="/services" component={Services} />
+          <Route path={['/schedule/tile-installation', '/schedule/instalación-de-losas']} component={Tiles} />
           <Route path="/schedule" component={Schedule} />
           <Route path="/pinboard" component={Pinboard} />
           <Route path="/login" component={Login} />

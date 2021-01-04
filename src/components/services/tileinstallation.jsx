@@ -2,13 +2,20 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import SecondaryHero from '../common/secondaryHero';
 import ServiceAddress from '../serviceAddress';
+import CardScroll from '../common/cardScroll';
 
 const Tiles = () => {
   const { t } = useTranslation();
 
+  const style = {
+    hero: '-mt-6 sm:mt-0',
+    address: 'py-10 -mt-0 sm:ml-0',
+    categories: 'py-10 -mt-0 sm:ml-20',
+  };
+
   return (
-    <main className="h-screen">
-      <div className="-mt-6 sm:mt-0">
+    <main>
+      <div id="hero" className={style.hero}>
         <SecondaryHero
           text1={t('tileinstallation.1')}
           text2={t('tileinstallation.2')}
@@ -17,13 +24,11 @@ const Tiles = () => {
           image="srvTiles"
         />
       </div>
-      <div>
-        <div className="-mt-10 sm:mt-0 sm:ml-5 sm:flex-col sm:justify-center sm:px-14"></div>
-        <div className="px-4 sm:-mt-0 sm:px-20 h-96">
-          <div className="mt-6 pb-12 text-gray-800 tracking-wide text-justify text-lg select-none">
-            <ServiceAddress />
-          </div>
-        </div>
+      <div id="address" className={style.address}>
+        <ServiceAddress />
+      </div>
+      <div id="categories" className={style.categories}>
+        <CardScroll which={'useCategories'} slug="/services" name="Back to Categories" />
       </div>
     </main>
   );

@@ -29,7 +29,7 @@ const Coverings = () => {
       </div>
       <div>
         <div id="services" className={style.services}>
-          <CardScroll which="useService" category="coverings" />
+          <CardScroll which="useService" slug="/schedule" category="coverings" />
         </div>
         <div id="testimonial" className={style.testimonial}>
           <Testimonial />
