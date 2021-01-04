@@ -2,16 +2,19 @@ import React from 'react';
 import { GoogleMap, LoadScript, StandaloneSearchBox } from '@react-google-maps/api';
 
 const styles = {
+  form: '',
   input: 'px-3 py-3 h-12 placeholder-indigo-500 w-full',
-  h2: 'py-4 text-3xl text-gray-600 font-normal text-left',
-  map: 'mt-6 rounded-md select-none overflow-hidden sm:w-1/2',
-  mainDiv: 'sm:flex justify-between px-20',
-  boxDiv: 'sm:w-1/2 mr-6',
+  button:
+    'mt-6 py-3 px-4 bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-500 focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-lg font-normal rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 ',
+  h2: 'mt-2 text-lg text-gray-600 font-normal text-left',
+  map: 'rounded-md shadow select-none overflow-hidden sm:w-1/2',
+  mainDiv: 'sm:flex justify-between px-20 ',
+  boxDiv: 'px-8 py-6 rounded-md shadow sm:w-1/2 mr-6 bg-white',
 };
 
 const containerStyle = {
   width: '100%',
-  height: '350px',
+  height: '100%',
 };
 
 const libraries = ['places'];
@@ -59,16 +62,30 @@ const ServiceAddress = () => {
         language="en"
         region="us">
         <div className={styles.boxDiv}>
-          <h2 className={styles.h2}>What is your service address?</h2>
-          <form>
+          <form className={styles.form}>
+            <h2 className={styles.h2}>Name:</h2>
+            <input type="text" name="name" placeholder="Full Name" autoComplete="off" className={styles.input}></input>
+            <h2 className={styles.h2}>Phone Number:</h2>
+            <input
+              type="text"
+              name="phone"
+              placeholder="407-321-0000"
+              autoComplete="off"
+              className={styles.input}></input>
+            <h2 className={styles.h2}>Service Address:</h2>
             <StandaloneSearchBox onLoad={onSearchBoxLoad} onPlacesChanged={onPlacesChanged}>
               <input
                 type="text"
                 name="address"
                 placeholder="777 E Washington St, Orlando, FL"
-                autoComplete="off"
+                autocomplete="off"
                 className={styles.input}></input>
             </StandaloneSearchBox>
+            <h2 className={styles.h2}>Preferred Date</h2>
+            <input type="date" name="date" autoComplete="off" className={styles.input}></input>
+            <button type="button" className={styles.button}>
+              Request Estimate Appointment
+            </button>
           </form>
         </div>
         <div className={styles.map}>

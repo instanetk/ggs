@@ -28,7 +28,7 @@ const Tiles = () => {
         <ServiceAddress />
       </div>
       <div id="categories" className={style.categories}>
-        <CardScroll which={'useCategories'} slug="/services" name="Back to Categories" />
+        <CardScroll which={'useCategories'} slug="/services" name="Browse by category" />
       </div>
     </main>
   );
