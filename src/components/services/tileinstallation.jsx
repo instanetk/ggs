@@ -9,7 +9,7 @@ const Tiles = () => {
 
   const style = {
     hero: '-mt-6 sm:mt-0',
-    address: 'py-10 -mt-0 sm:ml-0',
+    address: 'py-10 sm:ml-0',
     categories: 'py-10 -mt-0 sm:ml-20',
   };
 
@@ -17,8 +17,8 @@ const Tiles = () => {
     <main>
       <div id="hero" className={style.hero}>
         <SecondaryHero
-          text1={t('tileinstallation.1')}
-          text2={t('tileinstallation.2')}
+          text1={t('tileInstallation.1')}
+          text2={t('tileInstallation.2')}
           tagline={t('secondaryHero.tagline2')}
           color="text-yellow-700"
           image="srvTiles"

@@ -132,8 +132,16 @@
     "1": "Miscellaneous",
     "text": "Misc text"
   },
-  "tileinstallation": {
+  "tileInstallation": {
     "1": "Tile ",
     "2": "Installation"
+  },
+  "serviceAddress": {
+    "name": "Name:",
+    "fullname": "Full Name",
+    "phone": "Phone:",
+    "address": "Service Address:",
+    "date": "Preferred Date",
+    "button": "Request Estimate Appointment"
   }
 }

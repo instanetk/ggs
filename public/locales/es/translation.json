@@ -131,8 +131,16 @@
     "1": "Misceláneos",
     "text": "Texto misc"
   },
-  "tileinstallation": {
-    "1": "Tile ",
-    "2": "Installation"
+  "tileInstallation": {
+    "1": "Instalación de ",
+    "2": "Losas"
+  },
+  "serviceAddress": {
+    "name": "Nombre:",
+    "fullname": "Nombre Completo",
+    "phone": "Teléfono:",
+    "address": "Dirección de Servicio:",
+    "date": "Fecha Preferida",
+    "button": "Programar Cita de Estimado"
   }
 }
