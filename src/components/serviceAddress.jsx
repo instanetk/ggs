@@ -31,7 +31,6 @@ const options = {
   },
 };
 
-//COMPONENT
 const ServiceAddress = () => {
   const { t } = useTranslation();
   // eslint-disable-next-line
@@ -39,12 +38,18 @@ const ServiceAddress = () => {
   const [searchBox, setSearchBox] = React.useState(null);
   // eslint-disable-next-line
   const [address, setAddress, ref] = useStateRef(null);
-  // eslint-disable-next-line
   const [center, setCenter] = React.useState({
     lat: 28.5445894,
     lng: -81.5883121,
   });
   const [zoom, setZoom] = React.useState(8);
+  // Use the _ggs suffix to prevent Chrome autofill.
+  const [form, setForm, formRef] = useStateRef({
+    name_ggs: '',
+    phone_ggs: '',
+    address: '',
+    date: '',
+  });
 
   const onLoad = React.useCallback(function callback(map) {
     // const bounds = new window.google.maps.LatLngBounds();
@@ -63,17 +68,27 @@ const ServiceAddress = () => {
   const onPlacesChanged = React.useCallback(() => {
     setAddress(searchBox.getPlaces());
     const updateMap = () => {
-      let coordinates = ref.current[0];
+      let coordinates = ref.current[0].geometry.location;
       let center = {
-        lat: coordinates.geometry.location.lat(),
-        lng: coordinates.geometry.location.lng(),
+        lat: coordinates.lat(),
+        lng: coordinates.lng(),
       };
+
       setCenter(center);
       setZoom(17);
-      console.log(center);
+      setForm({ ...formRef.current, address: ref.current[0].formatted_address });
+      console.log(formRef.current);
     };
     updateMap();
-  }, [searchBox, setAddress, ref]);
+  }, [searchBox, setAddress, ref, formRef, setForm]);
+
+  const updateField = (e) => {
+    setForm({
+      ...formRef.current,
+      [e.target.name]: e.target.value,
+    });
+    console.log(formRef.current);
+  };
 
   return (
     <div className={styles.mainDiv}>
@@ -88,15 +103,17 @@ const ServiceAddress = () => {
 
             <h2 className={styles.h2}>{t('serviceAddress.name')}</h2>
             <input
+              onChange={updateField}
               type="text"
-              name="name"
+              name="name_ggs"
               autoComplete="none"
               placeholder={t('serviceAddress.fullname')}
               className={styles.input}></input>
             <h2 className={styles.h2}>{t('serviceAddress.phone')}</h2>
             <input
+              onChange={updateField}
               type="text"
-              name="phone"
+              name="phone_ggs"
               autoComplete="none"
               placeholder="407-321-0000"
               className={styles.input}></input>
@@ -113,7 +130,7 @@ const ServiceAddress = () => {
                 className={styles.input}></input>
             </StandaloneSearchBox>
             <h2 className={styles.h2}>{t('serviceAddress.date')}</h2>
-            <input type="date" name="date" className={styles.input}></input>
+            <input onChange={updateField} type="date" name="date" className={styles.input}></input>
             <button type="button" className={styles.button}>
               {t('serviceAddress.button')}
             </button>

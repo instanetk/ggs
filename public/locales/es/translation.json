@@ -88,7 +88,8 @@
     "logout": "Cerrar sesión"
   },
   "secondaryHero": {
-    "tagline": "Seleccione el servicio que desea entre los siguientes:"
+    "tagline": "Seleccione el servicio que desea entre los siguientes:",
+    "tagline2": "Pedir cita para estimado:"
   },
   "coverings": {
     "1": "Pisos y ",
@@ -139,8 +140,8 @@
     "name": "Nombre:",
     "fullname": "Nombre Completo",
     "phone": "Teléfono:",
-    "address": "Dirección de Servicio:",
-    "date": "Fecha Preferida",
+    "address": "Dirección para Servicio:",
+    "date": "Fecha Preferida:",
     "button": "Programar Cita de Estimado"
   }
 }
