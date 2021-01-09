@@ -143,5 +143,9 @@
     "address": "Dirección para Servicio:",
     "date": "Fecha Preferida:",
     "button": "Programar Cita de Estimado"
+  },
+  "thankYou": {
+    "h1": "¡Gracias!",
+    "p": "Estaremos en contacto próximamente para confirmar su cita."
   }
 }

@@ -143,5 +143,9 @@
     "address": "Service Address:",
     "date": "Preferred Date",
     "button": "Request Estimate Appointment"
+  },
+  "thankYou": {
+    "h1": "Thank you!",
+    "p": "We will be in touch shortly to confirm your appointment."
   }
 }

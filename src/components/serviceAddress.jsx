@@ -2,6 +2,8 @@ import React from 'react';
 import { GoogleMap, LoadScript, StandaloneSearchBox, Marker } from '@react-google-maps/api';
 import { useTranslation } from 'react-i18next';
 import useStateRef from 'react-usestateref';
+import { schedule } from '../services/scheduleService';
+import { toast } from 'react-toastify';
 
 const styles = {
   form: '',
@@ -31,7 +33,7 @@ const options = {
   },
 };
 
-const ServiceAddress = () => {
+const ServiceAddress = ({ sayThanks, service }) => {
   const { t } = useTranslation();
   // eslint-disable-next-line
   const [map, setMap] = React.useState(null);
@@ -49,7 +51,9 @@ const ServiceAddress = () => {
     phone_ggs: '',
     address: '',
     date: '',
+    service,
   });
+  const [error, setError] = React.useState({});
 
   const onLoad = React.useCallback(function callback(map) {
     // const bounds = new window.google.maps.LatLngBounds();
@@ -77,7 +81,7 @@ const ServiceAddress = () => {
       setCenter(center);
       setZoom(17);
       setForm({ ...formRef.current, address: ref.current[0].formatted_address });
-      console.log(formRef.current);
+      // console.log(formRef.current);
     };
     updateMap();
   }, [searchBox, setAddress, ref, formRef, setForm]);
@@ -87,9 +91,35 @@ const ServiceAddress = () => {
       ...formRef.current,
       [e.target.name]: e.target.value,
     });
-    console.log(formRef.current);
+    // console.log(formRef.current);
   };
 
+  const doSubmit = async (e) => {
+    try {
+      // This prevents a window reload (!)
+      e.preventDefault();
+      // Create appointment object
+      const appointment = {
+        name: formRef.current.name_ggs,
+        phone: formRef.current.phone_ggs,
+        address: formRef.current.address,
+        date: formRef.current.date,
+        service: formRef.current.service,
+      };
+      // console.log('appointment object', appointment);
+      await schedule(appointment);
+      sayThanks();
+    } catch (ex) {
+      if (ex.response && ex.response.status === 400) {
+        const errors = { ...error };
+        // If errors, set the error state to the response data.
+        errors.username = ex.response.data;
+        setError(errors);
+        // This error will be displayed to the client.
+        toast('🦊 ' + errors.username);
+      }
+    }
+  };
   return (
     <div className={styles.mainDiv}>
       <LoadScript
@@ -98,7 +128,7 @@ const ServiceAddress = () => {
         language="en"
         region="us">
         <div className={styles.boxDiv}>
-          <form className={styles.form} autoComplete="none">
+          <form onSubmit={doSubmit} className={styles.form} autoComplete="none">
             <input autoComplete="on" value="none" type="hidden"></input>
 
             <h2 className={styles.h2}>{t('serviceAddress.name')}</h2>
@@ -131,7 +161,7 @@ const ServiceAddress = () => {
             </StandaloneSearchBox>
             <h2 className={styles.h2}>{t('serviceAddress.date')}</h2>
             <input onChange={updateField} type="date" name="date" className={styles.input}></input>
-            <button type="button" className={styles.button}>
+            <button type="submit" className={styles.button}>
               {t('serviceAddress.button')}
             </button>
           </form>

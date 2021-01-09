@@ -1,11 +1,19 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import SecondaryHero from '../common/secondaryHero';
-import ServiceAddress from '../serviceAddress';
 import CardScroll from '../common/cardScroll';
+import ServiceAddress from '../serviceAddress';
+import ThankYou from '../../components/thankYou';
 
 const Tiles = () => {
   const { t } = useTranslation();
+  const [submitted, setState] = React.useState(false);
+
+  const sayThanks = () => {
+    setState(!submitted);
+  };
+
+  const service = t('services.tiles');
 
   const style = {
     hero: '-mt-6 sm:mt-0',
@@ -25,7 +33,7 @@ const Tiles = () => {
         />
       </div>
       <div id="address" className={style.address}>
-        <ServiceAddress />
+        {submitted ? <ThankYou /> : <ServiceAddress sayThanks={sayThanks} service={service} />}
       </div>
       <div id="categories" className={style.categories}>
         <CardScroll which={'useCategories'} slug="/services" name="Browse by category" />
