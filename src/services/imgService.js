@@ -23,7 +23,8 @@
 
 const img = {
   hero: 'hero_photo-1589530006797-d67347f18caa_ameibe.jpg',
-  login: 'shutterstock_1100648855_efytzx.png',
+  login:
+    'https://res.cloudinary.com/dgt2j8jc0/image/upload/c_scale,q_90,w_2000/login_shutterstock_1100648855_phc8ix.jpg',
   catCovering: 'shutterstock_88367131_ktahpp.jpg',
   catLandscaping: 'shutterstock_70441069_sgowps.jpg',
   catRemodeling: 'cat_photo-1542621334-a254cf47733d_aafomi.jpg',

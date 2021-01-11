@@ -27,6 +27,14 @@ import Account from './components/account';
 import auth from './services/authService';
 import Tiles from './components/services/tiles';
 import Laminate from './components/services/laminate';
+import Carpet from './components/services/carpet';
+import Backsplash from './components/services/backsplash';
+import CarpetCleaning from './components/services/carpetCleaning';
+import OneTimeCleaning from './components/services/cleaning';
+import Handyman from './components/services/handyman';
+import MinorElectrical from './components/services/minorElectrical';
+import BathroomRemodel from './components/services/bathroomRemodel';
+import KitchenRemodel from './components/services/kitchenRemodel';
 import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {
@@ -63,6 +71,14 @@ const App = () => {
             path={['/schedule/hardwood-laminate-floors', '/schedule/pisos-de-madera-y-laminado']}
             component={Laminate}
           />
+          <Route path={['/schedule/carpet-installation', '/schedule/instalación-de-alfombras']} component={Carpet} />
+          <Route path={['/schedule/backsplash', '/schedule/backsplash']} component={Backsplash} />
+          <Route path={['/schedule/carpet-cleaning', '/schedule/limpieza-de-alfombras']} component={CarpetCleaning} />
+          <Route path={['/schedule/one-time-cleaning', '/schedule/limpieza--una-vez-']} component={OneTimeCleaning} />
+          <Route path={['/schedule/handyman-services', '/schedule/servicios-de-reparación']} component={Handyman} />
+          <Route path={['/schedule/minor-electrical', '/schedule/electricidad-menor']} component={MinorElectrical} />
+          <Route path={['/schedule/bathroom-remodel', '/schedule/remodelación-de-baños']} component={BathroomRemodel} />
+          <Route path={['/schedule/kitchen-remodel', '/schedule/remodelación-de-cocina']} component={KitchenRemodel} />
           <Route path="/schedule" component={Schedule} />
           <Route path="/pinboard" component={Pinboard} />
           <Route path="/login" component={Login} />

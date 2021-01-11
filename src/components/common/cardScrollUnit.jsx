@@ -9,9 +9,10 @@ const CardScrollUnit = ({ name, slug, image }) => {
 
   const unit = t(name);
   //regex: match ' & ' - any ampersand wrapped by single spaces or a single space ' '.
+  //regex: match any parenthesis and replace with a -
   let route;
-  if (slug) route = slug + '/' + unit.toLowerCase().replace(/\s&\s|\s/g, '-');
-  else route = unit.toLowerCase().replace(/\s&\s|\s/g, '-');
+  if (slug) route = slug + '/' + unit.toLowerCase().replace(/\s&\s|\s|[()]/g, '-');
+  else route = unit.toLowerCase().replace(/\s&\s|\s|[()]/g, '-');
 
   return (
     <div className="w-64 text-center ml-4 flex-shrink-0 px-4 py-0 sm:pb-8 select-none sm:w-64 sm:ml-0 cursor-pointer ">

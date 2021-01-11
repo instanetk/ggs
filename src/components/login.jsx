@@ -27,7 +27,7 @@ const Login = ({ location }) => {
       await auth.login(form.email, form.password);
       // Redirect user
       const { state } = location;
-      window.location = state ? state.from.pathname : '/';
+      window.location = state ? state.from.pathname : '/account';
     } catch (ex) {
       if (ex.response && ex.response.status === 400) {
         const errors = { ...error };

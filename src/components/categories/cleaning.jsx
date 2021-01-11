@@ -21,15 +21,15 @@ const Cleaning = () => {
     <main>
       <div id="hero" className={style.hero}>
         <SecondaryHero
-          text1={t('cleaning.1')}
+          text2={t('cleaning.1')}
           tagline={t('secondaryHero.tagline')}
-          color="text-red-500"
-          image="catCleaning"
+          color="text-purple-700"
+          image="srvCleaning"
         />
       </div>
       <div>
         <div id="services" className={style.services}>
-          <CardScroll which="useService" category="cleaning" />
+          <CardScroll which="useService" slug="/schedule" category="cleaning" />
         </div>
         <div id="testimonial" className={style.testimonial}>
           <Testimonial />

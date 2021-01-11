@@ -140,6 +140,38 @@
     "1": "Pisos de Madera",
     "2": " y Laminado"
   },
+
+  "carpetInstallation": {
+    "1": "Instalación de ",
+    "2": "Alfombras"
+  },
+  "backsplash": {
+    "1": "Backsplash "
+  },
+  "carpetCleaning": {
+    "1": "Limpieza de ",
+    "2": "Alfombras"
+  },
+  "oneTimeCleaning": {
+    "1": "Limpieza ",
+    "2": "(una vez)"
+  },
+  "handyman": {
+    "1": "Servicios de ",
+    "2": "Reparación"
+  },
+  "minorElectrical": {
+    "1": "Electricidad ",
+    "2": "Menor"
+  },
+  "bathroomRemodel": {
+    "1": "Remodelación ",
+    "2": "de Baños"
+  },
+  "kitchenRemodel": {
+    "1": "Remodelación ",
+    "2": "de Cocina"
+  },
   "serviceAddress": {
     "name": "Nombre:",
     "fullname": "Nombre Completo",

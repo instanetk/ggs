@@ -28,7 +28,7 @@ const Misc = () => {
       </div>
       <div>
         <div id="services" className={style.services}>
-          <CardScroll which="useService" category="misc" />
+          <CardScroll which="useService" slug="/schedule" category="misc" />
         </div>
         <div id="testimonial" className={style.testimonial}>
           <Testimonial />

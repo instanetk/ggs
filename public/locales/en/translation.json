@@ -137,8 +137,39 @@
     "2": "Installation"
   },
   "laminateInstallation": {
-    "1": "Hardwood & Laminate ",
-    "2": "Floors"
+    "1": "Hardwood & ",
+    "2": "Laminate Floors"
+  },
+  "carpetInstallation": {
+    "1": "Carpet ",
+    "2": "Installation"
+  },
+  "backsplash": {
+    "1": "Backsplash "
+  },
+  "carpetCleaning": {
+    "1": "Carpet ",
+    "2": "Cleaning"
+  },
+  "oneTimeCleaning": {
+    "1": "One-Time ",
+    "2": "Cleaning"
+  },
+  "handyman": {
+    "1": "Handyman ",
+    "2": "Services"
+  },
+  "minorElectrical": {
+    "1": "Minor ",
+    "2": "Electrical"
+  },
+  "bathroomRemodel": {
+    "1": "Bathroom ",
+    "2": "Remodel"
+  },
+  "kitchenRemodel": {
+    "1": "Kitchen ",
+    "2": "Remodel"
   },
   "serviceAddress": {
     "name": "Name:",
