@@ -136,6 +136,10 @@
     "1": "Instalación de ",
     "2": "Losas"
   },
+  "laminateInstallation": {
+    "1": "Pisos de Madera",
+    "2": " y Laminado"
+  },
   "serviceAddress": {
     "name": "Nombre:",
     "fullname": "Nombre Completo",

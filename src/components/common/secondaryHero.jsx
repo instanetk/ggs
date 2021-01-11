@@ -1,4 +1,5 @@
 import React from 'react';
+import { Image, CloudinaryContext, Transformation } from 'cloudinary-react';
 import img from '../../services/imgService';
 
 const SecondaryHero = ({ text1, text2, color, image, tagline }) => {
@@ -40,9 +41,16 @@ const SecondaryHero = ({ text1, text2, color, image, tagline }) => {
             </main>
           </div>
         </div>
-        <div className="sm:inset-y-0 sm:bottom-0 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 xl:-mr-10">
+        {/* <div className="sm:inset-y-0 sm:bottom-0 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 xl:-mr-10">
           <img className="rounded-sm shadow object-cover w-full h-60 sm:h-full" src={img[image]} alt="" />
-        </div>
+        </div> */}
+        <CloudinaryContext
+          cloudName="dgt2j8jc0"
+          className="sm:inset-y-0 sm:bottom-0 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 xl:-mr-10">
+          <Image publicId={img[image]} className="rounded-sm shadow object-cover w-full h-full">
+            <Transformation width="900" quality="80" crop="fill" />
+          </Image>
+        </CloudinaryContext>
         <h1 className="-mt-16 ml-4 sm:hidden sm:mt-0 sm:mb-0 text-3xl leading-7 tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
           <span className="block xl:inline text-white sm:text-black">{text1}</span>
           <span className="block text-white sm:text-indigo-600 xl:inline">{text2}</span>

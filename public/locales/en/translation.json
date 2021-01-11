@@ -136,6 +136,10 @@
     "1": "Tile ",
     "2": "Installation"
   },
+  "laminateInstallation": {
+    "1": "Hardwood & Laminate ",
+    "2": "Floors"
+  },
   "serviceAddress": {
     "name": "Name:",
     "fullname": "Full Name",

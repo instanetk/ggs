@@ -25,8 +25,9 @@ import Logout from './components/logout';
 import NotFound from './components/notFound';
 import Account from './components/account';
 import auth from './services/authService';
+import Tiles from './components/services/tiles';
+import Laminate from './components/services/laminate';
 import 'react-toastify/dist/ReactToastify.css';
-import Tiles from './components/services/tileinstallation';
 
 const App = () => {
   const [user, setUser] = useState({});
@@ -58,6 +59,10 @@ const App = () => {
           <Route path={['/services/miscellaneous', '/services/misceláneos']} component={Misc} />
           <Route path="/services" component={Services} />
           <Route path={['/schedule/tile-installation', '/schedule/instalación-de-losas']} component={Tiles} />
+          <Route
+            path={['/schedule/hardwood-laminate-floors', '/schedule/pisos-de-madera-y-laminado']}
+            component={Laminate}
+          />
           <Route path="/schedule" component={Schedule} />
           <Route path="/pinboard" component={Pinboard} />
           <Route path="/login" component={Login} />

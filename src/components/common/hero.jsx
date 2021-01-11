@@ -1,7 +1,8 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { NavLink } from 'react-router-dom';
+import { Image, CloudinaryContext, Transformation } from 'cloudinary-react';
 import img from '../../services/imgService';
+// import { NavLink } from 'react-router-dom';
 
 const Hero = () => {
   const { t } = useTranslation();
@@ -36,13 +37,13 @@ const Hero = () => {
                 </div>
                 <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                   <div className="hidden sm:block rounded-md shadow">
-                    <NavLink to="schedule">
+                    {/* <NavLink to="schedule">
                       <span
                         href="https://generalglobalservices.com"
                         className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10">
                         {t('hero.button')}
                       </span>
-                    </NavLink>
+                    </NavLink> */}
                   </div>
                   <div className="mt-3 sm:mt-0 sm:ml-3">
                     {/* <a
@@ -56,9 +57,16 @@ const Hero = () => {
             </main>
           </div>
         </div>
-        <div className="sm:inset-y-0 sm:bottom-0 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 xl:-mr-10">
-          <img className="rounded-sm shadow object-cover w-full h-full" src={img.hero} alt="" />
-        </div>
+        {/* <div className="sm:inset-y-0 sm:bottom-0 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 xl:-mr-10"> */}
+        {/* <img className="rounded-sm shadow object-cover w-full h-full" src={img.hero} alt="" /> */}
+        {/* </div> */}
+        <CloudinaryContext
+          cloudName="dgt2j8jc0"
+          className="sm:inset-y-0 sm:bottom-0 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 xl:-mr-10">
+          <Image publicId={img.hero} className="rounded-sm shadow object-cover w-full h-full">
+            <Transformation width="1650" quality="80" crop="fill" />
+          </Image>
+        </CloudinaryContext>
         <h1 className="-mt-16 ml-4 sm:hidden sm:mt-0 sm:mb-0 text-3xl leading-7 tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
           <span className="block xl:inline text-white sm:text-black">{t('hero.1')}</span>
           <span className="block text-white sm:text-indigo-600 xl:inline">{t('hero.2')}</span>

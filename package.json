@@ -13,6 +13,7 @@
     "@types/googlemaps": "^3.43.0",
     "autoprefixer": "^9.8.6",
     "axios": "^0.21.0",
+    "cloudinary-react": "^1.6.8",
     "detect-browser-language": "0.0.2",
     "file-loader": "^6.2.0",
     "i18next": "^19.8.4",

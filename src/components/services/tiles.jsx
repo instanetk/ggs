@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import SecondaryHero from '../common/secondaryHero';
 import CardScroll from '../common/cardScroll';
 import ServiceAddress from '../serviceAddress';
-import ThankYou from '../../components/thankYou';
+import ThankYou from '../thankYou';
 
 const Tiles = () => {
   const { t } = useTranslation();
@@ -17,7 +17,7 @@ const Tiles = () => {
 
   const style = {
     hero: '-mt-6 sm:mt-0',
-    address: 'py-10 sm:ml-0',
+    address: 'sm:py-10 sm:ml-0',
     categories: 'py-10 -mt-0 sm:ml-20',
   };
 
