@@ -25,6 +25,7 @@
     "postcss": "^7.0.35",
     "query-string": "^6.13.7",
     "react": "^17.0.1",
+    "react-calendar": "^3.3.0",
     "react-dom": "^17.0.1",
     "react-i18next": "^11.8.4",
     "react-responsive-carousel": "^3.2.11",

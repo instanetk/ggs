@@ -40,7 +40,7 @@ const Login = ({ location }) => {
     }
   };
 
-  if (auth.getCurrentUser()) return <Redirect to="/" />;
+  if (auth.getCurrentUser()) return <Redirect to="/account" />;
 
   return (
     <main

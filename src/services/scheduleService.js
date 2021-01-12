@@ -12,3 +12,7 @@ export function schedule(appointment) {
     service: appointment.service,
   });
 }
+
+export function getSchedule(apiEndPoint) {
+  return http.get(apiEndpoint);
+}
