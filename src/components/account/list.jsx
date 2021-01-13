@@ -1,7 +1,6 @@
 import React from 'react';
 
 const List = ({ schedule }) => {
-  console.log(schedule);
   return (
     <div className="mx-auto px-4 sm:px-8 max-w-4xl">
       <div className="py-8">
@@ -36,10 +35,9 @@ const List = ({ schedule }) => {
                 </tr>
               </thead>
               <tbody>
-                {' '}
                 {schedule.map((appointment) => {
                   return (
-                    <tr>
+                    <tr key={appointment._id}>
                       <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                         <div className="flex items-center">
                           {/* <div className="flex-shrink-0">
@@ -56,7 +54,7 @@ const List = ({ schedule }) => {
                         <p className="text-gray-900 whitespace-no-wrap">{appointment.service}</p>
                       </td>
                       <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                        <p className="text-gray-900 whitespace-no-wrap">{appointment.date}</p>
+                        <p className="text-gray-900 whitespace-no-wrap">{new Date(appointment.date).toDateString()}</p>
                       </td>
                       <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                         <span className="relative inline-block px-3 py-1 font-semibold text-green-900 leading-tight">

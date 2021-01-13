@@ -103,7 +103,7 @@ const ServiceAddress = ({ sayThanks, service }) => {
         name: formRef.current.name_ggs,
         phone: formRef.current.phone_ggs,
         address: formRef.current.address,
-        date: formRef.current.date,
+        date: new Date(formRef.current.date),
         service: formRef.current.service,
       };
       // console.log('appointment object', appointment);

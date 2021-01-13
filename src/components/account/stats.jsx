@@ -9,7 +9,7 @@ const Stats = ({ schedule }) => {
             <span className="inline text-white">{schedule.length}</span>
             {/* <span className="text-indigo-200">+</span> */}
           </h5>
-          <p className="text-indigo-100 tracking-wide text-xs font-medium uppercase">Total Requests</p>
+          <p className="text-indigo-100 tracking-wide text-xs font-medium uppercase">Requests</p>
         </div>
         <div>
           <h5 className="text-5xl font-bold text-white">
@@ -19,12 +19,13 @@ const Stats = ({ schedule }) => {
                   if (!item.completed) {
                     return item;
                   }
+                  return null;
                 }).length
               }
             </span>
             {/* <span className="text-indigo-200">+</span> */}
           </h5>
-          <p className="text-indigo-100 tracking-wide text-xs font-medium uppercase">Active Requests</p>
+          <p className="text-indigo-100 tracking-wide text-xs font-medium uppercase">Active</p>
         </div>
         <div>
           <h5 className="text-5xl font-bold text-white">
@@ -34,6 +35,7 @@ const Stats = ({ schedule }) => {
                   if (item.completed) {
                     return item;
                   }
+                  return null;
                 }).length
               }
             </span>
@@ -43,10 +45,10 @@ const Stats = ({ schedule }) => {
         </div>
         <div>
           <h5 className="text-5xl font-bold text-white">
-            <span className="inline text-white">3987</span>
-            <span className="text-indigo-200">+</span>
+            <span className="inline text-white">39</span>
+            {/* <span className="text-indigo-200">+</span> */}
           </h5>
-          <p className="text-indigo-100 tracking-wide text-xs font-medium uppercase">Visitors</p>
+          <p className="text-indigo-100 tracking-wide text-xs font-medium uppercase">ONLINE</p>
         </div>
       </div>
     </section>

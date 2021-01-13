@@ -1,6 +1,6 @@
 {
   "name": "ggs",
-  "version": "0.1.2",
+  "version": "0.1.5",
   "private": true,
   "homepage": ".",
   "dependencies": {
@@ -11,6 +11,7 @@
     "@testing-library/react": "^11.2.2",
     "@testing-library/user-event": "^12.5.0",
     "@types/googlemaps": "^3.43.0",
+    "@wojtekmaj/react-daterange-picker": "^3.0.0",
     "autoprefixer": "^9.8.6",
     "axios": "^0.21.0",
     "cloudinary-react": "^1.6.8",

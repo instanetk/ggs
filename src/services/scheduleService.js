@@ -13,6 +13,8 @@ export function schedule(appointment) {
   });
 }
 
-export function getSchedule(apiEndPoint) {
-  return http.get(apiEndpoint);
+export function getSchedule(dateRange) {
+  const from = new Date(dateRange[0]).toISOString();
+  const to = new Date(dateRange[1]).toISOString();
+  return http.get(apiEndpoint + '?from=' + from + '&to=' + to);
 }

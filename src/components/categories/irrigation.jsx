@@ -44,11 +44,11 @@ const Irrigation = () => {
         <div id="content" className={style.content}>
           <p className={style.p}>{t('irrigation.text')}</p>
         </div>
-        <div id="testimonial" className={style.testimonial}>
-          <Testimonial />
-        </div>
         <div id="address" className={style.address}>
           {submitted ? <ThankYou /> : <ServiceAddress sayThanks={sayThanks} service={service} />}
+        </div>
+        <div id="testimonial" className={style.testimonial}>
+          <Testimonial />
         </div>
       </div>
       <div id="categories" className={style.categories}>
