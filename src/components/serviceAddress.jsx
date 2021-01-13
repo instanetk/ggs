@@ -103,9 +103,10 @@ const ServiceAddress = ({ sayThanks, service }) => {
         name: formRef.current.name_ggs,
         phone: formRef.current.phone_ggs,
         address: formRef.current.address,
-        date: new Date(formRef.current.date),
+        date: formRef.current.date,
         service: formRef.current.service,
       };
+
       // console.log('appointment object', appointment);
       await schedule(appointment);
       sayThanks();
@@ -120,65 +121,71 @@ const ServiceAddress = ({ sayThanks, service }) => {
       }
     }
   };
-  return (
-    <div className={styles.mainDiv}>
-      <LoadScript
-        googleMapsApiKey={process.env.REACT_APP_GOOGLE_MAPS_API_KEY}
-        libraries={libraries}
-        language="en"
-        region="us">
-        <div className={styles.boxDiv}>
-          <form onSubmit={doSubmit} className={styles.form} autoComplete="none">
-            <input autoComplete="on" value="none" type="hidden"></input>
 
-            <h2 className={styles.h2}>{t('serviceAddress.name')}</h2>
-            <input
-              onChange={updateField}
-              type="text"
-              name="name_ggs"
-              autoComplete="none"
-              placeholder={t('serviceAddress.fullname')}
-              className={styles.input}></input>
-            <h2 className={styles.h2}>{t('serviceAddress.phone')}</h2>
-            <input
-              onChange={updateField}
-              type="text"
-              name="phone_ggs"
-              autoComplete="none"
-              placeholder="407-321-0000"
-              className={styles.input}></input>
-            <h2 className={styles.h2}>{t('serviceAddress.address')}</h2>
-            <StandaloneSearchBox
-              onLoad={onSearchBoxLoad}
-              onPlacesChanged={onPlacesChanged}
-              bounds={options.latLngBounds}>
+  return (
+    <div>
+      <div className="ml-20">
+        <h3 className="p-4 text-gray-700 font-bold text-md uppercase select-none sm:-ml-4">Request an estimate</h3>
+      </div>
+      <div className={styles.mainDiv}>
+        <LoadScript
+          googleMapsApiKey={process.env.REACT_APP_GOOGLE_MAPS_API_KEY}
+          libraries={libraries}
+          language="en"
+          region="us">
+          <div className={styles.boxDiv}>
+            <form onSubmit={doSubmit} className={styles.form} autoComplete="none">
+              <input autoComplete="on" value="none" type="hidden"></input>
+
+              <h2 className={styles.h2}>{t('serviceAddress.name')}</h2>
               <input
+                onChange={updateField}
                 type="text"
-                name="googleAddress"
-                autoComplete="off"
-                placeholder="777 E Washington St, Orlando, FL"
+                name="name_ggs"
+                autoComplete="none"
+                placeholder={t('serviceAddress.fullname')}
                 className={styles.input}></input>
-            </StandaloneSearchBox>
-            <h2 className={styles.h2}>{t('serviceAddress.date')}</h2>
-            <input onChange={updateField} type="date" name="date" className={styles.input}></input>
-            <button type="submit" className={styles.button}>
-              {t('serviceAddress.button')}
-            </button>
-          </form>
-        </div>
-        <div className={styles.map}>
-          <GoogleMap
-            mapContainerStyle={containerStyle}
-            center={center}
-            zoom={zoom}
-            onLoad={onLoad}
-            onUnmount={onUnmount}
-            options={options}>
-            {/* Child components, such as markers, info windows, etc. */}
-            {zoom > 8 ? <Marker position={center} /> : null}
-          </GoogleMap>
-        </div>
-      </LoadScript>
+              <h2 className={styles.h2}>{t('serviceAddress.phone')}</h2>
+              <input
+                onChange={updateField}
+                type="text"
+                name="phone_ggs"
+                autoComplete="none"
+                placeholder="407-321-0000"
+                className={styles.input}></input>
+              <h2 className={styles.h2}>{t('serviceAddress.address')}</h2>
+              <StandaloneSearchBox
+                onLoad={onSearchBoxLoad}
+                onPlacesChanged={onPlacesChanged}
+                bounds={options.latLngBounds}>
+                <input
+                  type="text"
+                  name="googleAddress"
+                  autoComplete="off"
+                  placeholder="777 E Washington St, Orlando, FL"
+                  className={styles.input}></input>
+              </StandaloneSearchBox>
+              <h2 className={styles.h2}>{t('serviceAddress.date')}</h2>
+              <input onChange={updateField} type="date" name="date" className={styles.input}></input>
+              <button type="submit" className={styles.button}>
+                {t('serviceAddress.button')}
+              </button>
+            </form>
+          </div>
+          <div className={styles.map}>
+            <GoogleMap
+              mapContainerStyle={containerStyle}
+              center={center}
+              zoom={zoom}
+              onLoad={onLoad}
+              onUnmount={onUnmount}
+              options={options}>
+              {/* Child components, such as markers, info windows, etc. */}
+              {zoom > 8 ? <Marker position={center} /> : null}
+            </GoogleMap>
+          </div>
+        </LoadScript>
+      </div>
     </div>
   );
 };

@@ -3,8 +3,8 @@ import { useTranslation } from 'react-i18next';
 
 const styles = {
   mainDiv: 'sm:flex justify-center items-center px-4 sm:px-20 sm:flex-shrink-0',
-  wrapper: 'sm:flex sm:flex-col text-center align-middle border border-gray-300 bg-gray-200 w-full h-70 rounded-lg',
-  thankyou: 'sm:flex justify-center mt-10',
+  wrapper: 'sm:flex sm:flex-col text-center align-middle border border-gray-300 bg-gray-200 w-full p-10 rounded-lg',
+  thankyou: 'sm:flex justify-center',
   emoji: 'text-5xl px-4',
   h1: 'text-5xl text-gray-700',
   p: 'mt-6 text-gray-800',

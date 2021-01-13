@@ -8,7 +8,15 @@ import Stats from './account/stats';
 import '../styles/dateRange.css';
 
 const Account = () => {
-  const [value, onChange, ref] = useStateRef([new Date(), new Date()]);
+  const today = new Date();
+  const weekFirst = today.getDate() - today.getDay() + 1;
+  const weekLast = weekFirst + 6;
+  const firstDay = new Date(today.setDate(weekFirst)).toUTCString();
+  const lastDay = new Date(today.setDate(weekLast)).toUTCString();
+
+  // console.log(today, firstDay, lastDay);
+
+  const [value, onChange, ref] = useStateRef([firstDay, lastDay]);
   const [schedule, setSchedule] = useState([]);
   const [hide, setState] = useState(true);
 
@@ -19,16 +27,21 @@ const Account = () => {
 
   useEffect(() => {
     fetchSchedule();
-    setInterval(() => fetchSchedule(), 5000);
+    const interval = setInterval(() => fetchSchedule(), 5000);
+    return () => clearInterval(interval);
   }, [fetchSchedule]);
 
   const showCalendar = () => {
     setState(!hide);
     fetchSchedule();
   };
-  const options = { year: 'numeric', month: 'long', day: 'numeric' };
 
-  // console.log(ref.current);
+  // console.log(
+  //   new Date(ref.current[0]).toLocaleDateString('en-US', { timeZone: 'UTC' }),
+  //   new Date(ref.current[1]).toLocaleDateString('en-US', { timeZone: 'UTC' })
+  // );
+
+  const options = { year: 'numeric', month: 'long', day: 'numeric' };
 
   return (
     <main className="bg-gray-300">
@@ -39,7 +52,9 @@ const Account = () => {
             onClick={showCalendar}
             type="button"
             className="select-none w-full h-6 uppercase text-sm font-semibold text-green-900 focus:outline-none focus:ring-0">
-            {value[0].toLocaleDateString('en-US', options) + ' — ' + value[1].toLocaleDateString('en-US', options)}
+            {new Date(firstDay).toLocaleDateString('en-US', options) +
+              ' — ' +
+              new Date(lastDay).toLocaleDateString('en-US', options)}
           </button>
         </div>
         <div className={hide ? 'hidden' : 'text-center'}>
