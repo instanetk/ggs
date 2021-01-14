@@ -9,7 +9,7 @@ const Stats = ({ schedule }) => {
             <span className="inline text-white">{schedule.length}</span>
             {/* <span className="text-indigo-200">+</span> */}
           </h5>
-          <p className="text-indigo-100 tracking-wide text-xs font-medium uppercase">Requests</p>
+          <p className="text-indigo-100 tracking-wide text-xs font-medium uppercase">Appointments</p>
         </div>
         <div>
           <h5 className="text-5xl font-bold text-white">

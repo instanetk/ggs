@@ -14,13 +14,17 @@
   background-color: #f0f0f0;
   color: #6d6d6d;
 }
+
+.react-daterange-picker__range-divider {
+  margin-top: 15px;
+}
 .react-daterange-picker__wrapper {
   background-color: transparent;
   display: flex;
   flex-grow: 1;
   flex-shrink: 0;
   align-items: center;
-  border: none;
+  border: 0px solid #000;
 }
 .react-daterange-picker__inputGroup {
   min-width: calc((4px * 3) + 0.54em * 8 + 0.217em * 2);

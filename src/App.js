@@ -35,6 +35,7 @@ import Handyman from './components/services/handyman';
 import MinorElectrical from './components/services/minorElectrical';
 import BathroomRemodel from './components/services/bathroomRemodel';
 import KitchenRemodel from './components/services/kitchenRemodel';
+import AppointmentCard from './components/account/appointmentCard';
 import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {
@@ -85,7 +86,10 @@ const App = () => {
           <Route path="/register" component={Registration} />
           <Route path="/logout" component={Logout} />
           <Route path="/not-found" component={NotFound} />
-          <ProtectedRoute path="/account" component={Account} />
+          <ProtectedRoute path="/account" render={(props) => <Account user={user} {...props} />} />
+          <ProtectedRoute
+            path="/appointment"
+            render={(props) => <AppointmentCard user={user} {...props} />}></ProtectedRoute>
           <Route path="/" exact component={Home} />
           <Redirect to="/not-found" />
         </Switch>

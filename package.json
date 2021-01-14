@@ -65,6 +65,7 @@
     ]
   },
   "devDependencies": {
-    "image-webpack-loader": "^7.0.1"
+    "image-webpack-loader": "^7.0.1",
+    "tailwindcss-textshadow": "^2.1.3"
   }
 }

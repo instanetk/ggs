@@ -51,6 +51,7 @@ const ServiceAddress = ({ sayThanks, service }) => {
     phone_ggs: '',
     address: '',
     date: '',
+    coordinates: center,
     service,
   });
   const [error, setError] = React.useState({});
@@ -104,10 +105,11 @@ const ServiceAddress = ({ sayThanks, service }) => {
         phone: formRef.current.phone_ggs,
         address: formRef.current.address,
         date: formRef.current.date,
+        coordinates: center,
         service: formRef.current.service,
       };
 
-      // console.log('appointment object', appointment);
+      console.log('appointment object', appointment);
       await schedule(appointment);
       sayThanks();
     } catch (ex) {

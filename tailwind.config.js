@@ -25,5 +25,5 @@ module.exports = {
   corePlugins: {
     backgroundImage: true,
   },
-  plugins: [require('@tailwindcss/forms')],
+  plugins: [require('@tailwindcss/forms'), require('tailwindcss-textshadow')],
 };

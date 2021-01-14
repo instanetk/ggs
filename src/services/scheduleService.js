@@ -9,6 +9,7 @@ export function schedule(appointment) {
     phone: appointment.phone,
     address: appointment.address,
     date: new Date(appointment.date).toLocaleDateString('en-US', { timeZone: 'UTC' }),
+    coordinates: appointment.coordinates,
     service: appointment.service,
   });
 }
@@ -16,7 +17,12 @@ export function schedule(appointment) {
 export function getSchedule(dateRange) {
   const from = new Date(dateRange[0]).toLocaleDateString('en-US', { timeZone: 'UTC' });
   const to = new Date(dateRange[1]).toLocaleDateString('en-US', { timeZone: 'UTC' });
-  const query = apiEndpoint + '?from=' + from + '&to=' + to;
+  const query = apiEndpoint + '/list?from=' + from + '&to=' + to;
   // console.log(query);
+  return http.get(query);
+}
+
+export function getAppointment(id) {
+  const query = apiEndpoint + '/appointment/?id=' + id;
   return http.get(query);
 }

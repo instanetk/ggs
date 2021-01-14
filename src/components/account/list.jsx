@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const List = ({ schedule }) => {
   return (
@@ -8,7 +9,7 @@ const List = ({ schedule }) => {
           <div className="inline-block min-w-full shadow rounded-lg overflow-hidden">
             <table className="min-w-full leading-normal">
               <thead>
-                <tr className="bg-gray-100">
+                <tr className="bg-gray-200">
                   <th
                     scope="col"
                     className="px-5 py-3 border-b border-gray-200 text-gray-800  text-left text-sm uppercase font-normal">
@@ -45,7 +46,7 @@ const List = ({ schedule }) => {
                               <img alt="profil" src="/images/person/8.jpg" className="mx-auto rounded-full h-10 w-10 " />
                             </a>
                           </div> */}
-                          <div className="ml-3">
+                          <div className="ml-0">
                             <p className="text-gray-900 whitespace-no-wrap">{appointment.name}</p>
                           </div>
                         </div>
@@ -67,9 +68,11 @@ const List = ({ schedule }) => {
                         </span>
                       </td>
                       <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                        <a href="#" className="text-indigo-600 hover:text-indigo-900">
-                          Edit
-                        </a>
+                        <NavLink
+                          className="text-indigo-600 hover:text-indigo-900"
+                          to={`/appointment?id=${appointment._id}`}>
+                          View
+                        </NavLink>
                       </td>
                     </tr>
                   );
