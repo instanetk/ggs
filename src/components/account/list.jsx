@@ -1,7 +1,26 @@
-import React from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
+import useStateRef from 'react-usestateref';
 import { NavLink } from 'react-router-dom';
+import { getSchedule, updateStatus } from '../../services/scheduleService';
+import Status from './status';
 
-const List = ({ schedule }) => {
+const List = ({ value }) => {
+  const [schedule, setSchedule, ref] = useStateRef([]);
+
+  const fetchSchedule = useCallback(async () => {
+    const { data } = await getSchedule(value);
+    setSchedule(data);
+  }, [value, setSchedule]);
+
+  const onStatus = (id) => {
+    updateStatus(id);
+    fetchSchedule();
+  };
+
+  useEffect(() => {
+    fetchSchedule();
+  }, [fetchSchedule, value]);
+
   return (
     <div className="mx-auto px-4 sm:px-8 max-w-4xl">
       <div className="py-8">
@@ -36,7 +55,7 @@ const List = ({ schedule }) => {
                 </tr>
               </thead>
               <tbody>
-                {schedule.map((appointment) => {
+                {ref.current.map((appointment) => {
                   return (
                     <tr key={appointment._id}>
                       <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
@@ -58,14 +77,7 @@ const List = ({ schedule }) => {
                         <p className="text-gray-900 whitespace-no-wrap">{new Date(appointment.date).toDateString()}</p>
                       </td>
                       <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                        <span className="relative inline-block px-3 py-1 font-semibold text-green-900 leading-tight">
-                          <span
-                            aria-hidden="true"
-                            className={`absolute inset-0 ${
-                              appointment.completed ? 'bg-yellow-200' : 'bg-green-200'
-                            }  opacity-50 rounded-full`}></span>
-                          <span className="relative">{appointment.completed ? 'completed' : 'active'}</span>
-                        </span>
+                        <Status completed={appointment.completed} onStatus={onStatus} id={appointment._id} />
                       </td>
                       <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                         <NavLink

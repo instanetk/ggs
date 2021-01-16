@@ -1,6 +1,20 @@
-import React from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
+import { getSchedule } from '../../services/scheduleService';
 
-const Stats = ({ schedule }) => {
+const Stats = ({ value }) => {
+  // console.log(value);
+  const [schedule, setSchedule] = useState([]);
+
+  const fetchSchedule = useCallback(async () => {
+    const { data } = await getSchedule(value);
+    setSchedule(data);
+  }, [value]);
+
+  useEffect(() => {
+    fetchSchedule();
+    const interval = setInterval(() => fetchSchedule(), 1000);
+    return () => clearInterval(interval);
+  }, [fetchSchedule]);
   return (
     <section className="bg-purple-900 select-none">
       <div className="container mx-auto grid grid-cols-2 gap-8 md:grid-cols-4 py-8 text-center">

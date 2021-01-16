@@ -15,14 +15,20 @@ export function schedule(appointment) {
 }
 
 export function getSchedule(dateRange) {
+  // console.log('range', dateRange);
   const from = new Date(dateRange[0]).toLocaleDateString('en-US', { timeZone: 'UTC' });
   const to = new Date(dateRange[1]).toLocaleDateString('en-US', { timeZone: 'UTC' });
   const query = apiEndpoint + '/list?from=' + from + '&to=' + to;
-  // console.log(query);
+  // console.log('query', query);
   return http.get(query);
 }
 
 export function getAppointment(id) {
   const query = apiEndpoint + '/appointment/?id=' + id;
   return http.get(query);
+}
+
+export function updateStatus(id) {
+  const query = apiEndpoint + '/appointment/?id=' + id;
+  return http.put(query);
 }

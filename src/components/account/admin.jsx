@@ -11,14 +11,13 @@ const Admin = () => {
   const today = new Date();
   const weekFirst = today.getDate() - today.getDay() + 1;
   const weekLast = weekFirst + 6;
-  const firstDay = new Date(today.setDate(weekFirst)).toUTCString();
-  const lastDay = new Date(today.setDate(weekLast)).toUTCString();
-
-  // console.log(today, firstDay, lastDay);
+  const firstDay = new Date(today.setDate(weekFirst));
+  const lastDay = new Date(today.setDate(weekLast));
 
   const [value, onChange, ref] = useStateRef([firstDay, lastDay]);
-  const [schedule, setSchedule] = useState([]);
   const [hide, setState] = useState(true);
+  // eslint-disable-next-line
+  const [schedule, setSchedule] = useState([]);
 
   const fetchSchedule = useCallback(async () => {
     const { data } = await getSchedule(ref.current);
@@ -27,14 +26,18 @@ const Admin = () => {
 
   useEffect(() => {
     fetchSchedule();
-    const interval = setInterval(() => fetchSchedule(), 5000);
-    return () => clearInterval(interval);
+    // const interval = setInterval(() => fetchSchedule(), 5000);
+    // return () => clearInterval(interval);
   }, [fetchSchedule]);
 
   const showCalendar = () => {
     setState(!hide);
-    fetchSchedule();
   };
+
+  // const onStatus = (id) => {
+  //   updateStatus(id);
+  //   fetchSchedule();
+  // };
 
   // console.log(
   //   new Date(ref.current[0]).toLocaleDateString('en-US', { timeZone: 'UTC' }),
@@ -45,7 +48,7 @@ const Admin = () => {
 
   return (
     <div className="px-0 min-h-screen">
-      <Stats schedule={schedule} />
+      <Stats value={ref.current} />
       <div className="bg-green-400 text-center">
         <button
           onClick={showCalendar}
@@ -59,7 +62,7 @@ const Admin = () => {
       <div className={hide ? 'hidden' : 'text-center'}>
         <DateRangePicker
           onChange={onChange}
-          value={value}
+          value={ref.current}
           calendarIcon={null}
           clearIcon={null}
           closeWidgets={true}
@@ -67,7 +70,7 @@ const Admin = () => {
         />
       </div>
       {/* <AppointmentCard /> */}
-      <List schedule={schedule} />
+      <List value={ref.current} hide={hide} />
     </div>
   );
 };

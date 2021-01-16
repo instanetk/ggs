@@ -2,15 +2,17 @@ import React, { useCallback, useEffect } from 'react';
 import queryString from 'query-string';
 import { getAppointment } from '../../services/scheduleService';
 import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
-import { Image, CloudinaryContext, Transformation } from 'cloudinary-react';
 import img from '../../services/imgService';
 
 const AppointmentCard = ({ location, history, user }) => {
+  // Extract the ID from the URL query.
   let id;
   if (location.search !== 'undefined') {
     let result = queryString.parse(location.search);
     id = result.id;
   }
+
+  // Query database
   const [appointment, setAppointment] = React.useState({});
 
   const fetchAppointment = useCallback(async () => {
@@ -23,7 +25,7 @@ const AppointmentCard = ({ location, history, user }) => {
     fetchAppointment();
   }, [fetchAppointment]);
 
-  console.log(appointment);
+  // Google Maps configuration
   // eslint-disable-next-line
   const [map, setMap] = React.useState(null);
   // eslint-disable-next-line
@@ -51,23 +53,76 @@ const AppointmentCard = ({ location, history, user }) => {
   const options = {
     disableDefaultUI: false,
   };
-
+  // Switch statement to set the category image
   let image;
   switch (appointment.service) {
     case 'Tile Installation':
-    case 'Instalación de Losas': {
-      image = 'srvTiles';
+    case 'Instalación de Losas':
+      image = 'catCovering';
       break;
-    }
+    case 'Hardwood & Laminate Floors':
+    case 'Pisos de Madera y Laminado':
+      image = 'srvLaminate';
+      break;
+    case 'Carpet Installation':
+    case 'Instalación de Alfombras':
+      image = 'srvCarpet';
+      break;
     case 'Backsplash':
       image = 'srvBacksplash';
       break;
+    case 'Bathroom Remodel':
+    case 'Remodelacion de Baños':
+      image = 'srvBathroom';
+      break;
+    case 'Kitchen Remodel':
+    case 'Remodelación de Cocina':
+      image = 'srvKitchen';
+      break;
     case 'Landscape & Irrigation':
+    case 'Jardinería e Irrigación':
       image = 'catLandscaping';
       break;
+    case 'Painting':
+    case 'Pintura':
+      image = 'catPaining';
+      break;
+    case 'Carpet Cleaning':
+    case 'Liempieza de Alfombras':
+      image = 'srvCarpetClean';
+      break;
+    case 'One-Time Cleaning':
+    case 'Limpieza (Una vez)':
+      image = 'srvCleaning';
+      break;
+    case 'Plumbing':
+    case 'Plomeria':
+      image = 'catPlumbing';
+      break;
+    case 'Pavers & Stones':
+    case 'Pavimentos y Piedras':
+      image = 'catPavers';
+      break;
+    case 'Granite Countertops':
+    case 'Superficies de Granito':
+      image = 'catGranite';
+      break;
+    case 'Pool Service':
+    case 'Servicio de Piscina':
+      image = 'catPool';
+      break;
+    case 'Handyman Services':
+    case 'Servicios de Reparación':
+      image = 'srvHandyman';
+      break;
+    case 'Minor Electrical':
+    case 'Electricidad Menor':
+      image = 'srvElectrical';
+      break;
     default:
-      image = 'login';
+      image = '';
   }
+  // Format the date Object
   const date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
 
   return (
@@ -94,12 +149,12 @@ const AppointmentCard = ({ location, history, user }) => {
         <div className="w-1/2">
           <div
             id="header"
-            className="bg-pink-800 h-52 p-4 bg-cover bg-center relative"
+            className="bg-pink-700 h-52 p-4 bg-cover bg-center relative"
             style={{
               backgroundImage:
-                'url(' + 'https://res.cloudinary.com/dgt2j8jc0/image/upload/c_scale,q_80,w_1000/' + img[image] + ')',
+                'url(https://res.cloudinary.com/dgt2j8jc0/image/upload/c_scale,q_80,w_1000/' + img[image] + ')',
             }}>
-            <h1 className="text-white font-bold text-4xl text-shadow-xl absolute right-2 bottom-1">
+            <h1 className="text-white font-bold text-4xl text-shadow-xl absolute right-2 bottom-2 select-none">
               {appointment.service}
             </h1>
           </div>
@@ -112,11 +167,13 @@ const AppointmentCard = ({ location, history, user }) => {
 
           <div className="flex item-center justify-between mt-3 p-4">
             {user.isAdmin ? (
-              <button
-                onClick={history.goBack}
-                className="px-3 py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded">
-                Close
-              </button>
+              <div>
+                <button
+                  onClick={history.goBack}
+                  className="px-3 py-2 bg-gray-200 hover:bg-purple-200 text-black text-xs font-bold uppercase rounded">
+                  Back to Schedule
+                </button>
+              </div>
             ) : (
               ''
             )}
