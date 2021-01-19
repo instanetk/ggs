@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 const Status = ({ completed, onStatus, id }) => {
-  //   console.log(completed, onStatus);
+  useEffect(() => {
+    console.log('status component', completed);
+  });
   return (
     <div className="select-none cursor-pointer" onClick={() => onStatus(id)}>
       <span className="relative inline-block px-3 py-1 font-semibold text-green-900 leading-tight">

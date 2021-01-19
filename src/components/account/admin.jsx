@@ -5,8 +5,10 @@ import List from './list';
 import Stats from './stats';
 import { getSchedule } from '../../services/scheduleService';
 import '../../styles/dateRange.css';
+// import { io } from 'socket.io-client';
 
 const Admin = () => {
+  // const socket = io();
   // Set calendar to span the current week beginning on a Monday.
   const today = new Date();
   const weekFirst = today.getDate() - today.getDay() + 1;
@@ -26,23 +28,11 @@ const Admin = () => {
 
   useEffect(() => {
     fetchSchedule();
-    // const interval = setInterval(() => fetchSchedule(), 5000);
-    // return () => clearInterval(interval);
   }, [fetchSchedule]);
 
   const showCalendar = () => {
     setState(!hide);
   };
-
-  // const onStatus = (id) => {
-  //   updateStatus(id);
-  //   fetchSchedule();
-  // };
-
-  // console.log(
-  //   new Date(ref.current[0]).toLocaleDateString('en-US', { timeZone: 'UTC' }),
-  //   new Date(ref.current[1]).toLocaleDateString('en-US', { timeZone: 'UTC' })
-  // );
 
   const options = { year: 'numeric', month: 'long', day: 'numeric' };
 

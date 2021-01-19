@@ -12,8 +12,8 @@ const Stats = ({ value }) => {
 
   useEffect(() => {
     fetchSchedule();
-    const interval = setInterval(() => fetchSchedule(), 1000);
-    return () => clearInterval(interval);
+    // const interval = setInterval(() => fetchSchedule(), 5000);
+    // return () => clearInterval(interval);
   }, [fetchSchedule]);
   return (
     <section className="bg-purple-900 select-none">
