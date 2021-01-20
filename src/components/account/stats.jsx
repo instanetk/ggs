@@ -37,7 +37,7 @@ const Stats = ({ value }) => {
             <span className="inline text-white">
               {
                 schedule.filter((item) => {
-                  if (!item.completed) {
+                  if (item.status !== 'completed') {
                     return item;
                   }
                   return null;
@@ -53,7 +53,7 @@ const Stats = ({ value }) => {
             <span className="inline text-white">
               {
                 schedule.filter((item) => {
-                  if (item.completed) {
+                  if (item.status === 'completed') {
                     return item;
                   }
                   return null;

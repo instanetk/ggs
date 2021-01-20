@@ -16,6 +16,7 @@ const List = ({ value }) => {
   const onStatus = async (id) => {
     await updateStatus(id);
     fetchSchedule();
+    console.log('update', id);
   };
 
   useEffect(() => {
@@ -82,7 +83,7 @@ const List = ({ value }) => {
                         <p className={style.p}>{new Date(appointment.date).toDateString()}</p>
                       </td>
                       <td className={style.td}>
-                        <Status completed={appointment.completed} onStatus={onStatus} id={appointment._id} />
+                        <Status status={appointment.status} onStatus={onStatus} id={appointment._id} />
                       </td>
                       <td className={style.td}>
                         <NavLink className={style.navLink} to={`/appointment?id=${appointment._id}`}>
