@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { NavLink } from 'react-router-dom';
 import { getSchedule, updateStatus } from '../../services/scheduleService';
 import Status from './status';
@@ -7,25 +7,20 @@ import Status from './status';
 const List = ({ value }) => {
   const [schedule, setSchedule] = useState([]);
 
-  const scheduleRef = useRef([]);
-  scheduleRef.current = schedule;
-  console.log('ref', scheduleRef);
-
   const fetchSchedule = useCallback(async () => {
     const { data } = await getSchedule(value);
     setSchedule(data);
-    console.log('call api');
+    // console.log('call api');
   }, [value]);
 
   const onStatus = async (id) => {
     await updateStatus(id);
     fetchSchedule();
-    console.log('onStatus toggle', schedule[0].completed, 'ref:', scheduleRef.current[0].completed);
   };
 
   useEffect(() => {
     fetchSchedule();
-    console.log('useEffect');
+    // console.log('useEffect');
   }, [fetchSchedule]);
 
   const style = {
@@ -65,7 +60,7 @@ const List = ({ value }) => {
                 </tr>
               </thead>
               <tbody>
-                {scheduleRef.current.map((appointment) => {
+                {schedule.map((appointment) => {
                   return (
                     <tr key={appointment._id}>
                       <td className={style.td}>

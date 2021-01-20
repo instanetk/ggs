@@ -1,7 +1,15 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { getSchedule } from '../../services/scheduleService';
+import { io } from 'socket.io-client';
 
 const Stats = ({ value }) => {
+  useEffect(() => {
+    const socket = io('http://localhost:9000', { transports: ['websocket'] });
+
+    socket.on('connect', (count) => {
+      console.log('connected', socket.connected, 'count', count);
+    });
+  }, []);
   // console.log(value);
   const [schedule, setSchedule] = useState([]);
 
@@ -12,9 +20,8 @@ const Stats = ({ value }) => {
 
   useEffect(() => {
     fetchSchedule();
-    // const interval = setInterval(() => fetchSchedule(), 5000);
-    // return () => clearInterval(interval);
   }, [fetchSchedule]);
+
   return (
     <section className="bg-purple-900 select-none">
       <div className="container mx-auto grid grid-cols-2 gap-8 md:grid-cols-4 py-8 text-center">

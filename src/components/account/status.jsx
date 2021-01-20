@@ -5,7 +5,7 @@ const Status = ({ completed, onStatus, id }) => {
     console.log('status component', completed);
   });
   return (
-    <div className="select-none cursor-pointer" onClick={() => onStatus(id)}>
+    <div className="select-none cursor-pointer w-24" onClick={() => onStatus(id)}>
       <span className="relative inline-block px-3 py-1 font-semibold text-green-900 leading-tight">
         <span
           aria-hidden="true"

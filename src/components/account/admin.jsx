@@ -1,14 +1,19 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import useStateRef from 'react-usestateref';
+import React, { useRef, useState, useEffect, useCallback } from 'react';
 import DateRangePicker from '@wojtekmaj/react-daterange-picker';
 import List from './list';
 import Stats from './stats';
 import { getSchedule } from '../../services/scheduleService';
 import '../../styles/dateRange.css';
-// import { io } from 'socket.io-client';
+import { io } from 'socket.io-client';
 
 const Admin = () => {
-  // const socket = io();
+  useEffect(() => {
+    const socket = io('http://localhost:9000', { transports: ['websocket'] });
+
+    socket.on('connect', (count) => {
+      console.log('connected', socket.connected, 'count', count);
+    });
+  }, []);
   // Set calendar to span the current week beginning on a Monday.
   const today = new Date();
   const weekFirst = today.getDate() - today.getDay() + 1;
@@ -16,7 +21,11 @@ const Admin = () => {
   const firstDay = new Date(today.setDate(weekFirst));
   const lastDay = new Date(today.setDate(weekLast));
 
-  const [value, onChange, ref] = useStateRef([firstDay, lastDay]);
+  const [value, onChange] = useState([firstDay, lastDay]);
+
+  const ref = useRef([]);
+  ref.current = value;
+
   const [hide, setState] = useState(true);
   // eslint-disable-next-line
   const [schedule, setSchedule] = useState([]);
