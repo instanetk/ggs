@@ -4,25 +4,23 @@ import { getSchedule, updateStatus } from '../../services/scheduleService';
 import Status from './status';
 // import Pagination from './pagination';
 
-const List = ({ value }) => {
+const List = ({ value, data }) => {
+  console.log('list prop', data.length);
   const [schedule, setSchedule] = useState([]);
 
   const fetchSchedule = useCallback(async () => {
     const { data } = await getSchedule(value);
     setSchedule(data);
-    // console.log('call api');
   }, [value]);
 
   const onStatus = async (id) => {
     await updateStatus(id);
-    fetchSchedule();
-    console.log('update', id);
+    fetchSchedule(); // This will be irrelevant once the parent component Admin reacts to the socket event.
   };
-
   useEffect(() => {
-    fetchSchedule();
-    // console.log('useEffect');
-  }, [fetchSchedule]);
+    setSchedule(data);
+    console.log('list useEffect', data.length);
+  }, [data]);
 
   const style = {
     mainDiv: 'mx-auto px-4 sm:px-8 max-w-4xl',
@@ -31,7 +29,7 @@ const List = ({ value }) => {
     fourthDiv: 'inline-block min-w-full shadow rounded-lg overflow-hidden',
     table: 'min-w-full leading-normal',
     tr: 'bg-gray-200',
-    th: 'px-5 py-3 border-b border-gray-200 text-gray-800  text-left text-sm uppercase font-normal',
+    th: 'px-5 py-3 border-b border-gray-200 text-gray-600 text-left text-sm uppercase font-semibold',
     td: 'px-5 py-5 border-b border-gray-200 bg-white text-sm',
     p: 'text-gray-900 whitespace-no-wrap',
     navLink: 'text-indigo-600 hover:text-indigo-900',

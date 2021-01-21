@@ -27,9 +27,8 @@ const Status = ({ status, onStatus, id }) => {
 
   return (
     <div className="select-none cursor-pointer w-24" onClick={() => onStatus(id)}>
-      <span className="relative inline-block px-3 py-1 font-semibold text-green-900 leading-tight">
+      <span className="relative inline-block px-3 py-1 font-semibold text-center leading-tight">
         <span aria-hidden="true" className={`absolute inset-0 ${color} opacity-50 rounded-full`}></span>
-        {/* <button onClick={() => console.log(id)}>{completed ? 'completed' : 'active'}</button> */}
         <span className={`relative ${text}`}>{status}</span>
       </span>
     </div>

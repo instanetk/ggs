@@ -1,26 +1,11 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { getSchedule } from '../../services/scheduleService';
-import { io } from 'socket.io-client';
+import React, { useState, useEffect } from 'react';
 
-const Stats = ({ value }) => {
-  useEffect(() => {
-    const socket = io('http://localhost:9000', { transports: ['websocket'] });
-
-    socket.on('connect', (count) => {
-      console.log('connected', socket.connected, 'count', count);
-    });
-  }, []);
-  // console.log(value);
+const Stats = ({ data }) => {
   const [schedule, setSchedule] = useState([]);
 
-  const fetchSchedule = useCallback(async () => {
-    const { data } = await getSchedule(value);
-    setSchedule(data);
-  }, [value]);
-
   useEffect(() => {
-    fetchSchedule();
-  }, [fetchSchedule]);
+    setSchedule(data);
+  }, [data]);
 
   return (
     <section className="bg-purple-900 select-none">
@@ -28,9 +13,8 @@ const Stats = ({ value }) => {
         <div>
           <h5 className="text-5xl font-bold text-white">
             <span className="inline text-white">{schedule.length}</span>
-            {/* <span className="text-indigo-200">+</span> */}
           </h5>
-          <p className="text-indigo-100 tracking-wide text-xs font-medium uppercase">Appointments</p>
+          <p className="text-indigo-100 tracking-wide text-xs font-medium uppercase">Leads</p>
         </div>
         <div>
           <h5 className="text-5xl font-bold text-white">
@@ -44,7 +28,6 @@ const Stats = ({ value }) => {
                 }).length
               }
             </span>
-            {/* <span className="text-indigo-200">+</span> */}
           </h5>
           <p className="text-indigo-100 tracking-wide text-xs font-medium uppercase">Active</p>
         </div>
@@ -60,14 +43,12 @@ const Stats = ({ value }) => {
                 }).length
               }
             </span>
-            {/* <span className="text-indigo-200">+</span> */}
           </h5>
           <p className="text-indigo-100 tracking-wide text-xs font-medium uppercase">Completed</p>
         </div>
         <div>
           <h5 className="text-5xl font-bold text-white">
             <span className="inline text-white">39</span>
-            {/* <span className="text-indigo-200">+</span> */}
           </h5>
           <p className="text-indigo-100 tracking-wide text-xs font-medium uppercase">ONLINE</p>
         </div>

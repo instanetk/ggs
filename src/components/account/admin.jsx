@@ -11,7 +11,7 @@ const Admin = () => {
     const socket = io('http://localhost:9000', { transports: ['websocket'] });
 
     socket.on('connect', (count) => {
-      console.log('connected', socket.connected, 'count', count);
+      // console.log('connected', socket.connected, 'count', count);
     });
   }, []);
   // Set calendar to span the current week beginning on a Monday.
@@ -29,10 +29,12 @@ const Admin = () => {
   const [hide, setState] = useState(true);
   // eslint-disable-next-line
   const [schedule, setSchedule] = useState([]);
+  console.log('admin', schedule.length);
 
   const fetchSchedule = useCallback(async () => {
     const { data } = await getSchedule(ref.current);
     setSchedule(data);
+    console.log('date change');
   }, [ref]);
 
   useEffect(() => {
@@ -41,13 +43,14 @@ const Admin = () => {
 
   const showCalendar = () => {
     setState(!hide);
+    fetchSchedule();
   };
 
   const options = { year: 'numeric', month: 'long', day: 'numeric' };
 
   return (
     <div className="px-0 min-h-screen">
-      <Stats value={ref.current} />
+      <Stats value={ref.current} data={schedule} />
       <div className="bg-green-400 text-center">
         <button
           onClick={showCalendar}
@@ -69,7 +72,7 @@ const Admin = () => {
         />
       </div>
       {/* <AppointmentCard /> */}
-      <List value={ref.current} hide={hide} />
+      <List value={ref.current} data={schedule} hide={hide} />
     </div>
   );
 };
