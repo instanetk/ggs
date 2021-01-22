@@ -2,18 +2,14 @@ import React, { useRef, useState, useEffect, useCallback } from 'react';
 import DateRangePicker from '@wojtekmaj/react-daterange-picker';
 import List from './list';
 import Stats from './stats';
-import { getSchedule } from '../../services/scheduleService';
+import { getSchedule, updateStatus } from '../../services/scheduleService';
 import '../../styles/dateRange.css';
 import { io } from 'socket.io-client';
 
 const Admin = () => {
-  useEffect(() => {
-    const socket = io('http://localhost:9000', { transports: ['websocket'] });
+  const socket = io('http://localhost:9000', { transports: ['websocket'] });
+  // Listening to the server emit an "update-requested" event
 
-    socket.on('connect', (count) => {
-      // console.log('connected', socket.connected, 'count', count);
-    });
-  }, []);
   // Set calendar to span the current week beginning on a Monday.
   const today = new Date();
   const weekFirst = today.getDate() - today.getDay() + 1;
@@ -29,17 +25,34 @@ const Admin = () => {
   const [hide, setState] = useState(true);
   // eslint-disable-next-line
   const [schedule, setSchedule] = useState([]);
-  console.log('admin', schedule.length);
 
   const fetchSchedule = useCallback(async () => {
     const { data } = await getSchedule(ref.current);
     setSchedule(data);
-    console.log('date change');
   }, [ref]);
 
   useEffect(() => {
     fetchSchedule();
   }, [fetchSchedule]);
+
+  const onStatus = async (id) => {
+    await updateStatus(id);
+    return () => {
+      socket.offAny('update-requested');
+    };
+  };
+
+  useEffect(() => {
+    socket.on('update-requested', (message) => {
+      // Log to the console
+      console.log('connected:', socket.connected, 'socket id:', socket.id, 'type:', message, new Date());
+      // Query the Schedule collection
+      fetchSchedule();
+    });
+    return () => {
+      socket.off();
+    };
+  });
 
   const showCalendar = () => {
     setState(!hide);
@@ -72,7 +85,7 @@ const Admin = () => {
         />
       </div>
       {/* <AppointmentCard /> */}
-      <List value={ref.current} data={schedule} hide={hide} />
+      <List value={ref.current} data={schedule} hide={hide} socket={socket} onStatus={onStatus} />
     </div>
   );
 };

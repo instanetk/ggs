@@ -1,25 +1,13 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
-import { getSchedule, updateStatus } from '../../services/scheduleService';
 import Status from './status';
 // import Pagination from './pagination';
 
-const List = ({ value, data }) => {
-  console.log('list prop', data.length);
+const List = ({ data, onStatus }) => {
   const [schedule, setSchedule] = useState([]);
 
-  const fetchSchedule = useCallback(async () => {
-    const { data } = await getSchedule(value);
-    setSchedule(data);
-  }, [value]);
-
-  const onStatus = async (id) => {
-    await updateStatus(id);
-    fetchSchedule(); // This will be irrelevant once the parent component Admin reacts to the socket event.
-  };
   useEffect(() => {
     setSchedule(data);
-    console.log('list useEffect', data.length);
   }, [data]);
 
   const style = {
