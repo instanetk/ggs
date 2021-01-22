@@ -100,7 +100,7 @@
   "irrigation": {
     "1": "Jardinería e ",
     "2": "Irrigación",
-    "text": "El secreto de un césped verde y bonito comienza con su cuidado. Somos expertos en riego. Esta es la clave subyacente para el diseño y el mantenimiento de un hermoso paisaje. Después de medir el área, elaboraremos un diseño para su sistema de riego y cotizaremos los materiales y la tecnología necesarios para mantenerlo bajo las regulaciones de la ciudad y el condado, y perfectamente programado durante cada estación del año. Comienza rellenando el siguiente formulario de solicitud. Déjenos crear el jardín de sus sueños..."
+    "text": "El secreto de un césped verde y bonito comienza con su cuidado. Somos expertos en riego. Esta es la clave subyacente para el diseño y el mantenimiento de un hermoso paisaje. Después de medir el área, elaboraremos un diseño para su sistema de riego y cotizaremos los materiales y la tecnología necesarios para mantenerlo bajo las regulaciones de la ciudad y el condado; perfectamente programado durante cada estación del año. Comienza rellenando el siguiente formulario de solicitud. Déjenos crear el jardín de sus sueños..."
   },
   "painting": {
     "1": "Pintura",
@@ -172,6 +172,9 @@
   "kitchenRemodel": {
     "1": "Remodelación ",
     "2": "de Cocina"
+  },
+  "pinboard": {
+    "h1": "Comienza con un poco de inspiración..."
   },
   "serviceAddress": {
     "title": "Solicitar un presupuesto",

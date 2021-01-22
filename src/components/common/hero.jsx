@@ -63,7 +63,7 @@ const Hero = () => {
         <CloudinaryContext
           cloudName="dgt2j8jc0"
           className="sm:inset-y-0 sm:bottom-0 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 xl:-mr-10">
-          <Image publicId={img.hero} className="rounded-sm shadow object-cover w-full h-full">
+          <Image publicId={img.hero} className="rounded-lg shadow object-cover w-full h-72 sm:h-full">
             <Transformation width="1650" quality="80" crop="fill" />
           </Image>
         </CloudinaryContext>

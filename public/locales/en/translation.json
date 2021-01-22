@@ -100,7 +100,7 @@
   "irrigation": {
     "1": "Landscape & ",
     "2": "Irrigation",
-    "text": "The secret for beautiful green lawns begin with its care. We are irrigation experts. This is the underlying key for beautiful landscaping design and maintenance. After measuring the area, we will craft a design for your irrigation system and quote for the required materials and technology to keep it under city and county regulations, and perfectly timed during every season of the year. It begins by filling the request form below. Let us create the garden of your dreams... "
+    "text": "The secret for beautiful green lawns begin with its care. We are irrigation experts. This is the underlying key for beautiful landscaping design and maintenance. After measuring the area, we will craft a design for your irrigation system and quote for the required materials and technology to keep it under city and county regulations; perfectly timed during every season of the year. Begin by filling the request form below. Let us create the garden of your dreams... "
   },
   "painting": {
     "1": "Painting",
@@ -117,12 +117,12 @@
   "pavers": {
     "1": "Pavers & ",
     "2": "Stones",
-    "text": "Few things add character and beauty as pavers and stones. Maybe it is a path in your garden, maybe it is your driveway. From choosing a color and design pattern, to laying each block side by side, we will guide your every step of the way to unveil the true potential of your exteriors. Fill the form below and let us know when it would be a good time to provide you with a quote."
+    "text": "Few things add character and beauty as pavers and stones. Maybe it is a path in your garden, maybe it is your driveway. From choosing a color and design pattern, to laying each block side by side, we will guide you every step of the way to unveil the true potential of your exteriors. Fill the form below and let us know when it would be a good time to provide you with a quote."
   },
   "granite": {
     "1": "Granite ",
     "2": "Countertops",
-    "text": "The beauty of nature cannot be matched. Millions of years inside the heart of mountains, granite is one of the most beautiful and sought stone throughout human history. It forms from magma, the molten rock near the core of the planet. Different chemical compositions throughout the world is what makes for the hundred different patterns and colors it is available. Exotic and semiprecious, granite is worth every ounce of its weight. Because each granite surface must be custom made, cut, and polished, it is imperative to carefully measure and draw the areas it will cover first. During this appointment, we will ask for your preference of a rounded or beveled edge and give you a time reference for when it would be ready for installation. Just fill the form below to begin and we will be schedule a visit for you."
+    "text": "The beauty of nature cannot be matched. Millions of years inside the heart of mountains, granite is one of the most beautiful and sought stone throughout human history. It forms from magma, the molten rock near the core of the planet. Different chemical compositions throughout the world is what makes for the hundred different patterns and colors it is available. Exotic and semiprecious, granite is worth every ounce of its weight. Because each granite surface must be custom made, cut, and polished, it is imperative to carefully measure and draw the areas it will cover first. During this appointment, we will ask for your preference of a rounded or beveled edge and give you a time reference for when it would be ready for installation. Just fill the form below to begin and we will schedule a visit for you."
   },
   "pool": {
     "1": "Pool ",
@@ -171,6 +171,9 @@
   "kitchenRemodel": {
     "1": "Kitchen ",
     "2": "Remodel"
+  },
+  "pinboard": {
+    "h1": "Begin with a little inspiration..."
   },
   "serviceAddress": {
     "title": "Request an estimate",

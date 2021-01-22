@@ -2,7 +2,8 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import CardScroll from './common/cardScroll';
 import Testimonial from './common/testimonial';
-import Carousel from './common/carousel';
+// import Carousel from './common/carousel';
+import Hero from './common/hero';
 
 const Home = () => {
   const { t } = useTranslation();
@@ -34,13 +35,13 @@ const Home = () => {
           </div>
         </div>
       </div>
-      {/* <div className="-mt-14 py-1 sm:-mt-28">
+      <div className="-mt-14 py-1 sm:-mt-28">
         <Hero />
-      </div> */}
-      <div className="-mt-14 py-1 sm:-mt-24">
-        <Carousel />
       </div>
-      <div className="sm:flex-col sm:justify-center sm:px-14">
+      {/* <div className="-mt-14 py-1 sm:-mt-24">
+        <Carousel />
+      </div> */}
+      <div className="-mt-4 sm:mt-0 sm:flex-col sm:justify-center sm:px-14">
         <CardScroll name={t('home.category')} slug="services" which="useCategories" />
         <CardScroll name={t('home.services')} slug="schedule" which="useService" />
       </div>

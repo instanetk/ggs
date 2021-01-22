@@ -127,7 +127,7 @@ const ServiceAddress = ({ sayThanks, service }) => {
   return (
     <div>
       <div className="ml-20">
-        <h3 className="p-4 text-gray-700 font-bold text-md uppercase select-none sm:-ml-4">
+        <h3 className="-ml-14 sm:ml-0 py-4 text-gray-700 font-bold text-md uppercase select-none">
           {t('serviceAddress.title')}
         </h3>
       </div>

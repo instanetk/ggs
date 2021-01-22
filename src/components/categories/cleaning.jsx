@@ -9,7 +9,7 @@ const Cleaning = () => {
 
   const style = {
     hero: '-mt-6 sm:mt-0',
-    services: '-mt-10 sm:mt-0 sm:ml-5 sm:flex-col sm:justify-center sm:px-14',
+    services: 'mt-0 sm:mt-0 pb-2 sm:ml-5 sm:flex-col sm:justify-center sm:px-14',
     testimonial: 'px-4 sm:-mt-8 sm:px-20',
     content: 'mt-6 pb-12 text-gray-800 tracking-wide text-justify text-lg select-none',
     p: 'px-4 sm:px-20 mt-2 flex-wrap',

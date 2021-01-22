@@ -47,13 +47,13 @@ const SecondaryHero = ({ text1, text2, color, image, tagline }) => {
         <CloudinaryContext
           cloudName="dgt2j8jc0"
           className="sm:inset-y-0 sm:bottom-0 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 xl:-mr-10">
-          <Image publicId={img[image]} className="rounded-sm shadow object-cover w-full h-full">
+          <Image publicId={img[image]} className="rounded-lg shadow object-cover w-full h-72 sm:h-full">
             <Transformation width="900" quality="80" crop="fill" />
           </Image>
         </CloudinaryContext>
         <h1 className="-mt-16 ml-4 sm:hidden sm:mt-0 sm:mb-0 text-3xl leading-7 tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
-          <span className="block xl:inline text-white sm:text-black">{text1}</span>
-          <span className="block text-white sm:text-indigo-600 xl:inline">{text2}</span>
+          <span className="block xl:inline text-white sm:text-black text-shadow-xl ">{text1}</span>
+          <span className="block text-white sm:text-indigo-600 xl:inline text-shadow-xl ">{text2}</span>
         </h1>
       </div>
     </div>

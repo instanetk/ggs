@@ -1,13 +1,18 @@
 import React from 'react';
 import ReactPinboard from 'react-pinboard';
+import { useTranslation } from 'react-i18next';
 
 const cols = [{ media: '', cols: 2 }];
 
 const Pinboard = () => {
+  const { t } = useTranslation();
+
   return (
     <main>
       <div className="px-4 sm:px-20 sm:py-4">
-        <h1 className="text-4xl py-4 font-bold text-pink-600">It begins with a little inspiration...</h1>
+        <div className="bg-purple-100 rounded-lg my-6 px-4 shadow-md">
+          <h1 className="text-4xl py-4 font-bold text-purple-600 text-shadow-sm break-words">{t('pinboard.h1')}</h1>
+        </div>
         <ReactPinboard cols={cols} spacing="1.5em">
           <div>
             <img
