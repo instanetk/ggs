@@ -1,6 +1,5 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-
 import CardScroll from '../common/cardScroll';
 import SecondaryHero from '../common/secondaryHero';
 import Testimonial from '../common/testimonial';

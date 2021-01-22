@@ -16,6 +16,7 @@
     "misc": "Miscellaneous"
   },
   "services": {
+    "services": "Find your service...",
     "bathroom": "Bathroom Remodel",
     "kitchen": "Kitchen Remodel",
     "tiles": "Tile Installation",

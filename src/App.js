@@ -83,7 +83,9 @@ const App = () => {
           <Route path={['/schedule/minor-electrical', '/schedule/electricidad-menor']} component={MinorElectrical} />
           <Route path={['/schedule/bathroom-remodel', '/schedule/remodelación-de-baños']} component={BathroomRemodel} />
           <Route path={['/schedule/kitchen-remodel', '/schedule/remodelación-de-cocina']} component={KitchenRemodel} />
-          <Route path="/schedule" component={Schedule} />
+          <Route path="/schedule" component={Schedule}>
+            <Redirect to="/services" />
+          </Route>
           <Route path="/pinboard" component={Pinboard} />
           <Route path="/login" component={Login} />
           <Route path="/register" component={Registration} />
