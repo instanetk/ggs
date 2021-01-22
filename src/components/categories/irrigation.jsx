@@ -20,7 +20,7 @@ const Irrigation = () => {
     hero: '-mt-6 sm:mt-0',
     services: '-mt-10 sm:mt-0 sm:ml-5 sm:flex-col sm:justify-center sm:px-14',
     testimonial: 'px-4 sm:-mt-8 sm:px-20',
-    content: 'mt-0 pb-6 text-gray-800 tracking-wide text-justify text-lg select-none',
+    content: 'mt-0 pb-0 text-gray-800 tracking-wide text-justify text-lg select-none',
     p: 'px-4 sm:px-20 mt-2 flex-wrap',
     categories: 'py-10 -mt-0 sm:ml-20',
     address: 'sm:py-10 sm:ml-0',

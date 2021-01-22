@@ -100,38 +100,38 @@
   "irrigation": {
     "1": "Landscape & ",
     "2": "Irrigation",
-    "text": "Irrigation text"
+    "text": "The secret for beautiful green lawns begin with its care. We are irrigation experts. This is the underlying key for beautiful landscaping design and maintenance. After measuring the area, we will craft a design for your irrigation system and quote for the required materials and technology to keep it under city and county regulations, and perfectly timed during every season of the year. It begins by filling the request form below. Let us create the garden of your dreams... "
   },
   "painting": {
     "1": "Painting",
-    "text": "Painting"
+    "text": "Sometimes the little things are all that counts. A new color palette can make the difference between warm and cozy or open and spacious. Knowing you can count on us to bring our professionalism and utmost meticulous care for your home, you can trust us to bring new colors into your life. Fill the form below and let us know when it would be a good time to provide you with a quote."
   },
   "cleaning": {
     "1": "Cleaning",
-    "text": "Cleaning text"
+    "text": ""
   },
   "plumbing": {
     "1": "Plumbing",
-    "text": "Plumbing text"
+    "text": ""
   },
   "pavers": {
     "1": "Pavers & ",
     "2": "Stones",
-    "text": "Pavers text"
+    "text": "Few things add character and beauty as pavers and stones. Maybe it is a path in your garden, maybe it is your driveway. From choosing a color and design pattern, to laying each block side by side, we will guide your every step of the way to unveil the true potential of your exteriors. Fill the form below and let us know when it would be a good time to provide you with a quote."
   },
   "granite": {
     "1": "Granite ",
     "2": "Countertops",
-    "text": "Granite text"
+    "text": "The beauty of nature cannot be matched. Millions of years inside the heart of mountains, granite is one of the most beautiful and sought stone throughout human history. It forms from magma, the molten rock near the core of the planet. Different chemical compositions throughout the world is what makes for the hundred different patterns and colors it is available. Exotic and semiprecious, granite is worth every ounce of its weight. Because each granite surface must be custom made, cut, and polished, it is imperative to carefully measure and draw the areas it will cover first. During this appointment, we will ask for your preference of a rounded or beveled edge and give you a time reference for when it would be ready for installation. Just fill the form below to begin and we will be schedule a visit for you."
   },
   "pool": {
     "1": "Pool ",
     "2": "Services",
-    "text": "Pool text"
+    "text": "Blue, clean water. Maintaining the proper pH balance and the right filtration system is all that's needed to keep your pool clear and healthy. Most importantly, its timely and routine upkeep. Your pool needs the care of professionals who understand the careful balance required to maintain your pool's water clean and healthy. For the joyful times ahead, fill out the form and let's talk of your current needs."
   },
   "misc": {
     "1": "Miscellaneous",
-    "text": "Misc text"
+    "text": ""
   },
   "tileInstallation": {
     "1": "Tile ",
@@ -173,6 +173,7 @@
     "2": "Remodel"
   },
   "serviceAddress": {
+    "title": "Request an estimate",
     "name": "Name:",
     "fullname": "Full Name",
     "phone": "Phone:",

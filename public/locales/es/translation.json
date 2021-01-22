@@ -100,38 +100,38 @@
   "irrigation": {
     "1": "Jardinería e ",
     "2": "Irrigación",
-    "text": "Texto de irrigación"
+    "text": "El secreto de un césped verde y bonito comienza con su cuidado. Somos expertos en riego. Esta es la clave subyacente para el diseño y el mantenimiento de un hermoso paisaje. Después de medir el área, elaboraremos un diseño para su sistema de riego y cotizaremos los materiales y la tecnología necesarios para mantenerlo bajo las regulaciones de la ciudad y el condado, y perfectamente programado durante cada estación del año. Comienza rellenando el siguiente formulario de solicitud. Déjenos crear el jardín de sus sueños..."
   },
   "painting": {
     "1": "Pintura",
-    "text": "Texto de pintura"
+    "text": "A veces los pequeños detalles son lo que cuentan. Una nueva paleta de colores puede marcar la diferencia entre lo cálido y acogedor o lo abierto y espacioso. Sabiendo que puede contar con nosotros para aportar nuestra profesionalidad y el máximo cuidado meticuloso para su hogar, puede confiar en nosotros para traer nuevos colores a su vida. Rellene el siguiente formulario y háganos saber cuándo sería un buen momento para proporcionarle un presupuesto."
   },
   "cleaning": {
     "1": "Limpieza",
-    "text": "Texto de limpieza"
+    "text": ""
   },
   "plumbing": {
     "1": "Plomería",
-    "text": "Texto plomería"
+    "text": ""
   },
   "pavers": {
     "1": "Pavimentos y ",
     "2": "Piedras",
-    "text": "Pavimentos texto"
+    "text": "Pocas cosas añaden carácter y belleza como los ladrillos y las piedras. Tal vez sea un camino en su jardín, tal vez sea su entrada al estacionamiento. Desde la elección de un color y un patrón de diseño, hasta la colocación de cada bloque lado a lado, le guiaremos en cada paso del camino para desvelar el verdadero potencial de sus exteriores. Rellene el siguiente formulario y háganos saber cuándo sería un buen momento para proporcionarle un presupuesto."
   },
   "granite": {
     "1": "Superficies de ",
     "2": "Granito",
-    "text": "Texto granito"
+    "text": "La belleza de la naturaleza no puede ser igualada. Millones de años en el corazón de las montañas, el granito es una de las piedras más bellas y procuradas a lo largo de la historia de la humanidad. Se forma de la magma, la roca derretida cerca del núcleo del planeta. Las diferentes composiciones químicas en todo el mundo son las que dan lugar a los cientos de diseños y colores diferentes que existen. Exótico y semiprecioso, el granito vale cada onza de su peso. Debido a que cada superficie de granito debe ser hecha a la medida, cortada y pulida, es imperativo medir y dibujar cuidadosamente las áreas que cubrirá primero. Durante esta cita, le preguntaremos su preferencia de un borde redondeado o biselado y le daremos una referencia de tiempo para cuando estaría listo para la instalación. Sólo tiene que rellenar el siguiente formulario para empezar y le programaremos una visita."
   },
   "pool": {
     "1": "Servicio de ",
     "2": "Piscina",
-    "text": "Pool text"
+    "text": "Agua azul y limpia. Mantener el equilibrio adecuado del pH y el sistema de filtración correcto es todo lo que se necesita para mantener su piscina clara y saludable. Lo más importante es su mantenimiento puntual y rutinario. Su piscina necesita el cuidado de profesionales que comprendan el cuidadoso equilibrio necesario para mantener el agua de su piscina limpia y saludable. Para los tiempos de alegría que se avecinan, rellene el formulario y hablemos de sus necesidades actuales."
   },
   "misc": {
     "1": "Misceláneos",
-    "text": "Texto misc"
+    "text": ""
   },
   "tileInstallation": {
     "1": "Instalación de ",
@@ -174,6 +174,7 @@
     "2": "de Cocina"
   },
   "serviceAddress": {
+    "title": "Solicitar un presupuesto",
     "name": "Nombre:",
     "fullname": "Nombre Completo",
     "phone": "Teléfono:",

@@ -127,7 +127,9 @@ const ServiceAddress = ({ sayThanks, service }) => {
   return (
     <div>
       <div className="ml-20">
-        <h3 className="p-4 text-gray-700 font-bold text-md uppercase select-none sm:-ml-4">Request an estimate</h3>
+        <h3 className="p-4 text-gray-700 font-bold text-md uppercase select-none sm:-ml-4">
+          {t('serviceAddress.title')}
+        </h3>
       </div>
       <div className={styles.mainDiv}>
         <LoadScript

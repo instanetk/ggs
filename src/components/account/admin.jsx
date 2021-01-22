@@ -6,8 +6,6 @@ import { getSchedule, updateStatus } from '../../services/scheduleService';
 import '../../styles/dateRange.css';
 
 const Admin = ({ socket }) => {
-  // Listening to the server emit an "update-requested" event
-
   // Set calendar to span the current week beginning on a Monday.
   const today = new Date();
   const weekFirst = today.getDate() - today.getDay() + 1;
@@ -43,6 +41,7 @@ const Admin = ({ socket }) => {
   };
 
   useEffect(() => {
+    // Listening to the server emit an "update-requested" event
     socket.on('update-requested', (message) => {
       // Log to the console
       console.log('connected:', socket.connected, 'socket id:', socket.id, 'type:', message, new Date());
@@ -55,6 +54,7 @@ const Admin = ({ socket }) => {
   });
 
   useEffect(() => {
+    // Listening to the server emit an "userCount" event - live online users count
     socket.on('userCount', (count) => {
       // console.log('remainder:', count % 2);
       if (count % 2 === 0) setUserCount(count / 2);
@@ -94,8 +94,7 @@ const Admin = ({ socket }) => {
           onCalendarClose={showCalendar}
         />
       </div>
-      {/* <AppointmentCard /> */}
-      <List value={ref.current} data={schedule} hide={hide} socket={socket} onStatus={onStatus} />
+      <List data={schedule} onStatus={onStatus} />
     </div>
   );
 };
