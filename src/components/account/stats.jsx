@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const Stats = ({ data }) => {
+const Stats = ({ data, userCount }) => {
   const [schedule, setSchedule] = useState([]);
 
   useEffect(() => {
@@ -48,7 +48,7 @@ const Stats = ({ data }) => {
         </div>
         <div>
           <h5 className="text-5xl font-bold text-white">
-            <span className="inline text-white">39</span>
+            <span className="inline text-white">{userCount}</span>
           </h5>
           <p className="text-indigo-100 tracking-wide text-xs font-medium uppercase">ONLINE</p>
         </div>

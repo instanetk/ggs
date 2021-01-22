@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Route, Redirect, Switch } from 'react-router-dom';
+import { io } from 'socket.io-client';
 import { ToastContainer } from 'react-toastify';
 import ProtectedRoute from './components/common/protectedRoute';
 import NavBar from './components/common/navBar.jsx';
@@ -39,6 +40,8 @@ import AppointmentCard from './components/account/appointmentCard';
 import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {
+  const socket = io(process.env.REACT_APP_SOCKET_IO, { transports: ['websocket'] });
+
   const [user, setUser] = useState({});
 
   useEffect(() => {
@@ -86,7 +89,7 @@ const App = () => {
           <Route path="/register" component={Registration} />
           <Route path="/logout" component={Logout} />
           <Route path="/not-found" component={NotFound} />
-          <ProtectedRoute path="/account" render={(props) => <Account user={user} {...props} />} />
+          <ProtectedRoute path="/account" render={(props) => <Account user={user} socket={socket} {...props} />} />
           <ProtectedRoute
             path="/appointment"
             render={(props) => <AppointmentCard user={user} {...props} />}></ProtectedRoute>

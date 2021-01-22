@@ -4,10 +4,8 @@ import List from './list';
 import Stats from './stats';
 import { getSchedule, updateStatus } from '../../services/scheduleService';
 import '../../styles/dateRange.css';
-import { io } from 'socket.io-client';
 
-const Admin = () => {
-  const socket = io('http://localhost:9000', { transports: ['websocket'] });
+const Admin = ({ socket }) => {
   // Listening to the server emit an "update-requested" event
 
   // Set calendar to span the current week beginning on a Monday.
@@ -25,6 +23,8 @@ const Admin = () => {
   const [hide, setState] = useState(true);
   // eslint-disable-next-line
   const [schedule, setSchedule] = useState([]);
+  // Set current online user count from Socket.IO
+  const [userCount, setUserCount] = useState(0);
 
   const fetchSchedule = useCallback(async () => {
     const { data } = await getSchedule(ref.current);
@@ -38,7 +38,7 @@ const Admin = () => {
   const onStatus = async (id) => {
     await updateStatus(id);
     return () => {
-      socket.offAny('update-requested');
+      socket.off();
     };
   };
 
@@ -54,6 +54,16 @@ const Admin = () => {
     };
   });
 
+  useEffect(() => {
+    socket.on('userCount', (count) => {
+      // console.log('remainder:', count % 2);
+      if (count % 2 === 0) setUserCount(count / 2);
+    });
+    return () => {
+      socket.off();
+    };
+  });
+
   const showCalendar = () => {
     setState(!hide);
     fetchSchedule();
@@ -63,7 +73,7 @@ const Admin = () => {
 
   return (
     <div className="px-0 min-h-screen">
-      <Stats value={ref.current} data={schedule} />
+      <Stats value={ref.current} data={schedule} userCount={userCount} />
       <div className="bg-green-400 text-center">
         <button
           onClick={showCalendar}
