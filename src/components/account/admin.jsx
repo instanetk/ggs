@@ -4,11 +4,13 @@ import List from './list';
 import Stats from './stats';
 import { getSchedule, updateStatus } from '../../services/scheduleService';
 import '../../styles/dateRange.css';
-import online from '../../assets/sounds/online.m4a';
-import offline from '../../assets/sounds/offline.m4a';
+import offline from '../../assets/sounds/online.m4a';
+import online from '../../assets/sounds/offline.m4a';
 import lead from '../../assets/sounds/lead.m4a';
 
 const Admin = ({ socket }) => {
+  let isChromium = window.chrome; //Play audio only on Chrome
+
   // Set calendar to span the current week beginning on a Monday.
   const today = new Date();
   const weekFirst = today.getDate() - today.getDay() + 1;
@@ -48,12 +50,14 @@ const Admin = ({ socket }) => {
     // Listening to the server emit an "update-requested" event
     socket.on('update-requested', (message) => {
       // Log to the console
-      console.log('connected:', socket.connected, 'socket id:', socket.id, 'type:', message, new Date());
+      // console.log('connected:', socket.connected, 'socket id:', socket.id, 'type:', message, new Date());
       // Query the Schedule collection
       fetchSchedule();
     });
     socket.on('new-lead', () => {
-      new Audio(lead).play();
+      if (isChromium !== undefined) {
+        new Audio(lead).play();
+      }
     });
     return () => {
       socket.off();
@@ -66,18 +70,22 @@ const Admin = ({ socket }) => {
       // console.log('remainder:', count % 2);
       if (count % 2 === 0) setUserCount(count / 2);
     });
-    socket.on('userOn', () => {
-      try {
-        new Audio(online).play();
-      } catch (ex) {
-        console.log(ex.message);
-      }
-    });
-    socket.on('userOff', () => {
-      new Audio(offline).play();
-    });
+    if (isChromium !== undefined) {
+      socket.on('userOn', (count) => {
+        let on = new Audio(online);
+        on.play();
+        console.log('on', count);
+      });
+      socket.on('userOff', (count) => {
+        let off = new Audio(offline);
+        off.play();
+        console.log('off', count);
+      });
+    }
+
     return () => {
       socket.off();
+      console.log('useEffect off');
     };
   });
 
