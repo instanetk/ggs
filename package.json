@@ -1,6 +1,6 @@
 {
   "name": "ggs",
-  "version": "0.1.5",
+  "version": "0.9.5",
   "private": true,
   "homepage": ".",
   "dependencies": {
@@ -68,7 +68,6 @@
   },
   "devDependencies": {
     "eslint-plugin-react-hooks": "^4.2.0",
-    "image-webpack-loader": "^7.0.1",
     "tailwindcss-textshadow": "^2.1.3"
   }
 }
