@@ -11,9 +11,9 @@ const styles = {
   button:
     'mt-6 py-3 px-4 bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-500 focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-lg font-normal rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 ',
   h2: 'mt-2 text-lg text-gray-600 font-normal text-left',
-  map: 'mt-4 sm:mt-0 mr-6 sm:mr-0 h-72 sm:h-auto sm:flex rounded-md shadow select-none overflow-hidden sm:w-1/2',
-  mainDiv: 'sm:flex justify-between ml-6 sm:ml-0 sm:px-20 sm:flex-shrink-0',
-  boxDiv: 'h-full px-5 py-6 sm:px-8 sm:py-6 rounded-md shadow sm:w-1/2 mr-6 bg-white sm:flex-shrink-0',
+  map: 'mt-4 md:mt-0 mr-6 md:mr-0 h-72 md:h-auto md:flex rounded-md shadow select-none overflow-hidden md:w-1/2',
+  mainDiv: 'md:flex justify-between ml-6 md:ml-0 md:px-20 md:flex-shrink-0',
+  boxDiv: 'h-full px-5 py-6 md:px-8 md:py-6 rounded-md shadow md:w-1/2 mr-6 bg-white md:flex-shrink-0',
 };
 
 const containerStyle = {

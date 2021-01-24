@@ -5,7 +5,7 @@ import Admin from './account/admin';
 const Account = ({ user, socket }) => {
   // console.log(user);
   // Create a User component to wrap AppointmentCard
-  return <main>{user.isAdmin ? <Admin socket={socket} /> : '<AppointmentCard />'}</main>;
+  return <main className="min-h-screen">{user.isAdmin ? <Admin socket={socket} /> : '<AppointmentCard />'}</main>;
 };
 
 export default Account;

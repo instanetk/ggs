@@ -4,6 +4,9 @@ import List from './list';
 import Stats from './stats';
 import { getSchedule, updateStatus } from '../../services/scheduleService';
 import '../../styles/dateRange.css';
+import online from '../../assets/sounds/online.m4a';
+import offline from '../../assets/sounds/offline.m4a';
+import lead from '../../assets/sounds/lead.m4a';
 
 const Admin = ({ socket }) => {
   // Set calendar to span the current week beginning on a Monday.
@@ -30,6 +33,7 @@ const Admin = ({ socket }) => {
   }, [ref]);
 
   useEffect(() => {
+    document.getElementById('admin').click();
     fetchSchedule();
   }, [fetchSchedule]);
 
@@ -48,6 +52,9 @@ const Admin = ({ socket }) => {
       // Query the Schedule collection
       fetchSchedule();
     });
+    socket.on('new-lead', () => {
+      new Audio(lead).play();
+    });
     return () => {
       socket.off();
     };
@@ -58,6 +65,16 @@ const Admin = ({ socket }) => {
     socket.on('userCount', (count) => {
       // console.log('remainder:', count % 2);
       if (count % 2 === 0) setUserCount(count / 2);
+    });
+    socket.on('userOn', () => {
+      try {
+        new Audio(online).play();
+      } catch (ex) {
+        console.log(ex.message);
+      }
+    });
+    socket.on('userOff', () => {
+      new Audio(offline).play();
     });
     return () => {
       socket.off();
@@ -72,7 +89,7 @@ const Admin = ({ socket }) => {
   const options = { year: 'numeric', month: 'long', day: 'numeric' };
 
   return (
-    <div className="px-0 min-h-screen">
+    <div id="admin" className="px-0 min-h-screen">
       <Stats value={ref.current} data={schedule} userCount={userCount} />
       <div className="bg-green-400 text-center">
         <button

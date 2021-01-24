@@ -8,7 +8,7 @@ const User = ({ user }) => {
   return (
     <React.Fragment>
       {user && (
-        <div className="fixed right-6 bottom-6 sm:opacity-100 sm:left-6 sm:bottom-2 w-56">
+        <div className="hidden sm:block fixed right-6 bottom-6 sm:opacity-100 sm:left-6 sm:bottom-2 w-56">
           <div className="flex justify-between select-none">
             <div className="flex items-center text-xs text-white">
               <span>{user.name}</span>{' '}
