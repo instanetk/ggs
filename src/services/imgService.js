@@ -22,6 +22,7 @@ const img = {
   srvElectrical: 'srv_photo-1462041866295-e4af004a32ef_fqejdr.jpg',
   srvCleaning: 'srv_photo-1581578731548-c64695cc6952_i7e07c.jpg',
   srvBacksplash: 'shutterstock_1330608554_pskqlo.jpg',
+  srvIrrigation: 'shutterstock_411918619_rwgld0.jpg',
 };
 
 export default img;

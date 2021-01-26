@@ -26,7 +26,9 @@
     "handyman": "Servicios de Reparación",
     "electrical": "Electricidad Menor",
     "cleaning": "Limpieza (Una vez)",
-    "backsplash": "Backsplash"
+    "backsplash": "Backsplash",
+    "landscaping": "Jardinería",
+    "irrigation": "Irrigación"
   },
   "hero": {
     "1": "Proyectos del hogar ",
@@ -172,6 +174,12 @@
   "kitchenRemodel": {
     "1": "Remodelación ",
     "2": "de Cocina"
+  },
+  "srvIrrigation": {
+    "1": "Irrigación"
+  },
+  "srvLandscape": {
+    "1": "Jardinería"
   },
   "pinboard": {
     "h1": "Comienza con un poco de inspiración..."

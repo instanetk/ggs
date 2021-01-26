@@ -36,6 +36,8 @@ import Handyman from './components/services/handyman';
 import MinorElectrical from './components/services/minorElectrical';
 import BathroomRemodel from './components/services/bathroomRemodel';
 import KitchenRemodel from './components/services/kitchenRemodel';
+import IrrigationService from './components/services/irrigation';
+import Landscape from './components/services/landscape';
 import AppointmentCard from './components/account/appointmentCard';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -83,6 +85,8 @@ const App = () => {
           <Route path={['/schedule/minor-electrical', '/schedule/electricidad-menor']} component={MinorElectrical} />
           <Route path={['/schedule/bathroom-remodel', '/schedule/remodelación-de-baños']} component={BathroomRemodel} />
           <Route path={['/schedule/kitchen-remodel', '/schedule/remodelación-de-cocina']} component={KitchenRemodel} />
+          <Route path={['/schedule/irrigation', '/schedule/irrigacion']} component={IrrigationService} />
+          <Route path={['/schedule/landscaping', '/schedule/jardinería']} component={Landscape} />
           <Route path="/schedule" component={Schedule}>
             <Redirect to="/services" />
           </Route>
