@@ -7,6 +7,7 @@
     "@craco/craco": "^5.9.0",
     "@react-google-maps/api": "^2.0.2",
     "@tailwindcss/forms": "^0.2.1",
+    "@tailwindcss/postcss7-compat": "^2.0.2",
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.2.2",
     "@testing-library/user-event": "^12.5.0",
@@ -36,13 +37,14 @@
     "react-toastify": "^6.2.0",
     "react-usestateref": "^1.0.4",
     "socket.io-client": "^3.1.0",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.1",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.2",
     "typescript": "^4.1.2",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
     "start": "craco start",
-    "build": "craco build",
+    "build:a": "NODE_ENV=production npx tailwindcss-cli@latest build src/styles/tailwind.css -o src/styles/main.css",
+    "build:b": "craco build",
     "test": "craco test",
     "eject": "react-scripts eject",
     "build:css": "postcss src/style/tailwind.css -o src/style/main.css",
@@ -67,6 +69,7 @@
     ]
   },
   "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^4.0.0",
     "eslint-plugin-react-hooks": "^4.2.0",
     "tailwindcss-textshadow": "^2.1.3"
   }

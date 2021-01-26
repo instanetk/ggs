@@ -1,24 +1,26 @@
-FROM node:14.15.4-alpine3.10
+# Stage 1 - Build the React app
+FROM node:14.15.4-alpine3.10 as react-build
 
 # Create app directory
 WORKDIR /usr/src/app
 
-# Install app dependencies
-# A wildcard is used to ensure both package.json AND package-lock.json are copied
-# where available (npm@5+)
 COPY package*.json ./
 
-RUN npm ci 
+RUN npm install 
 
 # Bundle app source
 COPY . .
 
-RUN npm run build
+RUN npm run build:a
+RUN npm run build:b
 
-RUN npm install -g serve
+# Stage 2 - Serve build for production with Nginx
+FROM nginx:alpine
+
+COPY --from=react-build /usr/src/app/build /usr/share/nginx/html
+
+COPY --from=react-build /usr/src/app/nginx.conf /etc/nginx/conf.d/default.conf
 
 EXPOSE 3000
 
-# SERVE BUILD INSTEAD <<< 
-
-CMD [ "serve", "-s", "build", "-1", "3000" ]
+CMD ["nginx", "-g", "daemon off;"]
