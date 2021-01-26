@@ -180,9 +180,13 @@
     "name": "Name:",
     "fullname": "Full Name",
     "phone": "Phone:",
+    "email": "E-mail:",
     "address": "Service Address:",
     "date": "Preferred Date",
-    "button": "Request Estimate Appointment"
+    "note": "Note:",
+    "button": "Request Estimate Appointment",
+    "placeholder_note": "Would you like to tell us more?",
+    "placeholder_email": "you@example.com"
   },
   "thankYou": {
     "h1": "Thank you!",

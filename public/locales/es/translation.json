@@ -181,9 +181,13 @@
     "name": "Nombre:",
     "fullname": "Nombre Completo",
     "phone": "Teléfono:",
+    "email": "E-mail:",
     "address": "Dirección para Servicio:",
     "date": "Fecha Preferida:",
-    "button": "Programar Cita de Estimado"
+    "note": "Nota:",
+    "button": "Programar Cita de Estimado",
+    "placeholder_note": "Si desea puede escribir una nota",
+    "placeholder_email": "correo@electronico.com"
   },
   "thankYou": {
     "h1": "¡Gracias!",

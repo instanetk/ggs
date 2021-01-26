@@ -9,8 +9,10 @@ export function schedule(appointment) {
   return http.post(apiEndpoint, {
     name: appointment.name,
     phone: appointment.phone,
+    email: appointment.email,
     address: appointment.address,
     date: new Date(appointment.date).toLocaleDateString('en-US', { timeZone: 'America/New_York' }),
+    note: appointment.note,
     coordinates: appointment.coordinates,
     service: appointment.service,
   });

@@ -48,7 +48,7 @@ const AppointmentCard = ({ location, history, user }) => {
   }, []);
   const containerStyle = {
     width: '100%',
-    height: '450px',
+    height: '100%',
   };
   const options = {
     disableDefaultUI: false,
@@ -161,7 +161,9 @@ const AppointmentCard = ({ location, history, user }) => {
           <div className="p-4">
             <h2 className="text-gray-900 font-bold text-2xl">{appointment.name}</h2>
             <h2 className="text-gray-700 font-bold text-xl">{appointment.phone}</h2>
+            <h2 className="text-gray-700 font-bold text-xl">{appointment.email}</h2>
             <p className="mt-2 text-gray-600 text-sm">{appointment.address}</p>
+            <p className="mt-2 text-gray-600 text-sm italic font-serif">{appointment.note}</p>
             <p className="mt-2 text-gray-600 text-sm">{new Date(appointment.date).toLocaleDateString('en-US', date)}</p>
           </div>
 

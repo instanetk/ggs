@@ -7,10 +7,10 @@ import { toast } from 'react-toastify';
 
 const styles = {
   form: '',
-  input: 'px-3 py-3 h-12 placeholder-indigo-500 w-full',
+  input: 'px-3 py-2 h-9 placeholder-indigo-500 w-full',
   button:
     'mt-6 py-3 px-4 bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-500 focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-lg font-normal rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 ',
-  h2: 'mt-2 text-lg text-gray-600 font-normal text-left',
+  h2: 'mt-2 text-md text-gray-600 font-normal text-left',
   map: 'mt-4 md:mt-0 mr-6 md:mr-0 h-72 md:h-auto md:flex rounded-md shadow select-none overflow-hidden md:w-1/2',
   mainDiv: 'md:flex justify-between ml-6 md:ml-0 md:px-20 md:flex-shrink-0',
   boxDiv: 'h-full px-5 py-6 md:px-8 md:py-6 rounded-md shadow md:w-1/2 mr-6 bg-white md:flex-shrink-0',
@@ -49,7 +49,9 @@ const ServiceAddress = ({ sayThanks, service }) => {
   const [form, setForm, formRef] = useStateRef({
     name_ggs: '',
     phone_ggs: '',
+    email: '',
     address: '',
+    note: '',
     date: '',
     coordinates: center,
     service,
@@ -103,8 +105,10 @@ const ServiceAddress = ({ sayThanks, service }) => {
       const appointment = {
         name: formRef.current.name_ggs,
         phone: formRef.current.phone_ggs,
+        email: formRef.current.email,
         address: formRef.current.address,
         date: formRef.current.date,
+        note: formRef.current.note,
         coordinates: center,
         service: formRef.current.service,
       };
@@ -157,6 +161,14 @@ const ServiceAddress = ({ sayThanks, service }) => {
                 autoComplete="none"
                 placeholder="407-321-0000"
                 className={styles.input}></input>
+              <h2 className={styles.h2}>{t('serviceAddress.email')}</h2>
+              <input
+                onChange={updateField}
+                type="text"
+                name="email"
+                autoComplete="none"
+                placeholder={t('serviceAddress.placeholder_email')}
+                className={styles.input}></input>
               <h2 className={styles.h2}>{t('serviceAddress.address')}</h2>
               <StandaloneSearchBox
                 onLoad={onSearchBoxLoad}
@@ -171,6 +183,17 @@ const ServiceAddress = ({ sayThanks, service }) => {
               </StandaloneSearchBox>
               <h2 className={styles.h2}>{t('serviceAddress.date')}</h2>
               <input onChange={updateField} type="date" name="date" className={styles.input}></input>
+              <span className="flex">
+                <h2 className={styles.h2}>{t('serviceAddress.note')}</h2>
+                <p className="text-xs hidden">Optional</p>
+              </span>
+              <input
+                onChange={updateField}
+                type="text"
+                name="note"
+                autoComplete="none"
+                placeholder={t('serviceAddress.placeholder_note')}
+                className={styles.input}></input>
               <button type="submit" className={styles.button}>
                 {t('serviceAddress.button')}
               </button>
