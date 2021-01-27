@@ -119,6 +119,14 @@ const AppointmentCard = ({ location, history, user }) => {
     case 'Electricidad Menor':
       image = 'srvElectrical';
       break;
+    case 'Irrigation':
+    case 'Irrigación':
+      image = 'srvIrrigation';
+      break;
+    case 'Landscaping':
+    case 'Jardineria':
+      image = 'catLandscaping';
+      break;
     default:
       image = '';
   }
