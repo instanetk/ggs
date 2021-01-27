@@ -21,7 +21,7 @@ const CardScrollUnit = ({ name, slug, image }) => {
           <CloudinaryContext cloudName="dgt2j8jc0">
             <Image
               publicId={img[image]}
-              className="w-full h-32 sm:h-36 border-white border-t-2 border-l-2 border-r-2 rounded-t-lg shadow-md object-cover">
+              className="w-64 h-32 sm:h-36 border-white border-t-2 border-l-2 border-r-2 rounded-t-lg shadow-md object-cover">
               <Transformation width="480" quality="80" crop="scale" />
             </Image>
           </CloudinaryContext>

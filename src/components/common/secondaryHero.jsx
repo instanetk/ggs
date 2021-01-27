@@ -24,7 +24,7 @@ const SecondaryHero = ({ text1, text2, color, image, tagline }) => {
                 <div className="hidden sm:block mt-4 text-base text-gray-500 sm:-mt-6 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
                   <h1 className="hidden sm:block sm:mt-0 sm:mb-0 text-3xl leading-7 tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
                     <span className="block xl:inline text-white sm:text-black">{text1}</span>
-                    <span className={`block text-white sm:${color} xl:inline`}>{text2}</span>
+                    <span className={`block ${color} xl:inline`}>{text2}</span>
                   </h1>
                   <span className="mt-10">{tagline}</span>
                 </div>
