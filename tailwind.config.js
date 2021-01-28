@@ -20,7 +20,9 @@ module.exports = {
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      opacity: ['disabled'],
+    },
   },
   corePlugins: {
     backgroundImage: true,

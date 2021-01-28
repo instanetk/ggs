@@ -2,6 +2,7 @@ import React, { useCallback, useEffect } from 'react';
 import queryString from 'query-string';
 import { getAppointment } from '../../services/scheduleService';
 import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
+import Delete from './delete';
 import img from '../../services/imgService';
 
 const AppointmentCard = ({ location, history, user }) => {
@@ -133,12 +134,21 @@ const AppointmentCard = ({ location, history, user }) => {
   // Format the date Object
   const date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
 
+  const [visible, setVisible] = React.useState(false);
+
+  const onCancel = () => {
+    setVisible(!visible);
+  };
+
   return (
     <div
       className="flex min-h-screen items-center w-full p-20 bg-cover bg-center"
       style={{
         backgroundImage: 'url(' + img.login + ')',
       }}>
+      <div id="delete" className={`${visible ? '' : 'hidden'}`}>
+        <Delete id={id} onCancel={onCancel} />
+      </div>
       <div className="flex w-full mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
         <LoadScript googleMapsApiKey={process.env.REACT_APP_GOOGLE_MAPS_API_KEY} language="en" region="us">
           <div className="w-1/2">
@@ -177,11 +187,16 @@ const AppointmentCard = ({ location, history, user }) => {
 
           <div className="flex item-center justify-between mt-3 p-4">
             {user.isAdmin ? (
-              <div>
+              <div className="flex justify-between w-full">
                 <button
                   onClick={history.goBack}
                   className="px-3 py-2 bg-gray-200 hover:bg-purple-200 text-black text-xs font-bold uppercase rounded">
                   Back to Schedule
+                </button>
+                <button
+                  onClick={() => setVisible(!visible)}
+                  className="px-3 py-2 bg-gray-200 hover:bg-red-400 text-black text-xs font-bold uppercase rounded">
+                  Delete
                 </button>
               </div>
             ) : (

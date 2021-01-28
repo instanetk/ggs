@@ -57,7 +57,7 @@ const Home = () => {
         </div>
         <div className="flex justify-center">
           <div className="flex flex-col w-full m-6 text-2xl sm:w-48 sm:text-xl">
-            <form action="tel:407-801-3447">
+            <form action="tel:+1-407-801-3447">
               <button
                 type="submit"
                 className="sm:hidden w-full bg-green-500 hover:bg-green-600 text-green-50  p-2 text-center font-extrabold uppercase rounded-lg select-none">

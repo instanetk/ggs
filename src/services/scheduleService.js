@@ -36,3 +36,8 @@ export function updateStatus(id) {
   const query = apiEndpoint + '/appointment/?id=' + id;
   return http.put(query);
 }
+
+export function deleteAppointment(id) {
+  const query = apiEndpoint + '/appointment/?id=' + id;
+  return http.delete(query);
+}
