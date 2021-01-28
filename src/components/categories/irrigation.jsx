@@ -53,6 +53,7 @@ const Irrigation = () => {
       </div>
       <div id="categories" className={style.categories}>
         <CardScroll name={t('home.category')} which="useCategories" />
+        <CardScroll name={t('home.services')} slug="/schedule" which="useServices" />
       </div>
     </main>
   );

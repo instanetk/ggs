@@ -37,6 +37,7 @@ const Handyman = () => {
       </div>
       <div id="categories" className={style.categories}>
         <CardScroll which={'useCategories'} slug="/services" name="Browse by category" />
+        <CardScroll name={t('home.services')} slug="/schedule" which="useServices" />
       </div>
     </main>
   );
