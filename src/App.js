@@ -53,6 +53,21 @@ const App = () => {
     } catch (ex) {}
   }, []);
 
+  // const [userCount, setUserCount] = useState();
+
+  // useEffect(() => {
+  //   // Listening to the server emit an "userCount" event - live online users count
+  //   socket.on('userCount', (count) => {
+  //     // console.log('remainder:', count % 2);
+  //     if (count % 2 === 0) setUserCount(count / 2);
+  //   });
+
+  //   return () => {
+  //     socket.off();
+  //     console.log('useEffect off');
+  //   };
+  // }, []);
+
   return (
     <div id="App" className="min-h-screen antialiasing bg-gray-100 sm:flex">
       <ToastContainer />

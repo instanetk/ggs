@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { ReactComponent as Star } from '../../assets/svg/star.svg';
 
-const User = ({ user }) => {
+const User = ({ user, userCount }) => {
   const { t } = useTranslation();
   return (
     <React.Fragment>
@@ -20,6 +20,10 @@ const User = ({ user }) => {
           </div>
         </div>
       )}
+
+      {/* <div className="sm:block fixed right-6 bottom-6 sm:opacity-100 sm:left-6 sm:bottom-8 w-56">
+        <p className="text-xs text-gray-500 uppercase">{userCount} users online</p>
+      </div> */}
     </React.Fragment>
   );
 };
