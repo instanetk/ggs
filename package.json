@@ -28,6 +28,7 @@
     "query-string": "^6.13.7",
     "react": "^17.0.1",
     "react-calendar": "^3.3.0",
+    "react-cookie": "^4.0.3",
     "react-dom": "^17.0.1",
     "react-i18next": "^11.8.4",
     "react-pinboard": "0.0.9",

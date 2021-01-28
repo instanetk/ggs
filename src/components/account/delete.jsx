@@ -1,11 +1,7 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useState, useRef } from 'react';
 import { deleteAppointment } from '../../services/scheduleService';
 
 const Delete = ({ id, onCancel }) => {
-  useEffect(() => {
-    console.log(id);
-  }, [id]);
-
   const [form, setForm] = useState('');
 
   const formRef = useRef();
@@ -17,7 +13,9 @@ const Delete = ({ id, onCancel }) => {
   };
 
   const onClose = () => {
+    console.log('test', form);
     setForm('');
+    console.log(form, formRef.current);
     onCancel();
   };
 
@@ -73,7 +71,7 @@ const Delete = ({ id, onCancel }) => {
                     To delete an appoinment type <b>delete</b> in the field below:
                   </p>
                   <form className="p-4 text-center">
-                    <input autoFocus autoComplete="off" type="text" name="delete" onChange={updateField} />
+                    <input autoFocus autoComplete="off" value={form} type="text" name="delete" onChange={updateField} />
                   </form>
                 </div>
               </div>
