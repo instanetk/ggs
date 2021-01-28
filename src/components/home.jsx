@@ -56,8 +56,8 @@ const Home = () => {
           </p>
         </div>
         <div className="flex justify-center">
-          <div className="flex flex-col w-full m-6 text-2xl sm:w-48 sm:text-xl">
-            <form action="tel:+1-407-801-3447">
+          <div id="call-button" className="flex flex-col w-full m-6 text-2xl sm:w-48 sm:text-xl">
+            {/* <form action="tel:+1-407-801-3447">
               <button
                 type="submit"
                 className="sm:hidden w-full bg-green-500 hover:bg-green-600 text-green-50  p-2 text-center font-extrabold uppercase rounded-lg select-none">
@@ -69,7 +69,17 @@ const Home = () => {
                 className="hidden sm:block w-full bg-green-500 hover:bg-green-600 text-green-50  p-2 text-center font-extrabold uppercase rounded-lg select-none">
                 407-801-3447
               </button>
-            </form>
+            </form> */}
+            <a
+              href="tel:+1-407-801-3447"
+              className="sm:hidden bg-green-500 hover:bg-green-600 text-green-50 px-12 py-3 text-center font-extrabold uppercase rounded-lg select-none">
+              {t('home.button')}
+            </a>
+            <a
+              href="tel:+1-407-801-3447"
+              className="hidden sm:block w-full bg-green-500 hover:bg-green-600 text-green-50  p-2 text-center font-extrabold uppercase rounded-lg select-none">
+              407-801-3447
+            </a>
           </div>
         </div>
       </div>
