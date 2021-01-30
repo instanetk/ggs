@@ -37,7 +37,21 @@
     "button": "Book an appointement"
   },
   "testimonial": {
-    "text": "My home feels like new after General Global Services renovated my kitchen and bathrooms. They were honest, kind and professional. I would recommend them to anyone!"
+    "text": "My home feels like new after General Global Services renovated my kitchen and bathrooms. They were honest, kind and professional. I would recommend them to anyone!",
+    "write": "Write a testimonial"
+  },
+  "review": {
+    "title": "Share your experience with us...",
+    "name": "Name",
+    "email": "E-mail",
+    "placeholder": "Write your testimonial",
+    "word": "word",
+    "words": "words",
+    "send": "Send"
+  },
+  "testimonyThanks": {
+    "thankyou": "Thank you!",
+    "tagline": "Your good word means everything to us!"
   },
   "home": {
     "pill1": "Free Estimates on New Installations!",

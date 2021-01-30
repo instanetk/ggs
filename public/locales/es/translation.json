@@ -37,7 +37,21 @@
     "button": "Programar una cita"
   },
   "testimonial": {
-    "text": "Mi casa se siente como nueva luego que General Global Services renovara mi cocina y baños. Fueron honestos, amables y profecionales. ¡Se los remendaria a quien sea!"
+    "text": "Mi casa se siente como nueva luego que General Global Services renovara mi cocina y baños. Fueron honestos, amables y profecionales. ¡Se los remendaria a quien sea!",
+    "write": "Escribe un testimonio"
+  },
+  "review": {
+    "title": "Comparte tu experiencia con nosotros...",
+    "name": "Nombre",
+    "email": "E-mail",
+    "placeholder": "Redacta tu testimonio",
+    "word": "palabra",
+    "words": "palabras",
+    "send": "Enviar"
+  },
+  "testimonyThanks": {
+    "thankyou": "¡Gracias!",
+    "tagline": "¡Su buena palabra lo es todo para nosotros!"
   },
   "home": {
     "pill1": "¡Estimados Gratis en nuevas instalaciones!",
