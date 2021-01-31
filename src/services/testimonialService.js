@@ -8,3 +8,7 @@ export function submit(testimonial) {
   // console.log(testimonial);
   return http.post(apiEndpoint, testimonial);
 }
+
+export function getTestimonials() {
+  return http.get(apiEndpoint);
+}
