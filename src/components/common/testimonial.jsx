@@ -26,18 +26,30 @@ const Testimonial = () => {
     fetchTestimonials();
   }, []);
 
-  // console.log(submitted, testimony);
+  // console.log(testimony);
+
+  let published = [];
+
+  for (let i = 0; i < testimony.length; i++) {
+    if (testimony[i].published) {
+      published.push(testimony[i]);
+    }
+  }
+
+  let display = published[Math.floor(Math.random() * published.length)] || {};
+
+  // console.log(display);
   return (
     <div>
       <div className={visible ? '' : 'hidden'}>
         {submitted ? <TestimonyThanks onClose={show} /> : <Review onClose={show} sayThanks={sayThanks} />}
       </div>
 
-      <div id="testimony" key={testimony._id} className="mt-8 flex-col bg-white p-4 rounded-lg shadow-md select-none">
+      <div id="testimony" key={display._id} className="mt-8 flex-col bg-white p-4 rounded-lg shadow-md select-none">
         <span className="text-xs text-gray-300 font-semibold uppercase tracking-wider hidden">Testimonial</span>
-        <h3 className="font-serif italic text-2xl text-gray-800">&ldquo; {testimony.testimonial} &rdquo;</h3>
+        <h3 className="font-serif italic text-2xl text-gray-800">&ldquo; {display.testimonial} &rdquo;</h3>
         <div className="flex justify-end items-baseline p-2 text-sm text-gray-800">
-          — {testimony.name}, <span className="flex ml-2 items-baseline text-xs">{testimony.city}</span>
+          — {display.name}, <span className="flex ml-2 items-baseline text-xs">{display.city}</span>
         </div>
       </div>
 
