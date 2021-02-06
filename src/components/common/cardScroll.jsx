@@ -20,7 +20,7 @@ const CardScroll = ({ name, slug, which, category }) => {
     fetchServices();
   }, [category]);
 
-  let data = [];
+  let data;
 
   if (which === 'useCategories') data = useCategories;
   else data = useService;
@@ -30,16 +30,16 @@ const CardScroll = ({ name, slug, which, category }) => {
       <h3 className={name ? 'p-4 text-gray-700 font-bold text-md uppercase select-none sm:-ml-4' : 'hidden'}>{name}</h3>
       <div className="overflow-x-auto">
         <div className="-ml-4 inline-flex sm:flex sm:flex-wrap sm:flex-grow">
-          {data
-            // .sort(function (a, b) {
-            //   return a.weight - b.weight;
-            // })
+          {/* {data
+            .sort(function (a, b) {
+              return a.weight - b.weight;
+            })
             .map((cat) => {
               if (cat.featured) {
                 return <CardScrollUnit name={cat.i18n} slug={slug} image={cat.image} key={cat._id} />;
               }
               return null;
-            })}
+            })} */}
         </div>
       </div>
     </div>
