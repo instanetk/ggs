@@ -31,9 +31,9 @@ const CardScroll = ({ name, slug, which, category }) => {
       <div className="overflow-x-auto">
         <div className="-ml-4 inline-flex sm:flex sm:flex-wrap sm:flex-grow">
           {data
-            .sort(function (a, b) {
-              return a.weight - b.weight;
-            })
+            // .sort(function (a, b) {
+            //   return a.weight - b.weight;
+            // })
             .map((cat) => {
               if (cat.featured) {
                 return <CardScrollUnit name={cat.i18n} slug={slug} image={cat.image} key={cat._id} />;
