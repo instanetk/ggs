@@ -20,7 +20,7 @@ const CardScroll = ({ name, slug, which, category }) => {
     fetchServices();
   }, [category]);
 
-  let data;
+  let data = [];
 
   if (which === 'useCategories') data = useCategories;
   else data = useService;
