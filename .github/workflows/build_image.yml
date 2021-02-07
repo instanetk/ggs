@@ -15,6 +15,7 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
+  
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
@@ -47,10 +48,10 @@ jobs:
       - name: Build and push Docker images
         uses: docker/build-push-action@v2.2.2
         env:
-          REACT_APP_GOOGLE_MAPS_API_KEY: ${{ production.REACT_APP_GOOGLE_MAPS_API_KEY }} 
-          REACT_APP_GOOGLE_MAPS_LIBRARIES:  ${{ production.REACT_APP_GOOGLE_MAPS_LIBRARIES }}
-          REACT_APP_SOCKET_IO:  ${{ production.REACT_APP_SOCKET_IO }}
-          REACT_APP_API_URL:  ${{ production.REACT_APP_API_URL }}
+          REACT_APP_GOOGLE_MAPS_API_KEY: ${{ secrets.REACT_APP_GOOGLE_MAPS_API_KEY }} 
+          REACT_APP_GOOGLE_MAPS_LIBRARIES:  ${{ secrets.REACT_APP_GOOGLE_MAPS_LIBRARIES }}
+          REACT_APP_SOCKET_IO: ${{ secrets.REACT_APP_SOCKET_IO }}
+          REACT_APP_API_URL: ${{ secrets.REACT_APP_API_URL }}  
         with:
           push: true
           tags: ${{ steps.docker_meta.outputs.tags }}
