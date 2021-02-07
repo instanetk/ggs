@@ -26,14 +26,6 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      - name: create .env file
-        run: |
-          touch .env
-          echo REACT_APP_GOOGLE_MAPS_API_KEY=${{ secrets.REACT_APP_GOOGLE_MAPS_API_KEY }} >> .env
-          echo REACT_APP_GOOGLE_MAPS_LIBRARIES=${{ secrets.REACT_APP_GOOGLE_MAPS_LIBRARIES }} >> .env
-          echo REACT_APP_SOCKET_IO=${{ secrets.REACT_APP_SOCKET_IO }} >> .env
-          echo REACT_APP_API_URL=${{ secrets.REACT_APP_API_URL }} >> .env
-
       - name: Docker meta
         id: docker_meta
         uses: crazy-max/ghaction-docker-meta@v1
@@ -57,3 +49,8 @@ jobs:
           push: true
           tags: ${{ steps.docker_meta.outputs.tags }}
           labels: ${{ steps.docker_meta.outputs.labels }}
+          build-args: |
+          REACT_APP_GOOGLE_MAPS_API_KEY=${{ secrets.REACT_APP_GOOGLE_MAPS_API_KEY }}
+          REACT_APP_GOOGLE_MAPS_LIBRARIES=${{ secrets.REACT_APP_GOOGLE_MAPS_LIBRARIES }}
+          REACT_APP_SOCKET_IO=${{ secrets.REACT_APP_SOCKET_IO }}
+          REACT_APP_API_URL=${{ secrets.REACT_APP_API_URL }}
