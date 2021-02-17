@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import SecondaryHero from '../common/secondaryHero';
-import { getTestimonials, hideTestimonial, deleteTestimonial } from '../../services/testimonialService';
+import { getTestimonials, hideTestimonial } from '../../services/testimonialService';
 import { useTranslation } from 'react-i18next';
 import DeleteTestimonial from './delete';
 
@@ -21,6 +21,11 @@ const Testimonials = ({ user }) => {
 
   const onCancel = () => {
     setVisible(!visible);
+  };
+
+  const togglePublish = async (id) => {
+    hideTestimonial(id);
+    window.location = '/testimonials';
   };
 
   const style = {
@@ -45,7 +50,7 @@ const Testimonials = ({ user }) => {
           <div className="flex justify-center">
             <span
               className="px-4 font-light text-left text-xs text-indigo-600 cursor-pointer"
-              onClick={() => hideTestimonial(testimony._id)}>
+              onClick={() => togglePublish(testimony._id)}>
               Unpublish
             </span>
             <span
