@@ -17,6 +17,9 @@ const Menu = ({ isOpen, setOpen }) => {
         <NavLink className="menu" to="/pinboard">
           <MenuItem label={t('menu.pinboard')} />
         </NavLink>
+        <NavLink className="menu" to="/testimonials">
+          <MenuItem label={t('menu.testimonials')} />
+        </NavLink>
         <NavLink className="menu" to="/login" onClick={() => setOpen(!isOpen)}>
           <MenuItem label={t('menu.account')} />
         </NavLink>

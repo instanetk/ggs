@@ -4,6 +4,7 @@ import { ReactComponent as Clock } from '../../assets/svg/clock.svg';
 import { ReactComponent as Heart } from '../../assets/svg/heart.svg';
 import { ReactComponent as User } from '../../assets/svg/user.svg';
 import { ReactComponent as Ban } from '../../assets/svg/ban.svg';
+import { ReactComponent as Document } from '../../assets/svg/document.svg';
 
 const MenuItem = ({ label }) => {
   const icon = (label) => {
@@ -21,6 +22,10 @@ const MenuItem = ({ label }) => {
       case 'Pinboard':
       case 'Inspiración':
         comp = <Heart className="h-6 w-6 sm:block flex-shrink-0" />;
+        break;
+      case 'Testimonials':
+      case 'Testimonios':
+        comp = <Document className="h-6 w-6 sm:block flex-shrink-0" />;
         break;
       case 'My account':
       case 'Iniciar sesión':

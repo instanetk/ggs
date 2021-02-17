@@ -71,6 +71,7 @@
     "services": "Services",
     "schedule": "Schedule",
     "pinboard": "Pinboard",
+    "testimonials": "Testimonials",
     "account": "My account"
   },
   "login": {
@@ -196,6 +197,10 @@
   },
   "pinboard": {
     "h1": "Begin with a little inspiration..."
+  },
+  "testimonials": {
+    "h1": "Testimonials",
+    "tagline": "See for yourself what our customer say about us..."
   },
   "serviceAddress": {
     "title": "Request an estimate",

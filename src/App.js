@@ -11,6 +11,8 @@ import Home from './components/home';
 import Schedule from './components/schedule';
 import Services from './components/services';
 import Pinboard from './components/pinboard';
+import Testimonials from './components/testimonials/testimonials';
+import Unpublished from './components/testimonials/unpublished';
 import Coverings from './components/categories/coverings';
 import Irrigation from './components/categories/irrigation';
 import Painting from './components/categories/painting';
@@ -106,6 +108,8 @@ const App = () => {
             <Redirect to="/services" />
           </Route>
           <Route path="/pinboard" component={Pinboard} />
+          <Route path={['/testimonials', '/testimonios']} render={(props) => <Testimonials user={user} {...props} />} />
+          <ProtectedRoute path="/unpublished" render={(props) => <Unpublished user={user} {...props} />} />
           <Route path="/login" component={Login} />
           <Route path="/register" component={Registration} />
           <Route path="/logout" component={Logout} />

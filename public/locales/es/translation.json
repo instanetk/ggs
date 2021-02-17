@@ -71,6 +71,7 @@
     "services": "Servicios",
     "schedule": "Horarios",
     "pinboard": "Inspiración",
+    "testimonials": "Testimonios",
     "account": "Iniciar sesión"
   },
   "login": {
@@ -197,6 +198,10 @@
   },
   "pinboard": {
     "h1": "Comienza con un poco de inspiración..."
+  },
+  "testimonials": {
+    "h1": "Testimonios",
+    "tagline": "Vea por sí mismo(a) lo que nuestros clientes dicen de nosotros..."
   },
   "serviceAddress": {
     "title": "Solicitar un presupuesto",
