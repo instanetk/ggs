@@ -54,11 +54,16 @@ const Testimonial = () => {
       </div>
 
       <div className="flex justify-end mt-1 mr-1">
-        <span
-          className="font-light text-left text-xs text-indigo-600 cursor-pointer border border-dotted border-t-0 border-l-0 border-r-0 border-indigo-600"
-          onClick={() => show()}>
-          {t('testimonial.write')}
+        <span className="text-lg" aria-label="pencil emoji">
+          ✏️
         </span>
+        <div className="ml-1">
+          <span
+            className="font-light text-left text-sm text-indigo-600 cursor-pointer border border-dotted border-t-0 border-l-0 border-r-0 border-indigo-600"
+            onClick={() => show()}>
+            {t('testimonial.write')}
+          </span>
+        </div>
       </div>
     </div>
   );
