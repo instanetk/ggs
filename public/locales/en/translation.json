@@ -200,7 +200,8 @@
   },
   "testimonials": {
     "h1": "Testimonials",
-    "tagline": "See for yourself what our customer say about us..."
+    "tagline": "See for yourself what our customer say about us...",
+    "button": "Leave Your Testimony"
   },
   "serviceAddress": {
     "title": "Request an estimate",

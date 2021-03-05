@@ -201,7 +201,8 @@
   },
   "testimonials": {
     "h1": "Testimonios",
-    "tagline": "Vea por sí mismo(a) lo que nuestros clientes dicen de nosotros..."
+    "tagline": "Vea por sí mismo(a) lo que nuestros clientes dicen de nosotros...",
+    "button": "Deje Su Testimonio"
   },
   "serviceAddress": {
     "title": "Solicitar un presupuesto",

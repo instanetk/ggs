@@ -46,7 +46,7 @@ const Testimonials = ({ user }) => {
 
   return (
     <React.Fragment>
-      <div className={writeVisible ? 'z-50' : 'hidden'}>
+      <div className={writeVisible ? '' : 'hidden'}>
         {submitted ? <TestimonyThanks onClose={show} /> : <Review onClose={show} sayThanks={sayThanks} />}
       </div>
       <main>
@@ -64,17 +64,17 @@ const Testimonials = ({ user }) => {
         {/* <div className="flex justify-center rounded w-96 text-center text-lg font-bold bg-purple-200 text-purple-500 mt-4">
         <button>Leave a Testimonial</button>
       </div> */}
-        <div className="flex justify-center">
+        <div className="flex justify-center pt-6">
           <div className="w-72">
             <button
               onClick={() => show()}
               className="sm:hidden bg-purple-500 hover:bg-purple-600 text-purple-50 px-12 py-3 text-center font-extrabold uppercase rounded-lg select-none">
-              Leave Your Testimonial
+              {t('testimonials.button')}
             </button>
             <button
               onClick={() => show()}
               className="hidden sm:block w-full bg-purple-500 hover:bg-purple-600 text-purple-50  p-2 text-center font-extrabold uppercase rounded-lg select-none">
-              Leave Your Testimonial
+              {t('testimonials.button')}
             </button>
           </div>
         </div>
@@ -113,6 +113,20 @@ const Testimonials = ({ user }) => {
             );
           return null;
         })}
+        <div className="flex justify-center pb-8">
+          <div className="w-72">
+            <button
+              onClick={() => show()}
+              className="sm:hidden bg-purple-500 hover:bg-purple-600 text-purple-50 px-12 py-3 text-center font-extrabold uppercase rounded-lg select-none">
+              {t('testimonials.button')}
+            </button>
+            <button
+              onClick={() => show()}
+              className="hidden sm:block w-full bg-purple-500 hover:bg-purple-600 text-purple-50  p-2 text-center font-extrabold uppercase rounded-lg select-none">
+              {t('testimonials.button')}
+            </button>
+          </div>
+        </div>
       </main>
     </React.Fragment>
   );
