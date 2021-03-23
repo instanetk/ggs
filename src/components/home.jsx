@@ -75,6 +75,7 @@ const Home = () => {
               className="sm:hidden bg-green-500 hover:bg-green-600 text-green-50 px-12 py-3 text-center font-extrabold uppercase rounded-lg select-none">
               {t('home.button')}
             </a>
+            <span className="sm:hidden text-sm text-center text-gray-900 pt-6">407-801-3447</span>
             <a
               href="tel:+1-407-801-3447"
               className="hidden sm:block w-full bg-green-500 hover:bg-green-600 text-green-50  p-2 text-center font-extrabold uppercase rounded-lg select-none">

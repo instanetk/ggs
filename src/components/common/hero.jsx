@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { Image, CloudinaryContext, Transformation } from 'cloudinary-react';
 import img from '../../services/imgService';
 // import { NavLink } from 'react-router-dom';
+import star from '../../assets/images/star32c.png';
 
 const Hero = () => {
   const { t } = useTranslation();
@@ -31,7 +32,11 @@ const Hero = () => {
                     <span className="block text-white sm:text-indigo-600 xl:inline">{t('hero.2')}</span>
                   </h1>
                   <span className="flex tracking-widest mt-4 py-1 sm:justify-center lg:justify-start">
-                    ⭐️⭐️⭐️⭐️⭐️
+                    <img src={star} className="h-6 w-6" alt="iOS star emoji" />
+                    <img src={star} className="h-6 w-6 ml-1" alt="iOS star emoji" />
+                    <img src={star} className="h-6 w-6 ml-1" alt="iOS star emoji" />
+                    <img src={star} className="h-6 w-6 ml-1" alt="iOS star emoji" />
+                    <img src={star} className="h-6 w-6 ml-1" alt="iOS star emoji" />
                   </span>
                   <span>{t('hero.tagline')}</span>
                 </div>

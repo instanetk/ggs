@@ -14,6 +14,7 @@ const Menu = ({ isOpen, setOpen }) => {
         <NavLink className="menu" to="/schedule">
           <MenuItem label={t('menu.schedule')} />
         </NavLink>
+
         <NavLink className="menu" to="/pinboard">
           <MenuItem label={t('menu.pinboard')} />
         </NavLink>
@@ -26,6 +27,13 @@ const Menu = ({ isOpen, setOpen }) => {
           onClick={() => setOpen(!isOpen)}>
           <MenuItem label={t('menu.account')} />
         </NavLink>
+        <div className="hidden sm:block rounded-lg select-none text-sm text-white text-center leading-10 bg-gray-900 border border-gray-700 ml-4 mt-5 ">
+          <span>407-801-3447</span>
+          <br />
+          <span>
+            <a href="mailto:main@generalglobalservices.com?subject=GGS Inquiry">main@generalglobalservices.com</a>
+          </span>
+        </div>
       </div>
     </div>
   );
