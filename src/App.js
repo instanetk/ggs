@@ -100,8 +100,8 @@ const App = () => {
           <Route path={['/schedule/one-time-cleaning', '/schedule/limpieza--una-vez-']} component={OneTimeCleaning} />
           <Route path={['/schedule/handyman-services', '/schedule/servicios-de-reparación']} component={Handyman} />
           <Route path={['/schedule/minor-electrical', '/schedule/electricidad-menor']} component={MinorElectrical} />
-          <Route path={['/schedule/bathroom-remodel', '/schedule/remodelación-de-baños']} component={BathroomRemodel} />
-          <Route path={['/schedule/kitchen-remodel', '/schedule/remodelación-de-cocina']} component={KitchenRemodel} />
+          <Route path={['/schedule/bathroom-renovation', '/schedule/remodelación-de-baños']} component={BathroomRemodel} />
+          <Route path={['/schedule/kitchen-renovation', '/schedule/remodelación-de-cocina']} component={KitchenRemodel} />
           <Route path={['/schedule/irrigation', '/schedule/irrigacion']} component={IrrigationService} />
           <Route path={['/schedule/landscaping', '/schedule/jardinería']} component={Landscape} />
           <Route path="/schedule" component={Schedule}>
