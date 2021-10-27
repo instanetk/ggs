@@ -49,7 +49,7 @@ const Testimonial = () => {
         <span className="text-xs text-gray-300 font-semibold uppercase tracking-wider hidden">Testimonial</span>
         <h3 className="font-serif italic text-2xl text-gray-800">&ldquo;{display.testimonial}&rdquo;</h3>
         <div className="flex justify-end items-baseline p-2 text-sm text-gray-800">
-          — {display.name}, <span className="flex ml-2 items-baseline text-xs">{display.city}</span>
+          — {display.name}, <span className="flex ml-2 items-baseline text-xs">{display.zip}</span>
         </div>
       </div>
 

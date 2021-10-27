@@ -8,6 +8,7 @@ const Review = ({ onClose, sayThanks }) => {
   const [form, setForm] = useState({
     name_ggs: '',
     email: '',
+    zip: '',
     testimonial: '',
   });
 
@@ -54,6 +55,7 @@ const Review = ({ onClose, sayThanks }) => {
       const testimonial = {
         name: formRef.current.name_ggs,
         email: formRef.current.email,
+        zip: formRef.current.zip,
         testimonial: formRef.current.testimonial,
         language: getLanguage(),
       };
@@ -106,8 +108,8 @@ const Review = ({ onClose, sayThanks }) => {
                   </div>
                   <span className="text-1xl sm:text-2xl italic font-serif select-none">{t('review.title')}</span>
                 </div>
-                <div className="grid max-w-xl grid-cols-2 gap-4 m-auto">
-                  <div className="col-span-2 lg:col-span-1">
+                <div className="grid max-w-xl grid-cols-9 gap-4 m-auto">
+                  <div className="col-span-9 lg:col-span-3">
                     <div className="relative ">
                       {/* <label className="text-xs text-gray-400 ml-2">&#8203;</label> */}
 
@@ -122,7 +124,7 @@ const Review = ({ onClose, sayThanks }) => {
                       />
                     </div>
                   </div>
-                  <div className="col-span-2 lg:col-span-1">
+                  <div className="col-span-9 lg:col-span-3">
                     <div className=" relative ">
                       {/* <label className="text-xs text-gray-400 ml-2">We won't publish your email</label> */}
 
@@ -137,7 +139,22 @@ const Review = ({ onClose, sayThanks }) => {
                       />
                     </div>
                   </div>
-                  <div className="col-span-2">
+                  <div className="col-span-9 lg:col-span-3">
+                    <div className=" relative ">
+                 
+
+                      <input
+                        onChange={updateField}
+                        value={formRef.current.zip}
+                        name="zip"
+                        type="text"
+                        id="contact-form-zip"
+                        className="rounded-lg border-transparent flex-1 appearance-none border border-gray-900 w-full py-2 px-4 text-gray-700 placeholder-gray-200 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                        placeholder={t('review.zip')}
+                      />
+                    </div>
+                  </div>
+                  <div className="col-span-9">
                     <label className="text-gray-700" htmlFor="name">
                       <textarea
                         onChange={updateField}
@@ -154,7 +171,7 @@ const Review = ({ onClose, sayThanks }) => {
                       <span>{wordCount === 1 ? t('review.word') : t('review.words')}</span>
                     </p>
                   </div>
-                  <div className="col-span-2 text-right">
+                  <div className="col-span-9 text-right">
                     <button
                       type="submit"
                       className="py-2 px-4 bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-500 focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg ">

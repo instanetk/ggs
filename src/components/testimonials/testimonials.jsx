@@ -105,7 +105,7 @@ const Testimonials = ({ user }) => {
                   </span>
                   <h3 className="font-serif italic text-2xl text-gray-800">&ldquo;{testimony.testimonial}&rdquo;</h3>
                   <div className="flex justify-end items-baseline p-2 text-sm text-gray-800">
-                    — {testimony.name}, <span className="flex ml-2 items-baseline text-xs">{testimony.city}</span>
+                    — {testimony.name}, <span className="flex ml-2 items-baseline text-xs">{testimony.zip}</span>
                   </div>
                   {user && user.isAdmin ? control : ''}
                 </div>
