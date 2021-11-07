@@ -41,6 +41,7 @@ import KitchenRemodel from './components/services/kitchenRemodel';
 import IrrigationService from './components/services/irrigation';
 import Landscape from './components/services/landscape';
 import AppointmentCard from './components/account/appointmentCard';
+import FileUpload from './components/common/fileUpload';
 import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {
@@ -108,6 +109,7 @@ const App = () => {
             <Redirect to="/services" />
           </Route>
           <Route path="/pinboard" component={Pinboard} />
+          <Route path="/upload" component={FileUpload} />
           <Route path={['/testimonials', '/testimonios']} render={(props) => <Testimonials user={user} {...props} />} />
           <ProtectedRoute path="/unpublished" render={(props) => <Unpublished user={user} {...props} />} />
           <Route path="/login" component={Login} />
