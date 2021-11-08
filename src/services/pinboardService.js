@@ -10,3 +10,19 @@ export function postPin(data) {
     data,
   });
 }
+
+export function getPins() {
+  return http.get(apiEndpoint);
+}
+
+export function getPin(id) {
+  return http.get(apiEndpoint + '/' + id);
+}
+
+export function togglePublished(id) {
+  return http.put(apiEndpoint + '/' + id);
+}
+
+export function countLikes(id) {
+  return http.put(apiEndpoint + '/like/' + id);
+}
