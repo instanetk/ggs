@@ -10,7 +10,7 @@ import Footer from './components/common/footer';
 import Home from './components/home';
 import Schedule from './components/schedule';
 import Services from './components/services';
-import Pinboard from './components/pinboard';
+import Pinboard from './components/pinboard/pinboard';
 import Testimonials from './components/testimonials/testimonials';
 import Unpublished from './components/testimonials/unpublished';
 import Coverings from './components/categories/coverings';
@@ -41,7 +41,7 @@ import KitchenRemodel from './components/services/kitchenRemodel';
 import IrrigationService from './components/services/irrigation';
 import Landscape from './components/services/landscape';
 import AppointmentCard from './components/account/appointmentCard';
-import FileUpload from './components/common/fileUpload';
+import FileUpload from './components/pinboard/fileUpload';
 import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {

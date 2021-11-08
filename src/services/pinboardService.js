@@ -26,3 +26,7 @@ export function togglePublished(id) {
 export function countLikes(id) {
   return http.put(apiEndpoint + '/like/' + id);
 }
+
+export function deletePin(id) {
+  return http.delete(apiEndpoint + '/' + id);
+}
