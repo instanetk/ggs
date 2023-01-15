@@ -95,14 +95,6 @@
     "create": "Create an account",
     "legal": "By selecting 'Create an Account' you are agreeing to the HomeWorks™ and General Global Services, LLC Terms and Privacy statement."
   },
-  "footer": {
-    "terms": "Terms of Service",
-    "privacy": "Privacy Policy",
-    "legal": "Legal",
-    "providers": "Providers",
-    "company": "General Global Services, LLC",
-    "made": "Made in Orlando, FL"
-  },
   "user": {
     "logout": "Logout"
   },
@@ -220,5 +212,21 @@
   "thankYou": {
     "h1": "Thank you!",
     "p": "We will be in touch shortly to confirm your appointment."
+  },
+  "contact": {
+    "hoursOfOperation": "Hours of operation",
+    "schedule": "Mon - Fri 8:00am to 5:00pm",
+    "saturdayAndSunday": "Saturday and Sunday",
+    "message": "You may still call or text and leave us a detailed message. If it's an emergency we may get back to you right away, otherwise, we will contact you on the next business day."
+  },
+  "footer": {
+    "terms": "Terms of Service",
+    "privacy": "Privacy Policy",
+    "legal": "Legal",
+    "providers": "Providers",
+    "company": "General Global Services, LLC",
+    "made": "Made in Orlando, FL",
+    "addressStreet": "7157 Narcoossee Rd #1121",
+    "cityAndState": "Orlando, FL 32822"
   }
 }
