@@ -199,7 +199,8 @@
   "serviceAddress": {
     "title": "Request an estimate",
     "name": "Name:",
-    "fullname": "Full Name",
+    "firstname": "First Name",
+    "lastname": "Last Name",
     "phone": "Phone:",
     "email": "E-mail:",
     "address": "Service Address:",

@@ -1,4 +1,5 @@
 import http from './httpService';
+
 // import { apiUrl } from '../config.json';
 
 const apiUrl = process.env.REACT_APP_API_URL;
@@ -8,6 +9,7 @@ const apiEndpoint = apiUrl + '/schedule';
 export function schedule(appointment) {
   return http.post(apiEndpoint, {
     name: appointment.name,
+    last: appointment.last,
     phone: appointment.phone,
     email: appointment.email,
     address: appointment.address,

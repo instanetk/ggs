@@ -200,7 +200,8 @@
   "serviceAddress": {
     "title": "Solicitar un presupuesto",
     "name": "Nombre:",
-    "fullname": "Nombre Completo",
+    "firstname": "Nombre",
+    "lastname": "Apellidos",
     "phone": "Teléfono:",
     "email": "E-mail:",
     "address": "Dirección para Servicio:",

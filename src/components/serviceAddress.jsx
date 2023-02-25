@@ -8,6 +8,7 @@ import { toast } from 'react-toastify';
 const styles = {
   form: '',
   input: 'px-3 py-2 h-9 placeholder-indigo-500 w-full',
+  nameInput: 'px-3 py-2 h-9 placeholder-indigo-500 w-full',
   button:
     'mt-6 py-3 px-4 bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-500 focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-lg font-normal rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 ',
   h2: 'mt-2 text-md text-gray-600 font-normal text-left',
@@ -48,6 +49,7 @@ const ServiceAddress = ({ sayThanks, service }) => {
   // Use the _ggs suffix to prevent Chrome autofill.
   const [form, setForm, formRef] = useStateRef({
     name_ggs: '',
+    last_ggs: '',
     phone_ggs: '',
     email: '',
     address: '',
@@ -83,7 +85,10 @@ const ServiceAddress = ({ sayThanks, service }) => {
 
       setCenter(center);
       setZoom(17);
-      setForm({ ...formRef.current, address: ref.current[0].formatted_address });
+      setForm({
+        ...formRef.current,
+        address: ref.current[0].formatted_address,
+      });
       // console.log(formRef.current);
     };
     updateMap();
@@ -104,6 +109,7 @@ const ServiceAddress = ({ sayThanks, service }) => {
       // Create appointment object
       const appointment = {
         name: formRef.current.name_ggs,
+        last: formRef.current.last_ggs,
         phone: formRef.current.phone_ggs,
         email: formRef.current.email,
         address: formRef.current.address,
@@ -113,12 +119,13 @@ const ServiceAddress = ({ sayThanks, service }) => {
         service: formRef.current.service,
       };
 
-      console.log('appointment object', appointment);
       await schedule(appointment);
       sayThanks();
     } catch (ex) {
       if (ex.response && ex.response.status === 400) {
-        const errors = { ...error };
+        const errors = {
+          ...error,
+        };
         // If errors, set the error state to the response data.
         errors.username = ex.response.data;
         setError(errors);
@@ -146,13 +153,22 @@ const ServiceAddress = ({ sayThanks, service }) => {
               <input autoComplete="on" value="none" type="hidden"></input>
 
               <h2 className={styles.h2}>{t('serviceAddress.name')}</h2>
-              <input
-                onChange={updateField}
-                type="text"
-                name="name_ggs"
-                autoComplete="none"
-                placeholder={t('serviceAddress.fullname')}
-                className={styles.input}></input>
+              <span className="flex justify-between space-x-2">
+                <input
+                  onChange={updateField}
+                  type="text"
+                  name="name_ggs"
+                  autoComplete="none"
+                  placeholder={t('serviceAddress.firstname')}
+                  className={styles.nameInput}></input>
+                <input
+                  onChange={updateField}
+                  type="text"
+                  name="last_ggs"
+                  autoComplete="none"
+                  placeholder={t('serviceAddress.lastname')}
+                  className={styles.nameInput}></input>
+              </span>
               <h2 className={styles.h2}>{t('serviceAddress.phone')}</h2>
               <input
                 onChange={updateField}
